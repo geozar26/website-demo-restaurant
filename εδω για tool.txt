@@ -1,0 +1,1559 @@
+HTMl
+
+ <div class="carousel-card">
+                <picture>
+                    <source srcset="images/pastitsio.webp" type="image/webp">
+                    <img src="images/pastitsio.png" alt="παστίτσιο">
+                </picture>
+
+                <div class="small-icon">
+                  <i class="fa-solid fa-utensils"></i>
+                </div>
+
+
+
+CSS
+
+:root {
+    --color-primary: #0078ff;
+    --color-dark: #222;
+    --color-light: #F9F9F9;
+    --color-text-main: #333;
+    --color-text-secondary: #555;
+    --color-accent-login: #58a6ad;
+    --font-stack: "Poppins", sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+    color: var(--color-dark);
+    background: var(--color-light);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-stack);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Βάζουμε σταθερό πλευρικό κενό για ασφάλεια σε desktop */
+}
+
+
+/* === NAVBAR & HEADER (Desktop) === */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 19px 19px;
+    background: var(--color-light);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+    
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-primary);
+    padding-left: 15px;
+    /* ❌ ΑΦΑΙΡΕΣΗ: Αυτό σπρώχνει το logo και το nav bar προς τα κάτω */
+    margin-top: 0; /* Ήταν 16px */
+}
+
+.nav-links {
+    display: flex;
+    text-align: center;
+    gap: 30px;
+    /* ❌ ΑΦΑΙΡΕΣΗ: Αυτό σπρώχνει τους συνδέσμους προς τα κάτω */
+    margin-top: 10px; /* Ήταν 10px */
+}
+
+.nav-links a {
+    text-decoration: none;
+  
+    color: var(--color-dark);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--color-primary);
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Προσθήκη ΕΚΤΟΣ media query */
+.menu-overlay {
+    display: none;
+}
+
+/* --- Hero Section --- */
+/* --- Hero Section --- */
+.hero {
+    min-height: 60vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("images/restaurant.png") no-repeat center/cover;
+    color: var(--color-light);
+    text-align: center;
+    padding: 120px 20px;
+    
+    /* 🔴 ΕΔΩ ΕΙΝΑΙ Η ΑΛΛΑΓΗ ΓΙΑ ΚΕΝΤΡΑΡΙΣΜΑ */
+    display: flex; /* Ενεργοποιεί το Flexbox */
+    flex-direction: column; /* Τα στοιχεία στοιβάζονται κάθετα */
+    justify-content: center; /* Κεντράρισμα κάθετα (στο κέντρο) */
+    align-items: center; /* Κεντράρισμα οριζόντια */
+    
+    /* 🔴 ΠΡΟΣΟΧΗ: Προσθήκη padding-top για να μην κρύβεται κάτω από το FIXED navbar */
+    padding-top: 150px; /* Πρέπει να είναι αρκετό για να "σπρώξει" το περιεχόμενο κάτω από το navbar */
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+/* ... (Τα υπόλοιπα styles του hero παραμένουν ίδια) ... */
+
+.hero p {
+    max-width: 600px;
+    margin: 0 auto 26px;
+}
+
+.btn {
+    background: var(--color-primary);
+    color: var(--color-light);
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.btn:hover {
+    background: #005fcc;
+}
+
+
+
+.login-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2000;
+}
+
+.login-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--color-light);
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 360px;
+    width: 80%;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    z-index: 3000;
+}
+
+.login-popup h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--color-primary);
+}
+
+.login-popup .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 25px;
+    cursor: pointer;
+    color: #777;
+    transition: color 0.2s;
+}
+
+.login-popup .close:hover {
+    color: var( --color-primary);
+}
+
+.login-popup input {
+    width: 100%;
+    display: block;
+    margin: 10px 0;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.login-popup button {
+    width: 100%;
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    border: none;
+    padding: 12px 0;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.login-popup button:hover {
+    background-color: #005fcc;
+}
+
+.social-text {
+    color: #777;
+    font-size: 1rem;
+    margin: 30px 0 12px 0;
+}
+
+.social-icons-modal {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #888;
+    color: var(--color-light);
+    font-size: 18px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.social-icon:hover {
+    background-color: var(--color-primary);
+}
+
+.register-link {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.register-link a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.register-link a:hover {
+    color: var(--color-secondary);
+}
+
+.remember-me-container {
+    display: flex;
+    align-items: center;
+    margin: 12px 0;
+    margin-left:3px;
+}
+
+.remember-me-container input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.remember-me-container label {
+    cursor: pointer;
+}
+
+
+.todays-specials {
+    width: 100%;
+    margin: 60px 0;
+    text-align: center;
+    /* Αφαιρούμε το overflow: hidden αν υπάρχει σε γονέα για να φαίνονται τα tooltips */
+    overflow: visible; 
+}
+
+.todays-specials h2 {
+    font-size: 2.2rem;
+    margin-bottom: 4px;
+    display: block;
+    width: 100%;
+    color: #333;
+}
+
+
+.carousel-container::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-container {
+    width: 85%;
+    max-width: 1150px;
+    margin: 0 auto;
+    /* ΑΦΑΙΡΕΣΕ το overflow-y: visible αν σου δημιουργεί scrollbar στην σελίδα, 
+       το overflow-x: hidden αρκεί */
+    overflow-x: hidden; 
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 30px;
+    width: max-content;
+    padding: 10px;
+    transition: transform 0.5s ease; /* Ομαλή κίνηση */
+    overflow: visible;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.carousel-card {
+    position: relative;
+    text-align: left;
+    /* ΑΛΛΑΓΗ: Αντί για width: 300px, βάζουμε flex-basis */
+    flex: 0 0 300px; 
+    /* ΚΡΙΣΙΜΟ ΓΙΑ 300px-670px: Η κάρτα θα είναι ΜΕΧΡΙ 80% της οθόνης 
+       για να μη βγαίνει ποτέ έξω και κόβεται η εικόνα */
+    max-width: calc(100vw - 60px); 
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+/* Εξασφάλιση ότι το tooltip δεν θα κρύβεται από άλλες κάρτες */
+.carousel-card:hover {
+    z-index: 999; 
+}
+
+
+.carousel-tooltip {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute; 
+    top: -10px; 
+    left: 50%;
+    /* Το animation ξεκινάει από το κέντρο και κάτω */
+    transform: translateX(-50%) translateY(20px) scale(0.5); 
+    transform-origin: bottom center; 
+    z-index: 1000; 
+    background: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    width: 260px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+    pointer-events: none; /* Για να μην εμποδίζει το κλικ αλλού */
+}
+
+/* Η λέξη ΥΛΙΚΑ */
+.carousel-tooltip b {
+    display: block; 
+    color: var(--color-primary);
+    margin-bottom: 8px;
+   
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+/* Η περιγραφή μέσα στο tooltip */
+.carousel-tooltip p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #444;
+    font-weight: normal;
+    margin: 0;
+}
+
+.carousel-card:hover .carousel-tooltip {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+
+.small-icon {
+    display: grid;
+    place-items: center;
+    background-color: red;
+    width: 40px;
+    height: 35px; /* Το ανέβασα λίγο γιατί το icon είναι 30px */
+    
+    /* ΑΥΤΑ ΕΙΝΑΙ ΤΑ ΚΡΙΣΙΜΑ ΓΙΑ ΤΗ ΘΕΣΗ: */
+    position: absolute; 
+    bottom: 35px;   /* Όσο μικρότερο το νούμερο, τόσο πιο πάνω πάει */
+    left: 12px;  /* Απόσταση από αριστερά */
+    z-index: 10; /* Για να είναι σίγουρα πάνω από την εικόνα */
+}
+
+.small-icon i {
+    font-size: 24px; /* Το χαμήλωσα λίγο για να "αναπνέει" μέσα στο κόκκινο */
+    color: white;
+}
+
+
+
+
+
+.carousel-dots {
+    display: flex;
+    justify-content: center; /* Διατηρεί τις τελείες στο κέντρο */
+    gap: 12px;
+    margin-top: 5px; /* 🔴 Μειώθηκε από 30px σε 5px για να ανέβουν πιο ψηλά */ 
+}
+
+.dot {
+    width: 10px; /* Ελαφρώς πιο μικρά για να μοιάζουν με τη φωτό */
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background-color:var(--color-primary);
+    transform: scale(1.2);
+}
+
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow: auto;
+    
+    /* 🔴 ΔΙΟΡΘΩΣΗ: Αρχικά κρυφό με ομαλή μετάβαση */
+    visibility: hidden; 
+    opacity: 0;
+    transition: opacity 0.2s ease, visibility 0.2s ease; 
+    /* ❌ ΑΦΑΙΡΕΘΗΚΕ: display: none; */
+}
+
+/* 🔴 ΝΕΑ ΚΛΑΣΗ: Εμφάνιση του modal. ΠΡΕΠΕΙ ΝΑ ΧΡΗΣΙΜΟΠΟΙΗΘΕΙ ΣΤΟ JS. */
+.modal.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Το "κλειδί" για το απόλυτο κέντρο */
+    
+    background-color: var(--color-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 20px;
+    width: 90%;            /* 90% του πλάτους της οθόνης για να έχει πάντα ίσο περιθώριο */
+    max-width: 450px;      /* Δεν θα ανοίξει παραπάνω από αυτό σε μεγάλες οθόνες */
+    
+    max-height: 85vh; 
+    overflow-y: auto; 
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+    
+    margin: 0;             /* ΕΞΑΦΑΝΙΖΟΥΜΕ τα margins που χαλάνε το κεντράρισμα */
+}
+
+.modal-content h2 {
+    color: var(--color-primary);
+    margin-bottom: 20px;
+    text-align: center;
+    /* Αντί για 60px σταθερά, βάζουμε ένα μικρό ποσοστό για ασφάλεια */
+    padding: 0 5%; 
+    /* Εξασφαλίζουμε ότι το κείμενο μπορεί να αλλάζει γραμμή αν χρειαστεί */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.modal-content img {
+    width: 80%;
+    max-height: 250px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.modal-content p {
+    text-align: center;
+    
+    padding: 0 10px;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+}
+
+.modal .close {
+    position: absolute;
+    top: 10px;    /* Απόσταση από πάνω */
+    right: 15px;  /* Απόσταση από δεξιά */
+    color: var(--color-text-main);
+    font-size: 24px; /* Λίγο πιο μικρό για να είναι κομψό */
+    line-height: 1;  /* Για να κεντραριστεί σωστά το ύψος του */
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s, transform 0.2s;
+    z-index: 1002; /* Να είναι πάνω από όλα μέσα στο modal */
+}
+
+.modal .close:hover {
+    color: var( --color-primary);
+}
+
+.items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    padding: 30px 20px;
+    gap: 30px;
+}
+
+.items > h2 {
+    text-align: center;
+    grid-column: 1 / -1;
+    font-size: 2.5rem;
+    margin: 30px 0 40px 0;
+    width: 100%;
+}
+
+.item {
+    text-align: center;
+}
+
+.item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform; 
+    transform: translateZ(0); 
+    backface-visibility: hidden;
+    -webkit-tap-highlight-color: transparent; /* Η λύση για το χρώμα στο πάτημα */
+}
+
+.item img:hover {
+    /* Χρησιμοποίησε μια πολύ μικρή αλλαγή για να είναι ομαλό */
+    transform: scale(1.03) translateZ(0);
+    
+}
+.item h4 {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: var(--color-text-main);
+}
+
+/* --- Testimonials --- */
+.testimonials-section {
+    background-color: var(--color-light);
+    padding: 15px;
+    margin: 60px auto;
+    max-width: 1300px;
+    width: 90%;
+    padding: 15px 20px;
+}
+
+.testimonials-section h2 {
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto 50px;
+    display: block;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.testimonial-card {
+    background: var(--color-light);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    will-change: transform;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.client-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.client-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 3px solid var(--color-primary);
+}
+
+.client-details h4 {
+    font-size: 1.1rem;
+    color: var(--color-dark);
+    margin: 0;
+}
+
+.client-details span {
+    display: block;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.testimonial-card p {
+    font-style: italic;
+    color: var(--color-text-secondary);
+    margin: 0 0 15px 0;
+    line-height: 1.6;
+    flex-grow: 1;
+    text-align: justify;
+}
+
+.rating {
+    color: #ffc107;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+    align-self: flex-start;
+}
+
+
+.gallery h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 26px 0 0;
+    transform: translateY(15px);
+}
+
+/* 1. Πρόσθεσε αυτό στην αρχή του CSS σου */
+html {
+    /* Δεσμεύει το χώρο του scrollbar ώστε να μην "πηδάει" το layout όταν κλείνει το gallery */
+    scrollbar-gutter: stable;
+}
+
+/* 2. Ενημέρωσε το .gallery-container */
+.gallery .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 60px 5%;
+    margin-top: 15px;
+    /* Διασφαλίζει ότι το padding δεν επηρεάζει το συνολικό πλάτος */
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+/* 3. Ενημέρωσε το .box */
+.gallery .gallery-container .box {
+    aspect-ratio: 4 / 3;
+    width: 100%; /* Αναγκάζει το box να πιάνει όλο το πλάτος του grid cell αμέσως */
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 4. Διασφάλισε ότι η εικόνα γεμίζει το box χωρίς καθυστέρηση */
+.gallery .gallery-container .box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery .gallery-container .box .icon {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.gallery .gallery-container .box .icon i {
+    color: var(--color-light);
+    font-size: 5rem;
+}
+
+.gallery .gallery-container .box:hover .icon {
+    display: flex;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 20px auto 20px auto;
+}
+
+
+.row .content {
+    flex: 1  400px;
+    margin-top: 12px;
+}
+
+.row .image {
+    flex: 1 1 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.row .image img {
+    margin-top: 30px;
+    max-width: 100%;
+    border-radius: 10px;
+    height: auto;
+    max-height: 350px;
+    object-fit: cover;
+}
+
+
+.row .content h2 {
+    font-size: 2rem;
+    margin:2px;
+}
+
+.row .content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+    margin-top: 8px;      /* Σιγουρεύουμε ότι η παράγραφος δεν σπρώχνει προς τα πάνω */
+}
+
+
+.footer {
+    background-color: #000;
+    color: var(--color-light);
+    margin-top: 40px;
+    padding: 3px 0px;
+    font-family: var(--font-stack);
+    font-size: 14px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: stretch;
+    padding: 35px 30px 30px 30px;
+    text-align: center;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-col h3 {
+    margin-bottom: 7px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-icons a {
+    color: #ccc;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--color-primary);
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 2px;
+    text-align: center;
+}
+
+
+.footer-col ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 13px;
+}
+
+.footer-col ul li a:hover {
+    color: var(--color-primary);
+}
+
+.footer-right p {
+    margin: 3px 0;
+    font-size: 13px;
+    color: #ccc;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 15px;
+    padding: 15px 0;
+    border-top: 1px solid #222;
+    font-size: 12px;
+    color: #aaa;
+}
+
+
+/* === SECTION CONTAINER === */
+.services-section {
+  padding: 80px 20px 40px 20px;
+}
+
+.services-container {
+    max-width: 1100px; /* Μέγιστο πλάτος ενότητας */
+    width: 100%;
+    margin: 0 auto; /* Κεντράρισμα */
+}
+
+.section-heading {
+    text-align: center;
+    color: #333;
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+}
+
+/* === GRID ΔΙΑΤΑΞΗ (Ο Πυρήνας) === */
+.services-grid {
+    display: grid;
+    /* 3 ίσες στήλες, η καθεμία καταλαμβάνει 1 κλάσμα του διαθέσιμου χώρου (1fr) */
+    grid-template-columns: repeat(3, 1fr); 
+    gap:30px;
+}
+
+/* === ΚΑΡΤΑ ΥΠΗΡΕΣΙΑΣ === */
+.service-card {
+    background-color: var(--card-bg); /* Άσπρο φόντο */
+    padding: 40px 20px;
+    border-radius: 12px;
+    text-align: center; /* Κεντράρισμα όλων των στοιχείων μέσα στην κάρτα */
+    
+    /* Ήπιο box-shadow (Διακριτική σκιά) */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); 
+    
+    /* Ομαλή μετάβαση (transition) για το hover effect */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px); /* Ανύψωση κάρτας στο hover */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Πιο έντονη σκιά */
+}
+
+/* === ICONS === */
+.icon-style {
+    color: var(--color-primary); /* Χρώμα των icons */
+    font-size: 3rem; /* Μεγάλο μέγεθος icon */
+    margin-bottom: 20px;
+}
+
+/* === TEXT STYLES === */
+.card-title {
+    font-size: 1.5rem;
+    color: #222;
+    margin-top: 15px;
+}
+
+.card-description {
+    margin-top:12px;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+
+.service-card i{
+    color: #0078ff;
+    font-size:2rem;
+   
+}
+
+/* --- CONTAINER (Ο πατέρας) --- */
+.form-section-clean {
+  
+    min-height: auto; 
+    
+    /* Χρήση Flexbox */
+    display: flex;
+    flex-direction: column;   /* Ευθυγράμμιση σε στήλη */
+    justify-content: center;  /* Κεντράρισμα */
+    align-items: center;      /* Κεντράρισμα οριζόντια */
+    
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden; /* Διασφαλίζει ότι τίποτα δεν εξέχει δεξιά */
+}
+
+/* --- ΦΟΡΜΑ (Το παιδί) --- */
+.contact-form-container.form-center {
+    width: 100%;
+    max-width: 500px;
+    
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* 🟢 ΕΔΩ ΡΥΘΜΙΖΕΙΣ ΤΗ ΜΕΤΑΤΟΠΙΣΗ */
+    /* Το -30px την σπρώχνει λίγο αριστερά. 
+       Αν τη θέλεις κι άλλο, κάντο -50px ή -80px */
+    transform: translateX(-30px); 
+    
+    z-index: 2;
+    display: block;
+}
+
+/* --- ΕΙΚΟΝΑ ΔΕΞΙΑ (Σιγουρευόμαστε ότι δεν πιάνει χώρο) --- */
+.form-image-side {
+    display: none ;
+    position: absolute; /* Την βγάζουμε τελείως από τη ροή */
+}
+/* --- ΕΣΩΤΕΡΙΚΟ ΤΗΣ ΦΟΡΜΑΣ --- */
+.contact-card.form-card-style {
+    padding: 30px; 
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.main-contact-form input {
+    width: 100%;
+    border: none; 
+    border-bottom: 3px solid #e0e0e0; /* Πιο απαλή γραμμή */
+    padding: 20px 0 10px 0; 
+    margin-bottom: 30px; 
+    font-size: 1.1rem;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-bottom-color 0.3s, box-shadow 0.3s; /* Προσθήκη box-shadow στο transition */
+}
+
+/* ΝΕΟ: Focus State για μοντέρνα αίσθηση */
+.main-contact-form input:focus {
+    border-bottom-color: var(--color-primary); 
+    box-shadow: 0 1px 0 0 var(--color-primary); /* Διακριτική σκιά για βάθος */
+}
+
+    /* 🟢 ΑΛΛΑΓΗ 2: Απλοποιούμε τη φόρμα για να κεντραριστεί με margin: auto */
+    .contact-form-container.form-center {
+        /* Ακυρώνουμε το absolute positioning και το transform */
+        position: static ;
+        transform: none ;
+        top: auto ;
+        left: auto;
+        
+        /* Οριζόντιο Κεντράρισμα */
+        margin-left: auto ;
+        margin-right: auto;
+        
+        /* Διασφάλιση ότι πιάνει λογικό πλάτος στο mobile */
+        max-width: 450px;
+        flex-basis: auto;
+    }
+
+
+  .contact-card.form-card-style h3{
+         color:var(--color-primary);
+        font-size:2rem;
+}
+
+
+.send-btn-green {
+    width: 100%; 
+    display: block;
+    margin: 25px auto 0 auto; 
+    text-align: center;
+    background-color:var(--color-primary );
+    padding: 14px 20px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.send-btn-green:hover {
+   background: #005fcc;
+}
+
+@media (max-width: 1085px) {
+    .items {
+        /* Μείωση του ελάχιστου πλάτους στήλης από 280px σε 240px. 
+           Αυτό επιτρέπει στο grid να χωρέσει τις στήλες άνετα 
+           στο πλάτος της οθόνης 1085px. */
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 20px;
+        padding: 20px 10px;
+    }
+
+    /* 🟢 ΑΛΛΑΓΗ 1: Επαναφέρουμε τις ρυθμίσεις του container για να δώσουμε padding */
+    .form-section-clean {
+        background-color: #ffffff;
+        
+        /* Θέτουμε padding πάνω και κάτω για να υπάρχει κενό (π.χ. 60px) */
+        padding: 60px 20px; 
+        
+        /* Μειώνουμε το min-height για να προσαρμοστεί στο περιεχόμενο */
+        min-height: auto; 
+        
+    }
+}
+
+@media (max-width: 992px) {
+  
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .footer-col.footer-links { margin-right: -3px; }
+    .footer-col.footer-resources { margin-left: -3px; }
+}
+
+@media (max-width: 768px) {
+  
+    .menu-icon {
+        display: block;
+        z-index: 1005;
+        cursor: pointer;
+    }
+
+    .menu-overlay {
+        /* Το επαναφέρουμε στη ροή μόνο για κινητά */
+        display: block; 
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        backdrop-filter: blur(4px);
+        z-index: 999;
+
+        /* Κρυφό αλλά έτοιμο για transition */
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s ease-in-out, visibility 0.5s;
+    }
+
+    /* Όταν ανοίγει το μενού */
+    #menu-toggle:checked ~ .menu-overlay {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-links {
+        display: flex;
+        position: fixed;
+        top: 0;
+        right: -100%; /* Κλειστό */
+        height: 100vh;
+        width: 70%;
+        max-width: 300px;
+        background: var(--color-light);
+        z-index: 1000;
+        transition: right 0.5s ease-in-out; 
+        
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 80px 0 20px 30px;
+        gap: 10px;
+        margin: 0;
+    }
+
+    #menu-toggle:checked ~ .nav-links {
+        right: 0; /* Ανοιχτό */
+    }
+
+    /* Άνοιγμα Overlay */
+    #menu-toggle:checked ~ .menu-overlay {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-links a {
+        width: 100%;
+        font-size: 20px;
+        text-align: left;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+
+    /* === 2. Container & About Section (.row) === */
+    .container {
+        max-width: 100%; 
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 1rem; 
+        box-sizing: border-box; 
+    }
+  
+
+    .row .image, 
+    .row .content {
+        flex: 1 1 100%; 
+        max-width: 100%;
+        text-align: center; 
+    }
+
+.row .image img {
+    /* 1. ΠΛΑΤΟΣ: 97% για να είναι σχεδόν τέρμα στις άκρες, με ένα ελάχιστο κενό */
+    width: 97%;
+    max-width: 97%;
+    
+    /* 2. ΚΕΝΤΡΑΡΙΣΜΑ & ΑΠΟΣΤΑΣΗ: 10px πάνω-κάτω για να αναπνέει */
+    display: block;
+    margin: 10px auto;
+
+    /* 3. ΤΟ ΕΝΤΟΝΟ STRETCHED LOOK: 
+       Το 16 / 5 την κάνει ακόμα πιο πλατιά και χαμηλή (σαν ταινία) */
+    aspect-ratio: 16 / 5; 
+
+    
+    border-radius: 4px; /* Διακριτική καμπύλη */
+}
+    /* ... οι υπόλοιπες ρυθμίσεις σου ... */
+
+    .row {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 5px;          /* ΑΠΟ 20px ΣΕ 5px: Ανεβάζει όλο το μπλοκ του κειμένου πιο κοντά στην εικόνα */
+        margin: 10px 0;    /* Μείωση εξωτερικού περιθωρίου αν χρειάζεται */
+        height: auto; 
+    }
+
+    .row .content h2 {
+        margin-top: 0; 
+        margin-left: 0;
+        text-align: center; 
+        font-size: 2rem;
+    }
+    
+    .row .content p {
+        margin-top: 8px;   /* ΑΠΟ 18px ΣΕ 8px: Ανεβάζει την παράγραφο πιο κοντά στον τίτλο */
+        margin-bottom: 30px; 
+        text-align: justify; 
+        line-height: 1.6;
+    }
+    
+    .testimonials-section {
+        padding: 60px 20px;
+    }
+
+    .testimonials-section h2 {
+        font-size: 2rem;
+    }
+
+    /* === 3. Footer Adjustments === */
+    .footer {
+        margin-top: 1.2rem;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 25px 10px 10px 10px;
+    }
+
+    #links { order: 1; }
+    #follow-us { order: 2; }
+    #info { order: 3; }
+    #contact { order: 4; }
+
+    .row .image img {
+        max-height: 250px; 
+    }
+    
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .logo {
+        margin-left: 10px;
+    }
+
+    .modal-arrow {
+        font-size: 2.5rem;
+    }
+
+    .modal-content {
+        width:90%;
+        max-width: calc(100% - 40px);
+        padding: 20px 15px;
+        
+    }
+
+    .modal-content img {
+        width: 100%;
+        max-height: 250px;
+    }
+
+    .modal-content p {
+        padding: 0;
+        text-align: left;
+    }
+
+
+    .row .image img {
+        max-height: 250px; 
+    }
+  
+}
+
+@media (max-width: 630px) {
+    .item img {
+        height: auto;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+    }
+
+
+    .services-grid {
+        grid-template-columns: 1fr; 
+        padding: 0 20px; 
+    }
+
+    .service-card {
+        height: auto; 
+        min-height: 250px; 
+        padding: 30px 20px;
+    }
+
+    .service-card h3 {
+        font-size: 1.4rem; 
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    
+    .gallery h1 {
+        font-size: 3rem;
+        padding: 0 15px;
+    }
+
+
+    .row {
+        flex-direction: column; 
+        text-align: center;
+        gap: 15px; 
+    }
+    
+    .row .image, .row .content {
+        flex: 1 1 100%; 
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .items {
+        grid-template-columns: 1fr; 
+        padding: 20px 15px; 
+        gap: 25px;
+    }
+
+    .item img {
+        height: auto;
+        aspect-ratio: 4 / 3;
+    }
+  
+    
+    .container {
+        padding: 5px 10px; 
+    }
+
+    .row {
+        margin: 0;
+        gap: 10px;
+    }
+
+
+    .footer-container {
+        padding: 20px 5px 8px 5px;
+    }
+
+    .items {
+        padding: 20px 15px;
+    }
+
+    .gallery .gallery-container {
+        padding: 30px 15px;
+    }
+
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .contact-card.form-card-style h3 {
+        font-size: 1rem ;
+        margin-bottom: 15px;
+    }
+
+    .main-contact-form input {
+        font-size: 0.95rem; 
+        padding: 12px 5px 8px 5px; 
+        margin-bottom: 20px; 
+    }
+
+    .contact-card.form-card-style {
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 15px 15px 20px 15px;
+    }
+
+    .main-contact-form input::placeholder {
+        font-size: 0.9rem;
+    }
+
+ 
+    .main-contact-form input,
+    .form-group input, 
+    .form-group textarea {
+        width: 100%; /* Τα inputs πιάνουν όλο το διαθέσιμο πλάτος της κάρτας */
+        padding: 12px 8px;      /* Επαγγελματικό εσωτερικό padding */
+        font-size: 16px;        /* Αποφυγή αυτόματου zoom σε κινητά */
+        margin-left: 0;
+        margin-right: 0;
+        box-sizing: border-box;
+    }
+
+    /* Ο τίτλος της φόρμας */
+    .contact-card.form-card-style h3 {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    /* Το κουμπί αποστολής */
+    .send-btn-green {
+        width: 100%;           /* Το κουμπί ακολουθεί το πλάτος των inputs */
+        padding: 14px;
+        margin-top: 10px;
+    }
+  
+}
+
+
+@media (min-width: 1025px) {
+    .small-icon{
+        display:none;
+    }
+    .carousel-tooltip::after {
+        content: "";
+        position: absolute;
+        top: 100%; /* Στο κάτω μέρος */
+        left: 50%; /* Στη μέση */
+        transform: translateX(-50%); /* Ακριβές κεντράρισμα ουράς */
+        border-width: 10px;
+        border-style: solid;
+        border-color: white transparent transparent transparent;
+        display: block;
+    }
+}
+
+
+
+
+@media (max-width: 1024px) {
+    .carousel-tooltip {
+        position: absolute;
+         /* Το βάζουμε λίγο πιο πάνω από το εικονίδιο */
+        left: 10px;   /* Ίδια απόσταση με το εικονίδιο για να είναι στην ίδια ευθεία */
+    
+        
+        transform-origin: bottom left; 
+
+        display: none;
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    /* Όταν πατάς το κουμπί και μπαίνει η κλάση .active */
+    .carousel-tooltip.active {
+        display: block;
+        visibility: visible;
+        animation: organic-bloom 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    }
+
+    /* Όταν το ξαναπατάς για να κλείσει */
+    .carousel-tooltip.closing {
+        display: block;
+        animation: organic-shrink 0.4s ease-in forwards;
+    }
+  .carousel-tooltip::after {
+        content: "";
+        position: absolute;
+        top: 100%;    /* Κάτω από το πλαίσιο */
+        
+        /* ΕΔΩ ΕΙΝΑΙ Η ΑΛΛΑΓΗ: */
+        left: 15px;   /* Μετακινεί την ουρά τέρμα αριστερά στο σημείο που υπέδειξες */
+        
+        /* Σχήμα βέλους */
+        border-width: 8px;
+        border-style: solid;
+        border-color: white transparent transparent transparent;
+        
+        display: block;
+    }
+}
+
+
+
+
+@keyframes organic-bloom {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+        border-radius: 50%; /* Ξεκινάει σαν μπαλονάκι */
+    }
+    60% {
+        transform: scale(1.1); /* Το "ξεχείλισμα" που ήθελες */
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+        border-radius: 12px; /* Το τελικό σχήμα */
+    }
+}
+
+@keyframes organic-shrink {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+        border-radius: 12px;
+    }
+    100% {
+        transform: scale(0); /* Ρουφιέται πίσω στο εικονίδιο */
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+
+
+JS
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Επιλέγουμε όλα τα εικονίδια
+    const icons = document.querySelectorAll('.small-icon');
+
+    icons.forEach(icon => {
+        icon.addEventListener('click', (e) => {
+            e.stopPropagation();
+            
+            // Βρίσκουμε το tooltip που ανήκει στην ΙΔΙΑ κάρτα με το εικονίδιο
+            const parent = icon.parentElement;
+            const tooltip = parent.querySelector('.carousel-tooltip');
+
+            if (!tooltip.classList.contains('active')) {
+                // ΑΝΟΙΓΜΑ
+                tooltip.classList.remove('closing');
+                tooltip.classList.add('active');
+            } else {
+                // ΚΛΕΙΣΙΜΟ (με το animation organic-shrink)
+                tooltip.classList.add('closing');
+                
+                // Περιμένουμε να τελειώσει το animation (0.4s) πριν βγάλουμε την κλάση active
+                setTimeout(() => {
+                    tooltip.classList.remove('active');
+                    tooltip.classList.remove('closing');
+                }, 400); 
+            }
+        });
+    });
+
+    // Κλείσιμο αν πατήσεις οπουδήποτε αλλού στη σελίδα
+    document.addEventListener('click', () => {
+        const activeTooltips = document.querySelectorAll('.carousel-tooltip.active');
+        activeTooltips.forEach(tooltip => {
+            tooltip.classList.add('closing');
+            setTimeout(() => {
+                tooltip.classList.remove('active');
+                tooltip.classList.remove('closing');
+            }, 400);
+        });
+    });
+});
