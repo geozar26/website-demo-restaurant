@@ -21,8 +21,9 @@
     <nav class="nav-links">
         <a href="index.html">Αρχική</a>
         <a href="index1.html">Σχετικά με εμάς</a>
-        <a href="index4.html">Υπηρεσίες</a>
         <a href="index3.html">Επικοινωνία</a>
+        <a href="index8.html" class="btn-solid">Κράτηση</a>
+
 
         <div class="nav-footer">
             <div class="social-row">
@@ -42,10 +43,124 @@
     </nav>
 </header>
 
+
+<div id="loginOverlay" class="login-overlay"></div>
+<div id="loginPopup" class="login-popup">
+    <span id="loginClose" class="close">&times;</span>
+    <h2>Σύνδεση</h2>
+    
+    <form id="loginForm" action="#" method="POST"> 
+        
+        <input type="text" id="usernameInput" placeholder="Όνομα Χρήστη ή Email" required/>
+        <input type="password" id="passwordInput" placeholder="Κωδικός Πρόσβασης..." required />
+        
+        <div class="remember-me-container">
+            <input type="checkbox" id="rememberMeCheck">
+            <label for="rememberMeCheck">Να με θυμάσαι</label>
+        </div>
+
+        <button type="submit" id="loginButton">Συνδεθείτε</button>
+        
+    </form>    <p class="social-text"> Συνέχεια με</p>
+    <div class="social-icons-modal">
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+    </div>
+
+    <p class="register-link">
+        Δεν είστε μέλος; <a href="#">Εγγραφείτε</a>
+    </p>
+</div>
+
+<header class="navbar">
+    <div class="logo">kitchen grid</div>
+
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-overlay"></label>
+
+    <label for="menu-toggle" class="menu-icon">
+        <i class="fa-solid fa-bars"></i>
+    </label>
+
+    <nav class="nav-links">
+        <div class="search-trigger" id="openSearch">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <a href="index.html">Αρχική</a>
+        <a href="index1.html">Σχετικά με εμάς</a>
+        <a href="index3.html">Επικοινωνία</a>
+         <a href="index8.html" class="btn-solid">Κράτηση</a>
+
+
+        <div class="nav-footer">
+            <div class="social-row">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+
+            <a href="#" class="order-btn">Online Παραγγελία</a>
+
+            <div class="contact-box">
+                <p><i class="fa-solid fa-location-dot"></i> Πανεπιστημίου 42, Αθήνα</p>
+                <a href="tel:1234567890">
+                    <i class="fa-solid fa-phone"></i> 1234567890
+                </a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="search-overlay" id="searchOverlay">
+    <span class="search-close" id="closeSearch">&times;</span>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Αναζήτηση για γεύσεις..." autocomplete="off">
+        <div class="search-bar-line"></div>
+        <div class="mega-menu-content">
+            <div class="mega-row">
+                <div class="mega-item">
+                
+                    <img src="images/menu.jpg" alt="Menu">   
+                    <h3>Μενού</h3>
+                </div>
+                <div class="mega-item">
+                    <img src="images/steak.png" alt="Offers">
+                    <h3>πρσσφορές</h3>
+                </div>
+                <div class="mega-item">
+                    <img src="images/solomon.png" alt="New">
+                    <h3>Νέες γεύσεις</h3>
+                </div>
+            </div>
+            <div class="mega-divider"></div>
+            <div class="mega-row">
+                <div class="mega-item">
+                <img src="images/κράτηση τραπεζιού.jpg" alt="Table">
+                    <a href="index8.html">
+                    <h3>Κράτηση τραπεζιού</h3>
+                    </a>
+                </div>
+                <div class="mega-item">
+                    <img src="images/events.jpg" alt="Loyalty">
+                      <a href="index7.html">
+                    <h3>Εκδηλώσεις</h3>
+                    </a>
+                </div>
+                <div class="mega-item">
+                    <img src="images/drinks.png" alt="Chef">
+                    <h3>Ποτά & Αναψυκτικά</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
     <section class="hero menu-hero" style="min-height: 40vh; padding-top: 120px;">
         <div class="hero-content">
             <h1>Ο Κατάλογός μας</h1>
             <p>Ανακαλύψτε γεύσεις φτιαγμένες με μεράκι και αγνά υλικά.</p>
+            <a href="" class="btn">Εξερευνήστε το Μενού</a>
         </div>
     </section>
 
@@ -131,6 +246,23 @@
             &copy; 2025 The kitchen grid. Όλα τα δικαιώματα διατηρούνται.
         </div>
     </footer>
+
+     <div id="searchResultsPage">
+    <h1 id="searchTitle">Αποτελέσματα Αναζήτησης</h1>
+    <div id="pizzasGrid"></div>
+</div>
+
+ 
+<div id="searchOverlay" class="search-overlay">
+    <span id="searchClose" class="search-close">&times;</span>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Αναζήτηση..." autocomplete="off">
+        <div class="search-bar-line"></div>
+    </div>
+</div>
+  
+<script src="script.js"></script>
+
 
     <script>
         function filterMenu(category) {
