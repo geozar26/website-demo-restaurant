@@ -117,28 +117,45 @@ var RestaurantApp = /** @class */ (function () {
             }
         });
     };
-    RestaurantApp.prototype.handleTooltip = function (card, e) {
-        e.stopPropagation();
-        var dishId = card.getAttribute('data-dish');
-        if (!dishId)
-            return;
-        var tooltip = document.getElementById("modal-".concat(dishId));
-        if (!tooltip)
-            return;
-        var isOpen = tooltip.getAttribute('data-open') === 'true';
+RestaurantApp.prototype.handleTooltip = function (card, e) {
+    e.stopPropagation();
+    
+    var dishId = card.getAttribute('data-dish');
+    if (!dishId) return;
+
+    var tooltip = document.getElementById('tooltip-' + dishId);
+    
+    if (tooltip) {
+        var isOpen = tooltip.classList.contains('active');
+
         this.closeAllTooltips();
+
         if (!isOpen) {
-            tooltip.style.display = 'block';
+            tooltip.classList.add('active');
             tooltip.setAttribute('data-open', 'true');
         }
-    };
-    RestaurantApp.prototype.closeAllTooltips = function () {
-        document.querySelectorAll('[id^="modal-"]').forEach(function (t) {
-            var el = t;
-            el.style.display = 'none';
-            el.setAttribute('data-open', 'false');
-        });
-    };
+    }
+};
+
+// Αυτή κλείνει τα μικρά συννεφάκια (tooltips)
+RestaurantApp.prototype.closeAllTooltips = function () {
+    var tooltips = document.querySelectorAll('.carousel-tooltip');
+    tooltips.forEach(function (t) {
+        t.classList.remove('active');
+        t.setAttribute('data-open', 'false');
+    });
+};
+
+// ΑΛΛΑΞΕ ΤΟ ΟΝΟΜΑ ΕΔΩ: Αυτή κλείνει τα μεγάλα παράθυρα (modals)
+RestaurantApp.prototype.closeAllModals = function () {
+    document.querySelectorAll('[id^="modal-"]').forEach(function (t) {
+        var el = t;
+        el.style.display = 'none';
+        el.setAttribute('data-open', 'false');
+    });
+};
+   
+   
     RestaurantApp.prototype.initLoginLogic = function () {
         var _a;
         var overlay = document.getElementById('loginOverlay');
