@@ -896,20 +896,34 @@ button {
 }
 
 .carousel-tooltip {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  transform: translateX(-50%) translateY(10px);
-  z-index: var(--z-navbar);
-  box-shadow: var(--shadow-xl);
-  background: white;
-  padding: 15px 20px;
-  border-radius: 10px;
-  width: 260px;
-  transition: all 0.3s ease;
+    position: absolute;
+    bottom: 80px;
+    left: 50%; 
+    
+    width: 240px;
+    padding: 15px 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+    opacity: 0;
+    pointer-events: none; 
+   
+   
+    transform: translateX(-50%) scale(0.8) translateY(20px);
+    transform-origin: bottom center;
+   
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 99;
 }
+
+.carousel-tooltip.active {
+    opacity: 1;
+    pointer-events: auto;
+   
+    transform: translateX(-50%) scale(1) translateY(0);
+}
+
 .carousel-tooltip b {
   display: block;
   color: var(--color-primary);
@@ -925,21 +939,27 @@ button {
   margin: 0;
 }
 
-.carousel-card:hover .carousel-tooltip {
-  visibility: visible;
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
+
+.tooltip-icon {
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+    background: #007bff;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 4px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 100;
 }
 
-.carousel-tooltip::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border-width: 8px;
-  border-style: solid;
-  border-color: white transparent transparent transparent;
+.carousel-tooltip.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
 }
 
 .carousel-dots {
@@ -2400,17 +2420,17 @@ button {
     max-width: 600px;
   }
     .landing-overlay {
-      justify-content: center; /* Κεντράρισμα οριζόντια για κινητά */
-      padding-bottom: 60px;    /* Σταθερή απόσταση για να μη χάνεται το κείμενο */
+      justify-content: center; 
+      padding-bottom: 60px;    
       align-items: flex-end;
     }
 
     .landing-content {
-      text-align: center;      /* Κείμενο στο κέντρο */
+      text-align: center;     
     }
 
     .landing-content h1 {
-      font-size: 2.1rem;       /* Μέγεθος που χωράει σε iPhone SE/320px */
+      font-size: 2.1rem;     
     }
 
     .landing-content p {
@@ -2419,7 +2439,7 @@ button {
     }
 
     .btn-primary {
-      padding: 14px 35px;      /* Ελαφρώς πιο μαζεμένο κουμπί */
+      padding: 14px 35px;     
       width: auto;
     }
   }
