@@ -82,7 +82,7 @@ class RestaurantApp {
         this.initSearch(); 
         this.initLightbox();
         this.initScrollAnimations();
-        console.log("💎 RestaurantApp: Fully Restored with TypeScript Types");
+        console.log(" RestaurantApp: Fully Restored with TypeScript Types");
     }
 
     initScrollAnimations(): void {
