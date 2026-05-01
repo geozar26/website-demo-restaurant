@@ -43,7 +43,7 @@ body {
 
   color: var(--color-dark);
   background: var(--color-light);
-}
+ }
 
 * {
   margin: 0;
@@ -73,7 +73,6 @@ body {
   width: 100%;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
 }
-
 
 
 .nav-links {
@@ -233,7 +232,6 @@ body {
   width: 100%;
   max-width: 180px;
   height: 120px;
-  -o-object-fit: cover;
      object-fit: cover;
   border-radius: 15px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
