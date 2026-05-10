@@ -5,7 +5,7 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
  <title>website restaurant</title>
 
-    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 
@@ -147,78 +147,50 @@
         </div>
     </section>
 
-    <section id="event-spaces-trigger" class="event-spaces-section">
-    <h2 class="spaces-title">Οι Χώροι των Εκδηλώσεών μας</h2>
+
+    
+   <section id="event-spaces-trigger" class="event-spaces-section">
+    <h2 class="spaces-title" data-aos="fade-down">Οι Χώροι των Εκδηλώσεών μας</h2>
     
     <div class="spaces-grid">
-        <div class="space-item">
+        
+        <div class="space-item" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
             <img src="images/rooftop.jpg" alt="Roof Garden Event">
             <div class="space-desc">
-                <h3></h3>
-                <p></p>
+                <h3 data-aos="fade-up" data-aos-delay="200">Εξωτερικός Χώρος (Ταράτσα)</h3>
+                <p data-aos="fade-up" data-aos-delay="400">Ένας μοντέρνος χώρος στην ταράτσα, ιδανικός για χαλαρά cocktail parties, γενέθλια και εταιρικές συναντήσεις.</p>
             </div>
         </div>
 
-        <div class="space-item">
-          <img src="images/restaurant.png" alt="Outdoor Event">
+        <div class="space-item" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="300">
+            <img src="images/restaurant.png" alt="Outdoor Event">
             <div class="space-desc">
-                <h3>Εσωτερική Αίθουσα Δεξιώσεων</h3>
-                <p>Ένας ζεστός χώρος υψηλής αισθητικής, ιδανικός για αξέχαστες κοινωνικές δεξιώσεις, εταιρικές δεξιώσεις και επίσημα δείπνα.</p>
+                <h3 data-aos="fade-up" data-aos-delay="500">Εσωτερική Αίθουσα Δεξιώσεων</h3>
+                <p data-aos="fade-up" data-aos-delay="700">Ένας ζεστός χώρος υψηλής αισθητικής, ιδανικός για αξέχαστες κοινωνικές δεξιώσεις, εταιρικές δεξιώσεις και επίσημα δείπνα.</p>
             </div>
         </div>
 
-        <div class="space-item">
-           <img src="" alt="Outdoor Event">
+        <div class="space-item" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="600">
+            <img src="images/outside space.jpg" alt="Outdoor Event">
             <div class="space-desc">
-                <h3>Εξωτερικός Χώρος (Αυλή)</h3>
-                <p></p>
+                <h3 data-aos="fade-up" data-aos-delay="800">Εξωτερικός Χώρος (Αυλή)</h3>
+                <p data-aos="fade-up" data-aos-delay="1000">Ένα δροσερό καταφύγιο μέσα στο πράσινο, κατάλληλο για την απόλαυση του πρωινού καφέ ή για στιγμές χαλάρωσης. Η φυσική ομορφιά του κήπου τον καθιστά ιδανικό προορισμό για κάθε εκδήλωση.</p>
             </div>
         </div>
-    </div>
+
+    </div> 
 </section>
 
-    <script>
-       
-        window.addEventListener('scroll', function() {
-            const box = document.getElementById('eventBox');
-            const section = document.getElementById('events-trigger');
-            const position = section.getBoundingClientRect().top;
-            const screenHeight = window.innerHeight / 1.3;
-
-            if(position < screenHeight) {
-                box.classList.add('active');
-            }
-        });
-    </script>
-
-    <script>
-    window.addEventListener('scroll', function() {
-     
-        const spaceItems = document.querySelectorAll('.space-item');
-        
-        spaceItems.forEach(item => {
-       
-            const position = item.getBoundingClientRect().top;
-            const screenHeight = window.innerHeight / 1.3; 
-
-         
-            if (position < screenHeight) {
-                item.classList.add('active'); 
-            }
-        });
-    });
-
-    
-    window.dispatchEvent(new Event('scroll'));
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 100
+  });
 </script>
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
-
-<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
-<script src="script.js"></script>
-
+  
 
 
 <div id="searchOverlay" class="search-overlay">
@@ -229,48 +201,61 @@
     </div>
 </div>
 
-<footer class="footer">
+<footer class="footer" style="overflow: hidden;">
     <div class="footer-container">
-      <div class="footer-col footer-left">
-        <h3>Ακολουθηστε μας</h3>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
+        <div class="footer-col" data-aos="fade-up" data-aos-delay="0" data-aos-anchor-placement="top-bottom">
+            <h3>Ακολουθηστε μας</h3>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
         </div>
-      </div>
-      <div class="footer-col footer-middle">
-        <h3>Συνδεσμοι</h3>
-        <ul>
-          <li><a href="#home">Αρχική</a></li>
-          <li><a href="index1.html">Σχετικά με Εμάς</a></li>
-          <li><a href="#services">Υπηρεσίες</a></li>
-          <li><a href="#contact">Επικοινωνία</a></li>
-        </ul>
-      </div>
-      <div class="footer-col footer-middle">
-        <h3>Πληροφοριες</h3>
-        <ul>
-          <li><a href="#">Πολιτική απορρήτου</a></li>
-          <li><a href="#">Συνταγές</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Γκάλερι</a></li>
-        </ul>
-      </div>
-      <div class="footer-col footer-right">
-        <h3>Επικοινωνια</h3>
-        <ul>
-          <li><a href="mailto:info@kitchengrid.gr">Email: info@kitchengrid.gr</a></li>
-            <li><a href="tel:+302101234567">Τηλέφωνο: +30 210 1234567</a></li>
-            <li><a href="https://www.google.com/maps/search/?api=1&query=Πανεπιστημίου+42+Αθήνα" target="_blank">Διεύθυνση: Πανεπιστημίου 42, Αθήνα</a></li>
-            <li><a href="#">Συχνές ερωτήσεις</a></li>
-        </ul>
-      </div>
+
+        <div class="footer-col" data-aos="fade-up" data-aos-delay="150" data-aos-anchor-placement="top-bottom">
+            <h3>Συνδεσμοι</h3>
+            <ul>
+                <li><a href="#home">Αρχική</a></li>
+                <li><a href="index1.html">Σχετικά</a></li>
+                <li><a href="index3.html">Επικοινωνία</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col" data-aos="fade-up" data-aos-delay="300" data-aos-anchor-placement="top-bottom">
+            <h3>Πληροφοριες</h3>
+            <ul>
+                <li><a href="#">Συνταγές</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Γκάλερι</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col" data-aos="fade-up" data-aos-delay="450" data-aos-anchor-placement="top-bottom">
+            <h3>Επικοινωνια</h3>
+            <ul>
+                <li><a href="mailto:info@kitchengrid.gr">info@kitchengrid.gr</a></li>
+                <li><a href="tel:+302101234567">+30 210 1234567</a></li>
+            </ul>
+        </div>
     </div>
-    <div class="footer-bottom">
-      &copy; 2025 The kitchen grid. Όλα τα δικαιώματα διατηρούνται.
+
+    <div class="footer-bottom" data-aos="fade-up" data-aos-delay="500" data-aos-anchor-placement="top-bottom">
+        © 2025 The kitchen grid. Όλα τα δικαιώματα διατηρούνται.
     </div>
+</footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+<script src="script.js"></script>
+
+
+    
+<script>
+  AOS.init();
+</script>
 
 </body>
 </html>
