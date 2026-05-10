@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Responsive Landing Page</title>
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css" />
 
@@ -91,33 +92,53 @@
 </div>
 
 
- 
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <h1>Η Γεύση που Ψάχνετε, με Φρέσκα Υλικά.</h1>
-      <p>Ετοιμάζουμε νόστιμα φρέσκα πιάτα με τα καλύτερα υλικά.</p>
-      <a href="#about" class="btn">Εξερευνήστε το Μενού</a>
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h1>Η Ιστορία του Kitchen Grid</h1>
+    <p>Από μια μικρή ιδέα σε έναν χώρο γεύσης και εμπειρίας...</p>
+    <a href="#about" class="btn">Εξερευνήστε το Μενού</a>
+  </div>
+</section>
+
+<section class="about-section">
+
+  <!-- Πρώτη Εικόνα: flip-left -->
+  <div class="about-row left-reveal">
+    <div class="about-image" data-aos="flip-left">
+      <img src="images/restaurant.jpg" alt="Atmosphere">
     </div>
-  </section>
+    <div class="about-text">
+      <h3>Η ιστορία μας</h3>
+      <p>Το Kitchen Grid δημιουργήθηκε με στόχο να προσφέρει μια σύγχρονη εμπειρία φαγητού, βασισμένη σε καθαρές γεύσεις, ποιοτικές πρώτες ύλες και απλό, προσεγμένο περιβάλλον.</p>
+      <p>Ένας χώρος όπου η κουζίνα, η παρέα και η καθημερινή απόλαυση συναντιούνται φυσικά, από τον πρωινό καφέ μέχρι το βραδινό τραπέζι.</p>
+    </div>
+  </div>
 
+  <!-- Δεύτερη Εικόνα: flip-right -->
+  <div class="about-row right-reveal reverse">
+    <div class="about-image" data-aos="flip-right">
+      <img src="images/ingredients.jpg" alt="Energy">
+    </div>
+    <div class="about-text">
+      <h3>Τα Υλικά μας</h3>
+      <p>Στο kitchen grid ξεκινάμε πάντα από την ποιότητα των υλικών.</p>
+      <p>Φρέσκα προϊόντα, προσεκτικά επιλεγμένα από τοπικούς προμηθευτές, αποτελούν τη βάση για κάθε πιάτο μας — από παραδοσιακές συνταγές μέχρι πιο σύγχρονες προτάσεις.</p>
+    </div>
+  </div>
 
-    <section class="container">
-        <div class="row"> 
-            
-            <div class="image">
-                <img src="images/about.jpg" alt="">
-            </div>
-            
-            <div class="content">
-                <h2>Σχετικά με Εμάς</h2>
-                <p>Στο kitchen grid αγαπάμε το καλό φαγητό και τη χαρά που φέρνει στο τραπέζι. Η κουζίνα μας βασίζεται σε φρέσκα, επιλεγμένα υλικά και παραδοσιακές συνταγές με μια σύγχρονη πινελιά.</p>
+  <!-- Τρίτη Εικόνα: flip-up -->
+  <div class="about-row left-reveal">
+    <div class="about-image" data-aos="flip-up">
+      <img src="images/colaboration.jpg" alt="Details">
+    </div>
+    <div class="about-text">
+      <h3>Ο Τρόπος που Δουλεύουμε</h3>
+      <p>Στο Kitchen Grid η συνεργασία βασίζεται στην εμπιστοσύνη και την άψογη επικοινωνία της ομάδας.</p>
+      <p>Κάθε ρόλος συνδέεται με τον επόμενο με ακρίβεια, ώστε η εμπειρία του επισκέπτη να παραμένει ομαλή, σταθερή και προσεγμένη σε κάθε της λεπτομέρεια.</p>
+    </div>
+  </div>
 
-                
-                 <p>Κάθε πιάτο φτιάχνεται με προσοχή και αγάπη, ώστε να προσφέρει γεύσεις που μένουν αξέχαστες. Εδώ δεν σερβίρουμε μόνο φαγητό, αλλά μια εμπειρία που μπορείς να μοιραστείς με φίλους και οικογένεια.</p>
-            </div>
-          </div>
-        </section>
-   
+</section>
 
 <footer class="footer">
     <div class="footer-container">
@@ -168,8 +189,23 @@
     <div id="pizzasGrid"></div>
 </div>
 
- 
+
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
 <script src="script.js"></script>
+
+
+    
+<script>
+  AOS.init();
+</script>
+
+
+
+
 
 </body>
 </html>
