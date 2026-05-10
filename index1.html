@@ -1,18 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Responsive Landing Page</title>
-   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css" />
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>website restaurant</title>
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+<link rel="icon" href="data:,">
+
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" 
+          onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" as="style" 
+          onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"></noscript>
 </head>
 <body>
 
+<div id="loginOverlay" class="login-overlay"></div>
+<div id="loginPopup" class="login-popup">
+    <span id="loginClose" class="close">&times;</span>
+    <h2>Σύνδεση</h2>
+    
+    <form id="loginForm" action="#" method="POST"> 
+        
+        <input type="text" id="usernameInput" placeholder="Όνομα Χρήστη ή Email" required/>
+        <input type="password" id="passwordInput" placeholder="Κωδικός Πρόσβασης..." required />
+        
+        <div class="remember-me-container">
+            <input type="checkbox" id="rememberMeCheck">
+            <label for="rememberMeCheck">Να με θυμάσαι</label>
+        </div>
+
+        <button type="submit" id="loginButton">Συνδεθείτε</button>
+        
+    </form>    <p class="social-text"> Συνέχεια με</p>
+    <div class="social-icons-modal">
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+    </div>
+
+    <p class="register-link">
+        Δεν είστε μέλος; <a href="#">Εγγραφείτε</a>
+    </p>
+</div>
+
 <header class="navbar">
-    <div class="logo">kitchen grid</div>
+    <div class="logo" data-aos="fade-right" data-aos-delay="0">
+        kitchen grid
+    </div>
 
     <input type="checkbox" id="menu-toggle">
     <label for="menu-toggle" class="menu-overlay"></label>
@@ -22,26 +62,30 @@
     </label>
 
     <nav class="nav-links">
-        <div class="search-trigger" id="openSearch">
+        <div class="search-trigger" id="openSearch" data-aos="fade-right" data-aos-delay="150" data-aos-anchor=".navbar">
             <i class="fa-solid fa-magnifying-glass"></i>
         </div>
 
-        <a href="index.html">Αρχική</a>
-        <a href="index1.html">Σχετικά με εμάς</a>
-        <a href="index3.html">Επικοινωνία</a>
-        <a href="index8.html" class="btn-solid">Κράτηση</a>
+        <a href="index.html" data-aos="fade-right" data-aos-delay="0" data-aos-anchor=".navbar">Αρχική</a>
+        <a href="index1.html" data-aos="fade-right" data-aos-delay="100" data-aos-anchor=".navbar">Σχετικά με εμάς</a>
+        <a href="index3.html" data-aos="fade-right" data-aos-delay="150" data-aos-anchor=".navbar">Επικοινωνία</a>
+        <a href="index8.html" class="btn-solid" data-aos="fade-right" data-aos-delay="200" data-aos-anchor=".navbar">Κράτηση</a>
 
         <div class="nav-footer">
-            <div class="social-row">
+            <div class="social-row" data-aos="fade-right" data-aos-delay="900" data-aos-anchor=".navbar">
                 <a href="#"><i class="fa-brands fa-facebook"></i></a>
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
             </div>
 
-            <a href="#" class="order-btn">Online Παραγγελία</a>
+            <a href="#" class="order-btn" data-aos="fade-right" data-aos-delay="1050" data-aos-anchor=".navbar">
+                ONLINE ΠΑΡΑΓΓΕΛΙΑ
+            </a>
 
             <div class="contact-box">
-                <p><i class="fa-solid fa-location-dot"></i> Πανεπιστημίου 42, Αθήνα</p>
-                <a href="tel:1234567890">
+                <p data-aos="fade-right" data-aos-delay="1200" data-aos-anchor=".navbar">
+                    <i class="fa-solid fa-location-dot"></i> Πανεπιστημίου 42, Αθήνα
+                </p>
+                <a href="tel:1234567890" data-aos="fade-right" data-aos-delay="1350" data-aos-anchor=".navbar">
                     <i class="fa-solid fa-phone"></i> 1234567890
                 </a>
             </div>
@@ -58,11 +102,11 @@
             <div class="mega-row">
                 <div class="mega-item">
                 
-                               <a href="index6.html">
+                     <a href="index6.html">
         <img src="images/menu.jpg" alt="Menu">
         <h3>Μενού</h3>
             </a>
-                </div>
+            </div>
                 <div class="mega-item">
                     <img src="images/steak.png" alt="Offers">
                     <h3>πρσσφορές</h3>
@@ -75,8 +119,8 @@
             <div class="mega-divider"></div>
             <div class="mega-row">
                 <div class="mega-item">
-                <img src="images/reservation.jpg" alt="Table">
-                    <a href="index8.html">
+                      <a href="index8.html">
+                <img src="images/reservations.png" alt="Table">
                     <h3>Κράτηση τραπεζιού</h3>
                     </a>
                 </div>
@@ -85,6 +129,10 @@
                       <a href="index7.html">
                     <h3>Εκδηλώσεις</h3>
                     </a>
+                </div>
+                <div class="mega-item">
+                    <img src="images/drinks.png" alt="Chef">
+                    <h3>Ποτά & Αναψυκτικά</h3>
                 </div>
             </div>
         </div>
