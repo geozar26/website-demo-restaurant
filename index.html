@@ -166,19 +166,34 @@
  <section class="todays-specials">
     <h2 data-aos="fade-up" data-aos-duration="800">Σημερινά Πιάτα</h2>
 
-    <div class="carousel-container"> <div class="carousel-track">
+    <div class="carousel-container">
+        <div class="carousel-track">
 
-            <div class="carousel-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100" data-dish="pastitsio">
-                <div class="tooltip-icon"><i class="fa-solid fa-utensils"></i></div>
-                <picture>
-                    <source srcset="images/pastitsio.webp" type="image/webp">
-                    <img src="images/pastitsio.png" alt="παστίτσιο">
-                </picture>
-                <p>Παστίτσιο</p>
-            </div>
+          <div class="carousel-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="250" data-dish="pastitsio">
+    <div class="tooltip-icon"><i class="fa-solid fa-utensils"></i></div>
+    
+    <div id="tooltip-pastitsio" class="carousel-tooltip">
+        <b>Υλικά</b>
+        <p>Παραδοσιακό παστίτσιο με πλούσια μπεσαμέλ και φρέσκο κιμά.</p>
+    </div>
 
+    <picture>
+        <source srcset="images/pastitsio.webp" type="image/webp">
+        <img src="images/pastitsio.png" alt="παστίτσιο">
+    </picture>
+    <p>Παστίτσιο</p>
+</div>
+
+            <!-- Γεμιστά Καλαμαράκια -->
             <div class="carousel-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="250" data-dish="kalamarakia">
                 <div class="tooltip-icon"><i class="fa-solid fa-utensils"></i></div>
+                
+                <!-- Το Tooltip για τα Καλαμαράκια -->
+                <div id="tooltip-kalamarakia" class="carousel-tooltip">
+                       <b>Υλικά</b>
+                    <p>Καλαμαράκια γεμιστά με ρύζι και μυρωδικά της θάλασσας.</p>
+                </div>
+
                 <picture>
                     <source srcset="images/gemista-kalamarakia.webp" type="image/webp">
                     <img src="images/gemista-kalamarakia.png" alt="καλαμάρια">
@@ -186,8 +201,16 @@
                 <p>Γεμιστά Καλαμαράκια</p>
             </div>
 
+            <!-- Γεμιστές Κρέπες -->
             <div class="carousel-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" data-dish="krepes">
                 <div class="tooltip-icon"><i class="fa-solid fa-utensils"></i></div>
+                
+                <!-- Το Tooltip για τις Κρέπες -->
+                <div id="tooltip-krepes" class="carousel-tooltip">
+                      <b>Υλικά</b>
+                    <p>Αλμυρές κρέπες με τυριά, ζαμπόν και κρέμα γάλακτος.</p>
+                </div>
+
                 <picture>
                     <source srcset="images/gemistes-krepes.webp" type="image/webp">
                     <img src="images/gemistes-krepes.png" alt="Κρέπες">
@@ -195,8 +218,16 @@
                 <p>Γεμιστές Κρέπες</p>
             </div>
 
+            <!-- Γαριδομακαρονάδα -->
             <div class="carousel-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="550" data-dish="garidomakaronada">
                 <div class="tooltip-icon"><i class="fa-solid fa-utensils"></i></div>
+                
+                <!-- Το Tooltip για τη Γαριδομακαρονάδα -->
+                <div id="tooltip-garidomakaronada" class="carousel-tooltip">
+                       <b>Υλικά</b>
+                    <p>Φρέσκιες γαρίδες με σπαγγέτι και κόκκινη σάλτσα μυρωδικών.</p>
+                </div>
+
                 <picture>
                     <source srcset="images/garidomakaronada.webp" type="image/webp">
                     <img src="images/garidomakaronada.png" alt="Γαριδομακαρονάδα">
@@ -204,8 +235,16 @@
                 <p>Γαριδομακαρονάδα</p>
             </div>
 
+            <!-- Γιουβέτσι -->
             <div class="carousel-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700" data-dish="gioubetsi">
                 <div class="tooltip-icon"><i class="fa-solid fa-utensils"></i></div>
+                
+                <!-- Το Tooltip για το Γιουβέτσι -->
+                <div id="tooltip-gioubetsi" class="carousel-tooltip">
+                       <b>Υλικά</b>
+                    <p>Μοσχαράκι κοκκινιστό στο φούρνο με παραδοσιακό κριθαράκι.</p>
+                </div>
+
                 <picture>
                     <source srcset="images/giouvetsi-kritharaki.webp" type="image/webp">
                     <img src="images/giouvetsi-kritharaki.png" alt="Γιουβέτσι">
@@ -217,69 +256,86 @@
     </div> 
 
     <div class="carousel-dots">
-
+  
     </div>
 
-    </section>
+</section>
 
    <section class="items">
     <h2 data-aos="zoom-in" data-aos-duration="800" data-aos-delay="0">
         Προτάσεις Γεύσεων
     </h2>
 
-    <div class="item" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
-        <picture>
-            <source srcset="images/pizza.webp" type="image/webp">
-            <img class="recipe-img" src="images/pizza.png" alt="Πίτσα" loading="lazy"> 
-        </picture>
-        <button class="info-btn" aria-label="Πληροφορίες"><i class="fa-solid fa-utensils"></i></button>
-        <h4>Πίτσα</h4>
-    </div>
+  <div class="item" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+    <picture>
+        <source srcset="images/pizza.webp" type="image/webp">
+    
+        <img class="recipe-img" 
+             src="images/pizza.png" 
+             alt="Πίτσα" 
+             loading="lazy"
+             data-title="Πίτσα Special" 
+             data-description="Πλούσια γέμιση με ζαμπόν, μπέικον, φρέσκα μανιτάρια, πιπεριά και λιωμένη μοτσαρέλα."> 
+    </picture>
+    <button class="info-btn" aria-label="Πληροφορίες"><i class="fa-solid fa-utensils"></i></button>
+    <h4>Πίτσα</h4>
+</div>
 
-    <div class="item" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
-        <picture>
-            <source srcset="images/gyros.webp" type="image/webp">
-            <img class="recipe-img" src="images/gyros.png" alt="Γύρος" loading="lazy">
-        </picture>
-        <button class="info-btn" aria-label="Πληροφορίες"><i class="fa-solid fa-utensils"></i></button>
-        <h4>Πίτα Γύρο</h4>
-    </div>
+<div class="item" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
+    <picture>
+        <source srcset="images/gyros.webp" type="image/webp">
+        <img class="recipe-img" 
+             src="images/gyros.png" 
+             alt="Πίτα Γύρο" 
+             loading="lazy"
+             data-title="Πίτα Γύρος Χοιρινός" 
+             data-description="Παραδοσιακή πίτα με ζουμερό χοιρινό γύρο, φρέσκια ντομάτα, κρεμμύδι, πατάτες τηγανητές και χειροποίητο τζατζίκι."> 
+    </picture>
+    <button class="info-btn" aria-label="Πληροφορίες"><i class="fa-solid fa-utensils"></i></button>
+    <h4>Πίτα Γύρο</h4>
+</div>
 
-    <div class="item" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="600">
-        <picture>
-            <source srcset="images/spaghetti-mpolonez.webp" type="image/webp">
-            <img class="recipe-img" src="images/spaghetti-mpolonez.png" alt="Σπαγγέτι" loading="lazy">
-        </picture>
-        <button class="info-btn" aria-label="Πληροφορίες"><i class="fa-solid fa-utensils"></i></button>
-        <h4>Σπαγγέτι</h4>
-    </div>
+  <div class="item" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="800">
+    <picture>
+        <source srcset="images/chicken.webp" type="image/webp">
+        <img class="recipe-img" 
+             src="images/chicken.png" 
+             alt="Κοτόπουλο" 
+             loading="lazy"
+             data-title="Κοτόπουλο Ψητό" 
+             data-description="Ζουμερό φιλέτο κοτόπουλο στα κάρβουνα, μαριναρισμένο με λεμόνι και ρίγανη, σερβιρισμένο με φρέσκες πατάτες.">
+    </picture>
+    <button class="info-btn" aria-label="Πληροφορίες"><i class="fa-solid fa-utensils"></i></button>
+    <h4>Κοτόπουλο</h4>
+</div>
 
-    <div class="item" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="800">
-        <picture>
-            <source srcset="images/chicken.webp" type="image/webp">
-            <img class="recipe-img" src="images/chicken.png" alt="Κοτόπουλο" loading="lazy">
-        </picture>
-        <button class="info-btn" aria-label="Πληροφορίες"><i class="fa-solid fa-utensils"></i></button>
-        <h4>Κοτόπουλο</h4>
-    </div>
+<div class="item" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="0">
+    <picture>
+        <source srcset="images/crepes.webp" type="image/webp">
+        <img class="recipe-img" 
+             src="images/crepes.png" 
+             alt="Κρέπα" 
+             loading="lazy"
+             data-title="Κρέπα Special" 
+             data-description="Λαχταριστή κρέπα με λιωμένο τυρί, ζαμπόν, φρέσκια ντομάτα και προαιρετική σάλτσα επιλογής.">
+    </picture>
+    <button class="info-btn" aria-label="Πληροφορίες"><i class="fa-solid fa-utensils"></i></button>
+    <h4>Κρέπα</h4>
+</div>
 
-    <div class="item" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="0">
-        <picture>
-            <source srcset="images/crepes.webp" type="image/webp">
-            <img class="recipe-img" src="images/crepes.png" alt="Κρέπα" loading="lazy">
-        </picture>
-        <button class="info-btn" aria-label="Πληροφορίες"><i class="fa-solid fa-utensils"></i></button>
-        <h4>Κρέπα</h4>
-    </div>
-
-    <div class="item" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
-        <picture>
-            <source srcset="images/soutzoukakia.webp" type="image/webp">
-            <img class="recipe-img" src="images/soutzoukakia.png" alt="Σουτζουκάκια" loading="lazy">
-        </picture>
-        <button class="info-btn" aria-label="Πληροφορίες"><i class="fa-solid fa-utensils"></i></button>
-        <h4>Σουτζουκάκια</h4>
-    </div>
+<div class="item" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+    <picture>
+        <source srcset="images/soutzoukakia.webp" type="image/webp">
+        <img class="recipe-img" 
+             src="images/soutzoukakia.png" 
+             alt="Σουτζουκάκια" 
+             loading="lazy"
+             data-title="Σουτζουκάκια Σμυρνέικα" 
+             data-description="Παραδοσιακά σουτζουκάκια με έντονο άρωμα κύμινου, μέσα σε σπιτική σάλτσα ντομάτας.">
+    </picture>
+    <button class="info-btn" aria-label="Πληροφορίες"><i class="fa-solid fa-utensils"></i></button>
+    <h4>Σουτζουκάκια</h4>
+</div>
 
     <div class="item" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
         <picture>
@@ -512,7 +568,7 @@
         </div>
     </div>
 
-    <div class="footer-bottom" data-aos="fade-up" data-aos-delay="600" data-aos-anchor-placement="top-bottom">
+    <div class="footer-bottom" data-aos="fade-up" data-aos-delay="500" data-aos-anchor-placement="top-bottom">
         © 2025 The kitchen grid. Όλα τα δικαιώματα διατηρούνται.
     </div>
 </footer>
