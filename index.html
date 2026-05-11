@@ -8,6 +8,8 @@
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+     <link rel="preload" as="image" href="images/restaurant.png">
+ 
     <link rel="stylesheet" href="style.css">
 
 <link rel="icon" href="data:,">
@@ -608,21 +610,22 @@
 <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
 <script src="script.js"></script>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
+ 
+    
+    <script>
+    window.addEventListener('load', () => {
+        // Αυτό το delay βοηθάει τα στοιχεία της λίστας να εμφανίζονται σταδιακά
+        document.querySelectorAll('.items .item').forEach((el, i) => {
+            el.setAttribute('data-aos-delay', i * 80);
+        });
 
-  document.querySelectorAll('.items .item').forEach((el, i) => {
-    el.setAttribute('data-aos-delay', i * 80);
-  });
-
-  AOS.init({
-    once: true,
-    duration: 500,
-    easing: "ease-out"
-  });
-
-});
-</script>
+        AOS.init({
+            once: true,
+            duration: 500,
+            easing: "ease-out"
+        });
+    });
+  <script>
  
 <div id="searchOverlay" class="search-overlay">
     <span id="searchClose" class="search-close">&times;</span>
