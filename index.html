@@ -612,7 +612,7 @@
 
  
     
-    <script>
+   <script>
     window.addEventListener('load', () => {
         // Αυτό το delay βοηθάει τα στοιχεία της λίστας να εμφανίζονται σταδιακά
         document.querySelectorAll('.items .item').forEach((el, i) => {
@@ -625,7 +625,17 @@
             easing: "ease-out"
         });
     });
-  <script>
+
+    // ΛΥΣΗ ΓΙΑ ΤΗΝ ΕΠΙΣΤΡΟΦΗ ΣΤΗ ΣΕΛΙΔΑ (BFCache)
+    window.addEventListener('pageshow', function (event) {
+        if (event.persisted) {
+            // Αν η σελίδα φορτώθηκε από την cache, κάνε refresh το AOS
+            setTimeout(() => {
+                AOS.refresh();
+            }, 100);
+        }
+    });
+    </script>
  
 <div id="searchOverlay" class="search-overlay">
     <span id="searchClose" class="search-close">&times;</span>
