@@ -261,12 +261,15 @@
 <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
 <script src="script.js"></script>
 
-
-    
 <script>
-  AOS.init();
+document.addEventListener("DOMContentLoaded", () => {
+  AOS.init({
+    once: true,
+    duration: 500,
+    easing: "ease-out"
+  });
+});
 </script>
-
 
 
 
