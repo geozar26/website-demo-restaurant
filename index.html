@@ -596,9 +596,19 @@
 <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
 <script src="script.js"></script>
 
- <script>
-document.querySelectorAll('.items .item').forEach((el, i) => {
-  el.setAttribute('data-aos-delay', i * 80);
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  document.querySelectorAll('.items .item').forEach((el, i) => {
+    el.setAttribute('data-aos-delay', i * 80);
+  });
+
+  AOS.init({
+    once: true,
+    duration: 500,
+    easing: "ease-out"
+  });
+
 });
 </script>
  
