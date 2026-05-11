@@ -597,14 +597,10 @@
 <script src="script.js"></script>
 
  <script>
-document.addEventListener("DOMContentLoaded", () => {
-  AOS.init({
-    once: true,
-    duration: 500,
-    easing: "ease-out"
-  });
+document.querySelectorAll('.items .item').forEach((el, i) => {
+  el.setAttribute('data-aos-delay', i * 80);
 });
- </script>
+</script>
  
 <div id="searchOverlay" class="search-overlay">
     <span id="searchClose" class="search-close">&times;</span>
