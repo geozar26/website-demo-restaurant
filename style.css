@@ -250,6 +250,13 @@ html, body {
   animation: fadeIn 0.6s ease forwards;
 }
 
+.mega-item a {
+    text-decoration: none;
+    color: inherit;      
+    display: block;       
+}
+
+
 .mega-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
