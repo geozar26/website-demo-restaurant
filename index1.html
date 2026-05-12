@@ -261,13 +261,20 @@
 <script src="script.js"></script>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-  AOS.init({
-    once: true,
-    duration: 500,
-    easing: "ease-out"
+  window.addEventListener('load', () => {
+    // Αρχικοποίηση του AOS αφού έχουν φορτώσει ΤΑ ΠΑΝΤΑ
+    AOS.init({
+      once: true,
+      duration: 800,
+      easing: "ease-out",
+      offset: 100 // Ξεκινάει το animation λίγο πιο μετά για να είναι σίγουρο ότι φαίνεται
+    });
+
+    // Διπλό check για να "ξυπνήσει" το AOS
+    setTimeout(() => {
+        AOS.refresh();
+    }, 500);
   });
-});
 </script>
 
 
