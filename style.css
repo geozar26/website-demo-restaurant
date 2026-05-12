@@ -838,33 +838,6 @@ p {
     margin-top: 10px;
 }
 
-/* --- Responsive Στρατηγική --- */
-
-/* Κάτω από 1052px: Το κείμενο πάει πάνω, η φόρμα κάτω */
-@media (max-width: 1052px) {
-    .reservation-wrapper {
-        flex-direction: column;
-        gap: 30px;
-    }
-    
-    .reservation-info {
-        text-align: center;
-        width: 100%;
-    }
-
-    .reservation-info ul {
-        display: inline-block;
-        text-align: left;
-    }
-
-    .reservation-form {
-        width: 100%;
-        max-width: 600px; /* Περιορίζουμε το πλάτος για να μην απλώνει πολύ */
-        margin: 0 auto;
-    }
-}
-
-
 
 .hero h1 {
   font-size: 2.5rem;
@@ -2864,3 +2837,26 @@ p {
     }
 }
 
+
+@media (max-width: 1052px) {
+    .reservation-wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .reservation-info {
+        text-align: center;
+        width: 100%;
+    }
+
+    .reservation-info ul {
+        display: inline-block;
+        text-align: left;
+    }
+
+    .reservation-form {
+        width: 100%;
+        max-width: 600px; /* Περιορίζουμε το πλάτος για να μην απλώνει πολύ */
+        margin: 0 auto;
+    }
+}
