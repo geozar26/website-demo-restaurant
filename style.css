@@ -1327,7 +1327,7 @@ p {
 
 .fab-wrapper {
   position: absolute;
-  top: 10px;
+  top: 2px;
   left: 10px;
   z-index: var(--z-fab);
 }
