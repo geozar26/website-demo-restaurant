@@ -1127,8 +1127,6 @@ p {
 }
 
 
-
-
 .carousel-dots {
   display: flex;
   justify-content: center;
@@ -1147,6 +1145,27 @@ p {
 .dot.active {
   background-color: var(--color-primary);
   transform: scale(1.2);
+}
+
+
+
+@keyframes tooltipShow {
+  from {
+    opacity: 0;
+    transform: scale(0.5) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+@keyframes successPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
 }
 
 .modal.active {
@@ -1367,7 +1386,8 @@ p {
   width: 28px;
   height: 28px;
   cursor: pointer;
-} 
+}
+
 
 @keyframes tooltipShow {
   from {
