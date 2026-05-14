@@ -2151,65 +2151,133 @@ p {
   font-size: 1rem;
 }
 
-@media (max-width: 1042px) {
-  .landing-overlay {
-    /* Αλλάζουμε την ευθυγράμμιση από center σε flex-end */
-    align-items: flex-end; 
-    
-    /* Προσθέτουμε padding στο κάτω μέρος για να μην ακουμπάει τέρμα κάτω */
-    /* Ρύθμισε το 15% ή το 20% ανάλογα με το πόσο χαμηλά το θες */
-    padding-bottom: 15%; 
-  }
 
-  .landing-content h1 {
-    font-size: 2.8rem; /* Μικραίνουμε λίγο τη γραμματοσειρά για tablets/mobile */
-  }
 
-  .landing-content p {
-    font-size: 1rem;
-  }
-}
+  
 
-@media (max-width: 1085px) {
-  .items {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 20px;
-    padding: 20px 10px;
+@media (max-width: 630px) {
+  .item img {
+    height: auto;
+    aspect-ratio: 4/3;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
-  .form-section-clean {
-    background-color: #ffffff;
-    padding: 60px 20px;
-    min-height: auto;
-  }
-
-  .container-flex {
-    flex-direction: column-reverse;
+  .services-grid {
+    grid-template-columns: 1fr;
     padding: 0 20px;
   }
-  .info-modal-card {
-    margin-right: 0;
-    margin-top: -60px;
-    width: 90%;
-    flex: none;
+  .service-card {
+    height: auto;
+    min-height: 250px;
+    padding: 30px 20px;
   }
-  .event-visual {
-    max-width: 100%;
+  .service-card h3 {
+    font-size: 1.4rem;
   }
-}
-
-@media (max-width: 900px) {
-  .spaces-grid {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .gallery h1 {
+    font-size: 3rem;
+    padding: 0 15px;
+  }
+  .row {
     flex-direction: column;
-    align-items: center;
+    text-align: center;
+    gap: 15px;
   }
-  .space-item {
+  .row .image, .row .content {
+    flex: 1 1 100%;
     max-width: 100%;
+    margin: 0 auto;
   }
-}
+  .items {
+    grid-template-columns: 1fr;
+    padding: 20px 15px;
+    gap: 25px;
+  }
+  .item img {
+    height: auto;
+    aspect-ratio: 4/3;
+  }
+  .container {
+    padding: 5px 10px;
+  }
+  .row {
+    margin: 0;
+    gap: 10px;
+  }
+  .footer-container {
+    padding: 20px 5px 8px 5px;
+  }
+  .items {
+    padding: 20px 15px;
+  }
+  .gallery .gallery-container {
+    padding: 30px 15px;
+  }
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .contact-card.form-card-style h3 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  .main-contact-form input {
+    font-size: 0.95rem;
+    padding: 12px 5px 8px 5px;
+    margin-bottom: 20px;
+  }
+  .contact-card.form-card-style {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 15px 15px 20px 15px;
+  }
+  .main-contact-form input::-moz-placeholder {
+    font-size: 0.9rem;
+  }
+  .main-contact-form input::placeholder {
+    font-size: 0.9rem;
+  }
+  .main-contact-form input {
+    width: 100%;
+    padding: 12px 8px;
+    font-size: 16px;
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: border-box;
+  }
+  .form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px 8px;
+    font-size: 16px;
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: border-box;
+  }
+  .contact-card.form-card-style h3 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .send-btn-green {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+  }
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+    
+    .nav-links {
+        width: 85%; 
+    }
 
+  }
 
-
-@media (max-width: 768px) {
+  @media (max-width: 768px) {
   .menu-icon {
     display: block;
     z-index: 1005;
@@ -2493,221 +2561,6 @@ p {
 }
 
 
-@media (max-width: 630px) {
-  .item img {
-    height: auto;
-    aspect-ratio: 4/3;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .services-grid {
-    grid-template-columns: 1fr;
-    padding: 0 20px;
-  }
-  .service-card {
-    height: auto;
-    min-height: 250px;
-    padding: 30px 20px;
-  }
-  .service-card h3 {
-    font-size: 1.4rem;
-  }
-  .footer-container {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-  .gallery h1 {
-    font-size: 3rem;
-    padding: 0 15px;
-  }
-  .row {
-    flex-direction: column;
-    text-align: center;
-    gap: 15px;
-  }
-  .row .image, .row .content {
-    flex: 1 1 100%;
-    max-width: 100%;
-    margin: 0 auto;
-  }
-  .items {
-    grid-template-columns: 1fr;
-    padding: 20px 15px;
-    gap: 25px;
-  }
-  .item img {
-    height: auto;
-    aspect-ratio: 4/3;
-  }
-  .container {
-    padding: 5px 10px;
-  }
-  .row {
-    margin: 0;
-    gap: 10px;
-  }
-  .footer-container {
-    padding: 20px 5px 8px 5px;
-  }
-  .items {
-    padding: 20px 15px;
-  }
-  .gallery .gallery-container {
-    padding: 30px 15px;
-  }
-  .container {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  .contact-card.form-card-style h3 {
-    font-size: 1rem;
-    margin-bottom: 15px;
-  }
-  .main-contact-form input {
-    font-size: 0.95rem;
-    padding: 12px 5px 8px 5px;
-    margin-bottom: 20px;
-  }
-  .contact-card.form-card-style {
-    margin-left: 20px;
-    margin-right: 20px;
-    padding: 15px 15px 20px 15px;
-  }
-  .main-contact-form input::-moz-placeholder {
-    font-size: 0.9rem;
-  }
-  .main-contact-form input::placeholder {
-    font-size: 0.9rem;
-  }
-  .main-contact-form input {
-    width: 100%;
-    padding: 12px 8px;
-    font-size: 16px;
-    margin-left: 0;
-    margin-right: 0;
-    box-sizing: border-box;
-  }
-  .form-group input, .form-group textarea {
-    width: 100%;
-    padding: 12px 8px;
-    font-size: 16px;
-    margin-left: 0;
-    margin-right: 0;
-    box-sizing: border-box;
-  }
-  .contact-card.form-card-style h3 {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 25px;
-  }
-  .send-btn-green {
-    width: 100%;
-    padding: 14px;
-    margin-top: 10px;
-  }
-  .menu-grid {
-    grid-template-columns: 1fr;
-  }
-    
-    .nav-links {
-        width: 85%; 
-    }
-      /* --- Responsiveness: Από 600px και κάτω --- */
-    .reservation {
-        padding: 40px 20px; /* Περιθώριο γύρω από τη φόρμα για να μην κολλάει στην οθόνη */
-    }
-
-    .reservation-form {
-        padding: 25px 20px;
-    }
-
-    /* Κρατάμε 2 στήλες για Ημερομηνία/Ώρα & Άτομα/Περίσταση */
-    .reservation-form .grid {
-        gap: 12px;
-    }
-
-    /* Όνομα, Τηλέφωνο, Textarea και Button πιάνουν όλο το πλάτος */
-    .reservation-form input[type="text"],
-    .reservation-form input[type="tel"],
-    .reservation-form textarea,
-    .reservation-form button {
-        grid-column: span 2;
-    }
-
-  }
-   
-@media screen and (max-width: 1042px) {
-  
-  .landing-overlay {
-    display: flex;
-    align-items: flex-end; /* Σπρώχνει το περιεχόμενο προς τα κάτω */
-    padding-bottom: 10%;   /* Απόσταση από τη βάση της οθόνης */
-    padding-left: 5%;      /* Λίγο πιο μαζεμένο στα πλάγια */
-    padding-right: 5%;
-    justify-content: flex-start; /* Παραμένει αριστερά μέχρι τα 636px */
-  }
-
-  .landing-content {
-    max-width: 90%;
-  }
-
-  .landing-content h1 {
-    font-size: 2.8rem;
-    line-height: 1.1;
-  }
-
-  .landing-content p {
-    font-size: 1.05rem;
-    max-width: 600px;
-  }
-    .landing-overlay {
-      justify-content: center; /* Κεντράρισμα οριζόντια για κινητά */
-      padding-bottom: 60px;    /* Σταθερή απόσταση για να μη χάνεται το κείμενο */
-      align-items: flex-end;
-    }
-
-    .landing-content {
-      text-align: center;      /* Κείμενο στο κέντρο */
-    }
-
-    .landing-content h1 {
-      font-size: 2.1rem;       /* Μέγεθος που χωράει σε iPhone SE/320px */
-    }
-
-    .landing-content p {
-      font-size: 0.95rem;
-      margin-bottom: 25px;
-    }
-
-    .btn-primary {
-      padding: 14px 35px;      /* Ελαφρώς πιο μαζεμένο κουμπί */
-      width: auto;
-    }
-  
-
-  .reservation-flex-container {
-    flex-direction: column;
-    gap: 30px;
-  }
-  .reservation-card-left, .reservation-info-aside {
-    flex: 1 1 auto;
-    width: 100%;
-    max-width: 450px;
-  }
-
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .form-row {
-    flex-direction: column;
-  }
-}
-
-
-
-
-
 @media (max-width: 768px) {
 .mega-menu-grid {
     display: grid;
@@ -2787,60 +2640,125 @@ p {
     }
   }
 
-/* --- Responsiveness: Από 474px έως 320px (Η κρίσιμη ζώνη) --- */
-@media (max-width: 474px) {
-    .reservation {
-        padding: 30px 15px; /* Ισορροπημένο περιθώριο δεξιά-αριστερά */
-    }
-
-    .reservation-form {
-        padding: 20px 15px; /* Μικρότερο εσωτερικό padding για να έχουν χώρο τα inputs */
-    }
-
-    .reservation-form .grid {
-        /* Γυρνάμε σε 1 στήλη για να μην "σπάνε" τα πεδία και να μη φαίνονται στενά */
-        grid-template-columns: 1fr; 
-        gap: 15px;
-    }
-
-    /* Επαναφέρουμε όλα τα πεδία να πιάνουν τη μία (και μοναδική) στήλη */
-    .reservation-form input,
-    .reservation-form select,
-    .reservation-form textarea,
-    .reservation-form button {
-        grid-column: span 1; 
-        font-size: 16px; /* Ιδανικό μέγεθος για mobile inputs */
-        height: auto;
-    }
-
-    .reservation-info h2 {
-        font-size: 1.5rem;
-        text-align: center;
-    }
-    
-    .reservation-info p {
-        font-size: 0.9rem;
-        text-align: center;
-    }
-
-    .reservation-info ul {
-        display: none; 
-    }
-
-
-
-
-    .reservation {
-        padding: 20px 10px;
-    }
-    
-    .reservation-form {
-        padding: 15px 10px;
-    }
+  @media (max-width: 900px) {
+  .spaces-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .space-item {
+    max-width: 100%;
+  }
 }
 
+   @media (max-width: 1085px) {
+  .items {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    padding: 20px 10px;
+  }
+  .form-section-clean {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    min-height: auto;
+  }
 
-@media (max-width: 1052px) {
+  .container-flex {
+    flex-direction: column-reverse;
+    padding: 0 20px;
+  }
+  .info-modal-card {
+    margin-right: 0;
+    margin-top: -60px;
+    width: 90%;
+    flex: none;
+  }
+  .event-visual {
+    max-width: 100%;
+  }
+
+  .landing-overlay {
+    display: flex;
+    align-items: flex-end; /* Σπρώχνει το περιεχόμενο προς τα κάτω */
+    padding-bottom: 10%;   /* Απόσταση από τη βάση της οθόνης */
+    padding-left: 5%;      /* Λίγο πιο μαζεμένο στα πλάγια */
+    padding-right: 5%;
+    justify-content: flex-start; /* Παραμένει αριστερά μέχρι τα 636px */
+  }
+
+  .landing-content {
+    max-width: 90%;
+  }
+
+  .landing-content h1 {
+    font-size: 2.8rem;
+    line-height: 1.1;
+  }
+
+  .landing-content p {
+    font-size: 1.05rem;
+    max-width: 600px;
+  }
+    .landing-overlay {
+      justify-content: center; /* Κεντράρισμα οριζόντια για κινητά */
+      padding-bottom: 60px;    /* Σταθερή απόσταση για να μη χάνεται το κείμενο */
+      align-items: flex-end;
+    }
+
+    .landing-content {
+      text-align: center;      /* Κείμενο στο κέντρο */
+    }
+
+    .landing-content h1 {
+      font-size: 2.1rem;       /* Μέγεθος που χωράει σε iPhone SE/320px */
+    }
+
+    .landing-content p {
+      font-size: 0.95rem;
+      margin-bottom: 25px;
+    }
+
+    .btn-primary {
+      padding: 14px 35px;      /* Ελαφρώς πιο μαζεμένο κουμπί */
+      width: auto;
+    }
+  
+
+  .reservation-flex-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .reservation-card-left, .reservation-info-aside {
+    flex: 1 1 auto;
+    width: 100%;
+    max-width: 450px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+
+  .landing-overlay {
+    /* Αλλάζουμε την ευθυγράμμιση από center σε flex-end */
+    align-items: flex-end; 
+    
+    /* Προσθέτουμε padding στο κάτω μέρος για να μην ακουμπάει τέρμα κάτω */
+    /* Ρύθμισε το 15% ή το 20% ανάλογα με το πόσο χαμηλά το θες */
+    padding-bottom: 15%; 
+  }
+
+  .landing-content h1 {
+    font-size: 2.8rem; /* Μικραίνουμε λίγο τη γραμματοσειρά για tablets/mobile */
+  }
+
+  .landing-content p {
+    font-size: 1rem;
+  }
+
     .reservation-wrapper {
         flex-direction: column;
         gap: 30px;
@@ -2861,4 +2779,5 @@ p {
         max-width: 600px; /* Περιορίζουμε το πλάτος για να μην απλώνει πολύ */
         margin: 0 auto;
     }
-}
+  }
+
