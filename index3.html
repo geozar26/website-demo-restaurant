@@ -196,50 +196,63 @@
     </div>
 </section>
 
+<section class="contact-info-section">
+    <div class="contact-container">
+        
+        <div class="contact-top-row">
+            
+            <div class="contact-form-card">
+                <h2>Στείλε μήνυμα</h2>
+                <form>
+                    <div class="form-group-row">
+                        <input type="text" placeholder="Όνομα" required>
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <input type="text" placeholder="Θέμα">
+                    <textarea rows="5" placeholder="Μήνυμα..."></textarea>
+                    <button type="submit">Αποστολή</button>
+                </form>
+            </div>
 
-<section class="contact-section">
-  <div class="container contact-grid">
-
-    <!-- FORM -->
-    <div class="contact-form-box">
-      <h2>Στείλε μήνυμα</h2>
-
-      <form>
-        <div class="form-row">
-          <input type="text" placeholder="Όνομα" required>
-          <input type="email" placeholder="Email" required>
+            <div class="contact-blue-card">
+                <div class="card-top">
+                    <h3>Ωράριο Λειτουργίας</h3>
+                    <p><i class="fa-solid fa-calendar-days"></i> Δευτέρα - Παρασκευή</p>
+                    <p class="hours-spec">13:00 - 23:00</p>
+                    <p><i class="fa-solid fa-calendar-days"></i> Σάββατο - Κυριακή</p>
+                    <p class="hours-spec">12:00 - 00:00</p>
+                </div>
+                
+                <div class="card-divider"></div>
+                
+                <div class="card-bottom">
+                    <h3>Επικοινωνία</h3>
+                    <p><i class="fa-solid fa-phone"></i> 1234567890</p>
+                    <p><i class="fa-solid fa-envelope"></i> info@kitchengrid.gr</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Πανεπιστημίου 42, Αθήνα</p>
+                </div>
+            </div>
+            
         </div>
 
-        <input type="text" placeholder="Θέμα">
+        <div class="contact-map-row">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3144.8906977227464!2d23.7317734!3d37.9808381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bd39fa95e4e7%3A0xc48419f9b5c3ff3b!2sPanepistimiou%2042%2C%20Athina%20106%2079!5e0!3m2!1sen!2sgr!4v1710000000000!5m2!1sen!2sgr" 
+                width="100%" 
+                height="380" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
 
-        <textarea rows="6" placeholder="Μήνυμα..."></textarea>
-
-        <button type="submit">Αποστολή</button>
-      </form>
     </div>
-
-    <!-- MAP / ACTION -->
-    <div class="contact-map-box">
-      <h2>Τοποθεσία</h2>
-      <p>Βρες μας εύκολα στον χάρτη.</p>
-
-      <a class="map-btn" href="https://maps.google.com" target="_blank">
-        Άνοιγμα στο Google Maps
-      </a>
-
-    <div class="map-placeholder">
-  <img src="images/location.jpg" alt="Τοποθεσία" />
-</div>
-
-  </div>
 </section>
 
-<section class="contact-image"></section>
-
-  
 <footer class="footer" style="overflow: hidden;">
     <div class="footer-container">
-        <div class="footer-col" data-aos="fade-up" data-aos-delay="0" data-aos-anchor-placement="top-bottom">
+        <div class="footer-col" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
             <h3>Ακολουθηστε μας</h3>
             <div class="social-icons">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -248,7 +261,7 @@
             </div>
         </div>
 
-        <div class="footer-col" data-aos="fade-up" data-aos-delay="150" data-aos-anchor-placement="top-bottom">
+        <div class="footer-col" data-aos="fade-up"  data-aos-anchor-placement="top-bottom">
             <h3>Συνδεσμοι</h3>
             <ul>
                 <li><a href="#home">Αρχική</a></li>
@@ -257,7 +270,7 @@
             </ul>
         </div>
 
-        <div class="footer-col" data-aos="fade-up" data-aos-delay="300" data-aos-anchor-placement="top-bottom">
+        <div class="footer-col" data-aos="fade-up"  data-aos-anchor-placement="top-bottom">
             <h3>Πληροφοριες</h3>
             <ul>
                 <li><a href="#">Συνταγές</a></li>
@@ -266,7 +279,7 @@
             </ul>
         </div>
 
-        <div class="footer-col" data-aos="fade-up" data-aos-delay="450" data-aos-anchor-placement="top-bottom">
+        <div class="footer-col" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
             <h3>Επικοινωνια</h3>
             <ul>
                 <li><a href="mailto:info@kitchengrid.gr">info@kitchengrid.gr</a></li>
@@ -275,7 +288,7 @@
         </div>
     </div>
 
-    <div class="footer-bottom" data-aos="fade-up" data-aos-delay="500" data-aos-anchor-placement="top-bottom">
+    <div class="footer-bottom" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
         © 2025 The kitchen grid. Όλα τα δικαιώματα διατηρούνται.
     </div>
 </footer>
