@@ -1361,9 +1361,28 @@ p {
 
 .fab-wrapper {
   position: absolute;
-  top: 2px;
-  left: 10px;
+  top: 15px;       /* Το κατεβάζουμε λίγο για να ευθυγραμμιστεί όμορφα */
+  left: 20px;      /* Το φέρνουμε λίγο πιο μέσα από την άκρη */
   z-index: var(--z-fab);
+  
+  /* ΟΙ ΙΔΙΟΤΗΤΕΣ ΠΟΥ ΕΛΕΙΠΑΝ ΚΑΙ ΠΡΕΠΕΙ ΝΑ ΠΡΟΣΘΕΣΕΙΣ: */
+  background: var(--color-primary); /* Δίνει το μπλε φόντο */
+  color: white;                     /* Κάνει το καρότσι λευκό */
+  width: 40px;                      /* Ορίζει το πλάτος */
+  height: 40px;                     /* Ορίζει το ύψος */
+  border-radius: var(--radius-md);  /* Το κάνει τετράγωνο με ελαφρώς στρογγυλές γωνίες */
+  display: flex;                    /* Κεντράρει το εικονίδιο */
+  align-items: center;              /* Κεντράρει κάθετα */
+  justify-content: center;           /* Κεντράρει οριζόντια */
+  box-shadow: var(--shadow-sm);     /* Δίνει τη σκιά για να ξεχωρίζει */
+  cursor: pointer;
+  transition: var(--transition-normal);
+}
+
+/* Πρόσθεσε και το hover για να αλλάζει χρώμα όταν πάει το ποντίκι πάνω του */
+.fab-wrapper:hover {
+  background: #005fcc;
+  transform: scale(1.05);
 }
 
 
