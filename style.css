@@ -43,15 +43,12 @@
   font-family: var(--font-stack);
 }
 
-* {
-    box-sizing: border-box; /* Υπολογίζει το padding μέσα στο πλάτος */
-}
 
 html, body {
     width: 100%;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Εξαφανίζει το άσπρο κενό δεξιά */
+    overflow-x: hidden; 
 }
 
 .container {
@@ -64,7 +61,7 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 19px 19px;
+  padding: 19px;
   background: var(--color-light);
   z-index: var(--z-navbar);
   position: fixed;
@@ -119,50 +116,50 @@ html, body {
   display: flex;
 }
 
-/* Το Overlay της αναζήτησης */
+
 .search-overlay {
-    position: fixed; /* Κλειδώνει πάνω από όλη τη σελίδα */
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.95);
-    z-index: 9999; /* Πάνω από όλα τα στοιχεία */
+    z-index: 9999; 
     
-    /* Επαναφορά για σωστό άνοιγμα/κλείσιμο */
-    display: none; /* Ελέγχεται από το JS (flex όταν είναι ενεργό) */
+  
+    display: none; 
     
-    /* Layout για να ξεκινάει από πάνω */
+
     flex-direction: column;
     align-items: center;
     justify-content: flex-start; 
     
-    /* Scrollability */
+
     overflow-y: auto;
-    padding-top: 60px; /* Κενό από την κορυφή της οθόνης */
+    padding-top: 60px; 
 }
 
-/* Όταν το overlay είναι ανοιχτό (προστίθεται μέσω JS) */
+
 .search-overlay.active {
     display: flex;
 }
 
-/* Container περιεχομένου */
+
 .search-container {
     width: 90%;
     max-width: 900px;
     position: relative;
-    margin-bottom: 50px; /* Εξασφαλίζει κενό στο τέλος του scroll */
+    margin-bottom: 50px; 
 }
 
-/* Το Mega Menu μέσα στο overlay */
+
 .mega-menu-content {
     width: 100%;
     margin-top: 40px;
-    /* Αφαιρούμε το padding-bottom από εδώ και το βάζουμε στο container */
+
 }
 
-/* Ρυθμίσεις για τις σειρές */
+
 .mega-row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -170,12 +167,6 @@ html, body {
     padding: 20px 0;
 }
 
-/* --- Media Queries για επαγγελματικό κενό --- */
-
-
-
-
-/* --- Media Queries για επαγγελματικό κενό --- */
 
 #searchInput {
   width: 100%;
@@ -254,14 +245,6 @@ html, body {
     text-decoration: none;
     color: inherit;      
     display: block;       
-}
-
-
-.mega-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  padding: 20px 0;
 }
 
 .mega-item {
@@ -398,12 +381,11 @@ html, body {
   width: 100%;
 }
 
-.hero-content h1 {
-    font-size: 42px;
-    margin-bottom: 20px;
+.hero-content h1{
+  font-size: 42px;
+  margin-bottom: 20px;
 }
 
-/* Στοχεύει το p που βρίσκεται ΜΕΣΑ στο .hero-content */
 .hero-content p {
     font-size: 19px;
     line-height: 1.7;
@@ -433,79 +415,138 @@ html, body {
   background: var(--color-light);
 }
 
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
+
+.contact-info-section {
+    background-color: var(--color-light);
+    padding-top: 60px;
+    padding-bottom: 0; 
+    font-family: var(--font-stack);
 }
 
-/* FORM */
-.contact-form-box {
-  background: white;
-  padding: 30px;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
-}
-
-.form-row {
-  display: flex;
-  gap: 15px;
-}
-
-input, textarea {
-  width: 100%;
-  margin-top: 15px;
-  padding: 12px;
-  border-radius: var(--radius-md);
-  border: 1px solid #ddd;
-  font-family: var(--font-stack);
-  transition: var(--transition-normal);
-}
-
-input:focus, textarea:focus {
-  border-color: var(--color-primary);
-  box-shadow: var(--shadow-neon);
-  outline: none;
-}
-
-button {
-  margin-top: 20px;
-  width: 100%;
-  padding: 14px;
-  border: none;
-  border-radius: var(--radius-pill);
-  background: var(--color-primary);
-  color: white;
-  font-weight: 600;
-  cursor: pointer;
+.contact-container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 
-.contact-map-box {
-  background: var(--color-dark);
-  color: white;
-  padding: 30px;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
+.contact-top-row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 45px;
+    flex-wrap: wrap;
 }
 
-.map-btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 18px;
-  background: var(--color-accent-login);
-  color: white;
-  border-radius: var(--radius-pill);
-  text-decoration: none;
+.contact-form-card, 
+.contact-blue-card {
+    flex: 1;
+    min-width: 300px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    box-sizing: border-box;
 }
 
-.map-placeholder {
-  margin-top: 10px;
-  border-radius: var(--radius-md);
-  background: url("images/map.jpg") center/cover no-repeat;
-  opacity: 0.8;
+
+.contact-form-card h2 {
+    color: var(--color-dark);
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
 }
 
+ 
+.contact-form-card input, 
+.contact-form-card textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-stack);
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.contact-form-card button {
+    background-color: var(--color-primary);
+    color: #ffffff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: var(--radius-pill);
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition-fast);
+    box-shadow: var(--shadow-neon);
+}
+
+.contact-form-card button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+
+.contact-blue-card {
+    background-color: var(--color-primary);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: var(--shadow-lg);
+}
+
+.contact-blue-card h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.contact-blue-card p {
+    margin: 6px 0;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-blue-card .hours-spec {
+    margin-left: 25px;
+    opacity: 0.9;
+    margin-bottom: 12px;
+}
+
+.card-divider {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin: 20px 0;
+}
+
+.sections-separator-map {
+    width: 100vw; 
+    max-width: 100%; 
+    display: grid;
+    background-color: transparent;
+}
+
+.sections-separator-map iframe {
+    width: 100%;
+    height: 450px; 
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .form-group-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    .contact-top-row {
+        gap: 20px;
+    }
+}
 .main-landing {
   position: relative;
   min-height: 80vh;
@@ -640,10 +681,10 @@ p {
   display: block;
 }
 
-/* --- Reservation Section Styles --- */
+
 .reservation {
     padding: 80px 10%;
-    background-color: #fcfcfc; /* Ελαφρύ φόντο για αντίθεση */
+    background-color: #fcfcfc; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -659,7 +700,6 @@ p {
     width: 100%;
 }
 
-/* Αριστερή πλευρά: Κείμενο */
 .reservation-info {
     flex: 1;
     padding-top: 20px;
@@ -693,7 +733,7 @@ p {
     font-weight: 500;
 }
 
-/* Δεξιά πλευρά: Φόρμα */
+
 .reservation-form {
     flex: 1.2;
     background: #ffffff;
@@ -703,10 +743,10 @@ p {
     width: 100%;
 }
 
-/* Grid για τα inputs */
+
 .reservation-form .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Δύο στήλες */
+    grid-template-columns: 1fr 1fr; 
     gap: 20px;
     margin-bottom: 20px;
 }
@@ -733,7 +773,7 @@ p {
 }
 
 .reservation-form textarea {
-    grid-column: span 2; /* Το textarea πιάνει όλο το πλάτος */
+    grid-column: span 2; 
     height: 120px;
     resize: none;
     margin-bottom: 20px;
@@ -742,7 +782,7 @@ p {
 .reservation-form button {
     width: 100%;
     padding: 18px;
-    background-color: #007bff; /* Άλλαξε το στο χρώμα του brand σου */
+    background-color: #007bff; 
     color: white;
     border: none;
     border-radius: 10px;
@@ -757,9 +797,7 @@ p {
     transform: translateY(-2px);
 }
 
-/* --- Media Queries για Responsiveness --- */
 
-/* Κεντρικό Section */
 .reservation {
     padding: 60px 5%;
     background-color: #f8f9fa;
@@ -775,13 +813,13 @@ p {
     align-items: flex-start;
 }
 
-/* Αριστερό Κείμενο */
+
 .reservation-info {
     flex: 1;
 }
 
 .reservation-info h2 {
-    font-size: clamp(2rem, 4vw, 2.8rem); /* Fluid font size */
+    font-size: clamp(2rem, 4vw, 2.8rem); 
     margin-bottom: 15px;
     font-weight: 800;
 }
@@ -799,37 +837,37 @@ p {
     gap: 10px;
 }
 
-/* Η Φόρμα */
+
 .reservation-form {
     flex: 1.2;
     background: #fff;
-    padding: 30px; /* Μειωμένο padding για να είναι πιο compact */
+    padding: 30px; 
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
-/* Grid Σύστημα - Εδώ γίνεται η μαγεία */
+
 .reservation-form .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 στήλες standard */
-    gap: 15px; /* Μικρότερο κενό ανάμεσα στα πεδία */
+    grid-template-columns: 1fr 1fr; 
+    gap: 15px; 
 }
 
 .reservation-form input, 
 .reservation-form select, 
 .reservation-form textarea {
     width: 100%;
-    padding: 12px 15px; /* Πιο στενά inputs */
+    padding: 12px 15px; 
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     font-size: 0.9rem;
     background: #fdfdfd;
 }
 
-/* Το Textarea πιάνει πάντα όλο το πλάτος */
+
 .reservation-form textarea {
     grid-column: span 2;
-    height: 80px; /* Μικρότερο ύψος */
+    height: 80px; 
     margin-top: 5px;
 }
 
@@ -845,11 +883,6 @@ p {
     margin-top: 10px;
 }
 
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
 .hero p {
   max-width: 600px;
   margin: 0 auto 26px;
@@ -1054,9 +1087,8 @@ p {
 
 .carousel-card .tooltip-icon {
     position: absolute;
-    bottom: 55px;   /* Το κρατάμε μέσα στην εικόνα */
-    left: 15px;     /* Μετακίνηση τέρμα αριστερά */
-    right: auto;    /* Ακυρώνουμε τυχόν προηγούμενο right */
+    bottom: 55px;  
+    left: 15px;     
     
     width: 35px;
     height: 35px;
@@ -1111,18 +1143,18 @@ p {
 .carousel-card .tooltip-icon i {
     color: #ffffff;
     font-size: 16px;
-    pointer-events: none; /* Το κλικ να περνάει στο div */
+    pointer-events: none; 
 }
-/* Ο Τίτλος (Υλικά) */
+
 .carousel-tooltip b {
     display: block;
     margin:5px;
-      color: var(--color-primary); /* Ένα ωραίο κόκκινο ή το χρώμα της επιχείρησής σου */
+      color: var(--color-primary); 
     font-size: 0.85rem;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.5px;
- /* Μια διακριτική γραμμή */
+
   
 }
 
@@ -1206,24 +1238,7 @@ p {
   opacity: 1;
 }
 
-@keyframes tooltipShow {
-  from {
-    opacity: 0;
-    transform: scale(0.5) translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
-}
-@keyframes successPulse {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-}
+
 .order-btn.success {
   background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
   animation: successPulse 0.5s ease;
@@ -1399,16 +1414,6 @@ p {
 }
 
 
-@keyframes tooltipShow {
-  from {
-    opacity: 0;
-    transform: scale(0.8) translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
-}
 .reveal {
   opacity: 0;
   will-change: transform, opacity;
@@ -1565,9 +1570,9 @@ p {
   display: flex;
 }
 
-/* About Section Styles */
+
 .about-section {
-    /* Πάνω: 120px (το κρατάμε), Δεξιά/Αριστερά: 10%, Κάτω: 60px (πιο μαζεμένο) */
+
     padding: 120px 10% 60px; 
     max-width: var(--container-width);
     margin: 0 auto;
@@ -1601,7 +1606,7 @@ p {
     margin-bottom: 100px;
 }
 
-/* Η κλάση που αντιστρέφει τη σειρά (Εικόνα δεξιά) */
+
 .about-row.reverse {
     flex-direction: row-reverse;
 }
@@ -1637,9 +1642,9 @@ p {
     font-size: 1.1rem;
 }
 
-/* Reveal Classes (Placeholder για τα εφέ σου) */
+
 .left-reveal, .right-reveal {
-    /* Εδώ θα προσθέσεις τα δικά σου transition/transform εφέ */
+   
     transition: all 0.8s ease-out;
 }
 
@@ -1967,7 +1972,7 @@ p {
   font-size: 0.9rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  text-transform: uppercase;
+  text-transform: upp2ercase;
   letter-spacing: 0.5px;
 }
 .recipe-trigger-btn:hover {
@@ -1990,7 +1995,7 @@ p {
 .landing-content {
   
  
-  text-align: left;           /* Στοίχιση κειμένου αριστερά */
+  text-align: left;          
   color: white;
 }
 
@@ -2128,7 +2133,7 @@ p {
 .space-item img {
   width: 100%;
   height: 350px;
-  -o-object-fit: cover;
+  -o-object-fit: cove;
      object-fit: cover;
   border-radius: 20px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
@@ -2564,7 +2569,7 @@ p {
 @media (max-width: 768px) {
 .mega-menu-grid {
     display: grid;
-    /* Επιβάλλουμε 3 στήλες πάντα, χωρίς minmax που τις σπάει */
+   
     grid-template-columns: repeat(3, 1fr); 
     gap: 15px;
     width: 95%;
@@ -2574,7 +2579,7 @@ p {
   .mega-item img {
     width: 100%;
     height: auto;
-    aspect-ratio: 1/1; /* Τετράγωνες για ομοιομορφία */
+    aspect-ratio: 1/1; 
     object-fit: cover;
     border-radius: 10px;
   }
@@ -2589,40 +2594,38 @@ p {
 
 
 
-    /* Διασφάλιση ότι όλα τα στοιχεία στη σειρά ξεκινούν από το ίδιο σημείο */
+   
     .mega-row {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 8px;
-        align-items: stretch; /* Αναγκάζει τα κουτιά να έχουν το ίδιο ύψος */
+        align-items: stretch; 
         overflow: visible;
     }
 
-    /* Απόσταση για τη δεύτερη σειρά (κάτω 3 εικόνες) */
     .mega-row + .mega-row {
         margin-top: 30px;
     }
 
-    /* Ευθυγράμμιση των εσωτερικών στοιχείων της κάθε στήλης */
+
     .mega-row > div, 
     .mega-row > section {
-        margin: 0; /* Μηδενισμός εξωτερικού περιθωρίου για να είναι ίσιες */
+        margin: 0; 
         padding: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    /* Ρυθμίσεις εικόνας για απόλυτη ομοιομορφία */
+
     .mega-row img {
         width: 100%;
         height: auto;
         display: block;
-        aspect-ratio: 1 / 1; /* Προαιρετικό: κάνει όλες τις εικόνες τετράγωνες για να είναι σίγουρα ίσιες */
+        aspect-ratio: 1 / 1;
         object-fit: cover;
     }
 
-    /* Κείμενο χωρίς περικοπές */
     .mega-row span, 
     .mega-row p,
     .mega-row a {
@@ -2632,7 +2635,7 @@ p {
         white-space: normal;
         overflow: visible;
         margin-top: 8px;
-        width: 100%; /* Διασφαλίζει ότι το κείμενο κεντράρεται σωστά κάτω από την εικόνα */
+        width: 100%; 
     }
 
     .search-container {
@@ -2678,50 +2681,35 @@ p {
 
   .landing-overlay {
     display: flex;
-    align-items: flex-end; /* Σπρώχνει το περιεχόμενο προς τα κάτω */
-    padding-bottom: 10%;   /* Απόσταση από τη βάση της οθόνης */
-    padding-left: 5%;      /* Λίγο πιο μαζεμένο στα πλάγια */
+    align-items: flex-end; 
+    padding-bottom: 10%;   
+    padding-left: 5%;      
     padding-right: 5%;
-    justify-content: flex-start; /* Παραμένει αριστερά μέχρι τα 636px */
+    justify-content: flex-start; 
   }
 
   .landing-content {
     max-width: 90%;
   }
 
-  .landing-content h1 {
-    font-size: 2.8rem;
-    line-height: 1.1;
-  }
-
-  .landing-content p {
-    font-size: 1.05rem;
-    max-width: 600px;
-  }
     .landing-overlay {
-      justify-content: center; /* Κεντράρισμα οριζόντια για κινητά */
-      padding-bottom: 60px;    /* Σταθερή απόσταση για να μη χάνεται το κείμενο */
+      justify-content: center; 
+      padding-bottom: 60px;   
       align-items: flex-end;
     }
 
     .landing-content {
-      text-align: center;      /* Κείμενο στο κέντρο */
+      text-align: center;    
     }
 
     .landing-content h1 {
-      font-size: 2.1rem;       /* Μέγεθος που χωράει σε iPhone SE/320px */
+      font-size: 2.1rem;      
     }
 
     .landing-content p {
       font-size: 0.95rem;
       margin-bottom: 25px;
     }
-
-    .btn-primary {
-      padding: 14px 35px;      /* Ελαφρώς πιο μαζεμένο κουμπί */
-      width: auto;
-    }
-  
 
   .reservation-flex-container {
     flex-direction: column;
@@ -2743,16 +2731,15 @@ p {
 
 
   .landing-overlay {
-    /* Αλλάζουμε την ευθυγράμμιση από center σε flex-end */
+    
     align-items: flex-end; 
     
-    /* Προσθέτουμε padding στο κάτω μέρος για να μην ακουμπάει τέρμα κάτω */
-    /* Ρύθμισε το 15% ή το 20% ανάλογα με το πόσο χαμηλά το θες */
+ 
     padding-bottom: 15%; 
   }
 
   .landing-content h1 {
-    font-size: 2.8rem; /* Μικραίνουμε λίγο τη γραμματοσειρά για tablets/mobile */
+    font-size: 2.8rem; 
   }
 
   .landing-content p {
@@ -2776,7 +2763,7 @@ p {
 
     .reservation-form {
         width: 100%;
-        max-width: 600px; /* Περιορίζουμε το πλάτος για να μην απλώνει πολύ */
+        max-width: 600px; 
         margin: 0 auto;
     }
   }
