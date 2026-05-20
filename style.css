@@ -153,11 +153,6 @@ html, body {
 }
 
 
-.mega-menu-content {
-    width: 100%;
-    margin-top: 40px;
-
-}
 
 
 .mega-row {
@@ -780,90 +775,13 @@ p {
     margin-bottom: 20px;
 }
 
-.reservation-form button {
-    width: 100%;
-    padding: 18px;
-    background-color: #007bff; 
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
-}
+
 
 .reservation-form button:hover {
     background-color: #0056b3;
     transform: translateY(-2px);
 }
 
-
-.reservation {
-    padding: 60px 5%;
-    background-color: #f8f9fa;
-    display: flex;
-    justify-content: center;
-}
-
-.reservation-wrapper {
-    display: flex;
-    max-width: 1100px;
-    width: 100%;
-    gap: 40px;
-    align-items: flex-start;
-}
-
-
-.reservation-info {
-    flex: 1;
-}
-
-.reservation-info h2 {
-    font-size: clamp(2rem, 4vw, 2.8rem); 
-    margin-bottom: 15px;
-    font-weight: 800;
-}
-
-.reservation-info ul {
-    list-style: none;
-    padding: 0;
-}
-
-.reservation-info li {
-    margin-bottom: 10px;
-    font-size: 0.95rem;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-
-.reservation-form {
-    flex: 1.2;
-    background: #fff;
-    padding: 30px; 
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-}
-
-
-.reservation-form .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
-    gap: 15px; 
-}
-
-.reservation-form input, 
-.reservation-form select, 
-.reservation-form textarea {
-    width: 100%;
-    padding: 12px 15px; 
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    background: #fdfdfd;
-}
 
 
 .reservation-form textarea {
@@ -1891,6 +1809,7 @@ p {
   justify-content: space-between;
   transition: transform 0.3s;
 }
+
 .menu-item:hover {
   transform: translateY(-5px);
 }
