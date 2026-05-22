@@ -32,7 +32,7 @@
            <a href="index.html" data-aos="fade-right" data-aos-duration="400" data-aos-anchor=".navbar">Αρχική</a>
         <a href="index1.html" data-aos="fade-right" data-aos-duration="400"  data-aos-anchor=".navbar">Σχετικά με εμάς</a>
         <a href="index3.html" data-aos="fade-right" data-aos-duration="400"  data-aos-anchor=".navbar">Επικοινωνία</a>
-        <a href="index8.html" class="btn-solid" data-aos-duration="400" data-aos="fade-right" data-aos-delay="200" data-aos-anchor=".navbar">Κράτηση</a>
+        <a href="index8.html" class="btn-solid"   data-aos="fade-right"   data-aos-duration="400"   data-aos-anchor=".navbar">Κράτηση</a>
         
         <div class="nav-footer">
             <div class="social-row">
@@ -168,7 +168,7 @@
                 </div>
             </div>
 
-            <div class="menu-item main">
+            <div class="menu-item all">
                 <div class="menu-item-info">
                     <h3>Γιουβέτσι Μοσχάρι <span class="price">11.00€</span></h3>
                     <p>Σιγομαγειρεμένο στο φούρνο με κριθαράκι και σάλτσα ντομάτας.</p>
@@ -181,6 +181,44 @@
                     <p>Ζουμερή σοκολατόπιτα με γλάσο μαύρης σοκολάτας.</p>
                 </div>
             </div>
+
+     <div class="menu-item main">
+                <div class="menu-item-info">
+                    <h3>Γεμιστά καλαμαράκια <span class="price">5.50€</span></h3>
+                    <p>Με παραδοσιακή γέμιση από ρύζι, μυρωδικά και σάλτσα φρέσκιας ντομάτας.</p>
+                </div>
+            </div>
+
+            <div class="menu-item main">
+                <div class="menu-item-info">
+                    <h3>Κοτόπουλο στον φούρνο <span class="price">5.50€</span></h3>
+                    <p>Τρυφερό κοτόπουλο μαριναρισμένο με λεμόνι, ρίγανη και τραγανές πατάτες φούρνου.</p>
+                </div>
+            </div>
+
+            <div class="menu-item main">
+                <div class="menu-item-info">
+                    <h3>Πίτα γύρο <span class="price">5.50€</span></h3>
+                    <p>Αφράτη πίτα με ζουμερό γύρο, φρέσκια ντομάτα, κρεμμύδι, πατάτες και σάλτσα της επιλογής σας.</p>
+                </div>
+            </div>
+
+            <div class="menu-item main">
+                <div class="menu-item-info">
+                    <h3>Burger <span class="price">5.50€</span></h3>
+                    <p>Με ζουμερό μπιφτέκι, λιωμένο τυρί τσένταρ, ντομάτα, μαρούλι και τη δική μας σως.</p>
+                </div>
+            </div>
+
+            <div class="menu-item main">
+                <div class="menu-item-info">
+                    <h3>Μπολονέζ <span class="price">5.50€</span></h3>
+                    <p>Al dente ζυμαρικά με πλούσια σάλτσα από φρέσκο μοσχαρίσιο κιμά και αρωματικά βότανα.</p>
+                </div>
+            </div>
+
+
+
         </div>
     </section>
 
@@ -251,7 +289,9 @@
 
     
 <script>
-  AOS.init();
+AOS.init({
+        once: true
+    });
 </script>
 
 
@@ -271,6 +311,7 @@
                     item.style.display = 'none';
                 }
             });
+            AOS.refresh();
         }
     </script>
 </body>
