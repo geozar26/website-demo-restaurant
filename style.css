@@ -6,7 +6,6 @@
   --color-text-secondary:#555;
   --color-accent-login:#58a6ad;
   --font-stack:"Poppins", sans-serif;
-  --font-stack:"Poppins", sans-serif;
   --container-width:1200px;
   --header-height:80px;
   --radius-sm:4px;
@@ -32,6 +31,7 @@
   --z-overlay:2000;
   --z-modal:3000;
   --img-home:url('images/restaurant.png');
+  --spacing-section: 140px;
 }
 
 
@@ -72,31 +72,20 @@ html, body {
 }
 
 
-
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 8px; 
+    gap: 30px; 
 }
 
-
-
-.nav-links a.btn-solid {
-    background-color: var(--color-primary);
-    color: #ffffff;
-    border-radius: var(--radius-pill);
-    
-  
-    padding: 8px 22px;    
-    font-size: 17px;     
-    font-weight: 600;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
-    box-shadow: var(--shadow-sm);
-    transition: var(--transition-normal);
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-dark);
+  font-weight: 500;
+  transition: color var(--transition-normal);
+}
+.nav-links a:hover {
+  color: var(--color-primary);
 }
 
 
@@ -108,12 +97,34 @@ html, body {
     font-size: 17px;
     margin-top: 2px;   
     display: inline-block;
-    transition: var(--transition-normal);
+    transition: color var(--transition-normal);
 }
 
 
-.search-overlay.active {
-  display: flex;
+.nav-links a:not(.btn-solid):hover {
+    color: var(--color-primary);
+}
+
+
+.nav-links a.btn-solid {
+    background-color: var(--color-primary);
+    color: #ffffff;
+    border-radius: var(--radius-pill);
+    padding: 8px 22px;    
+    font-size: 17px;     
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-normal);
+}
+
+/* 5. Hover εφέ για το κουμπί */
+.nav-links a.btn-solid:hover {
+    background-color: #005fcc;
 }
 
 
@@ -125,16 +136,10 @@ html, body {
     height: 100%;
     background: rgba(0, 0, 0, 0.95);
     z-index: 9999; 
-    
-  
     display: none; 
-    
-
     flex-direction: column;
     align-items: center;
     justify-content: flex-start; 
-    
-
     overflow-y: auto;
     padding-top: 60px; 
 }
@@ -151,7 +156,6 @@ html, body {
     position: relative;
     margin-bottom: 50px; 
 }
-
 
 
 
@@ -173,6 +177,8 @@ html, body {
   font-weight: 300;
   padding: 10px 0;
   letter-spacing: 1px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .search-bar-line {
@@ -285,10 +291,7 @@ html, body {
     transform: translateY(0);
   }
 }
-#searchInput {
-  text-align: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
+
 
 #pizzasGrid {
   display: grid;
@@ -403,27 +406,29 @@ html, body {
 }
 
 
-/* ===== CONTACT SECTION WRAPPER ===== */
-.contact-info-section{
-    padding: 80px 20px;
+ .contact-info-section {
+    /* 120px πάνω, 20px δεξιά-αριστερά, 0px κάτω (για να κολλήσει ο χάρτης στο footer) */
+    padding: 120px 20px 0px 20px; 
     background: var(--color-light);
     font-family: var(--font-stack);
 }
+
+
 
 .contact-container{
     max-width: var(--container-width);
     margin: 0 auto;
 }
 
-/* ===== TOP ROW LAYOUT ===== */
+
 .contact-top-row{
     display: flex;
-    gap: 30px;
+    gap: 80px;
     align-items: stretch;
     flex-wrap: wrap;
 }
 
-/* ===== FORM CARD (WHITE) ===== */
+
 .contact-form-card{
     flex: 1;
     min-width: 320px;
@@ -460,7 +465,7 @@ html, body {
     box-shadow: 0 0 0 3px rgba(0,120,255,0.15);
 }
 
-/* row inputs */
+
 .form-group-row{
     display: flex;
     gap: 12px;
@@ -470,7 +475,7 @@ html, body {
     flex: 1;
 }
 
-/* button */
+
 .contact-form-card button{
     width: 100%;
     padding: 12px;
@@ -487,7 +492,7 @@ html, body {
     background: #005fcc;
 }
 
-/* ===== BLUE INFO CARD ===== */
+
 .contact-blue-card{
     flex: 1;
     min-width: 320px;
@@ -501,38 +506,38 @@ html, body {
     justify-content: space-between;
 }
 
-/* headings */
+
 .contact-blue-card h3{
     margin-bottom: 12px;
     font-size: 20px;
 }
 
-/* text spacing */
+
 .contact-blue-card p{
     margin: 6px 0;
     font-size: 14px;
     opacity: 0.95;
 }
 
-/* divider */
 .card-divider{
     height: 1px;
     background: rgba(255,255,255,0.25);
     margin: 20px 0;
 }
 
-/* icons alignment */
+
 .contact-blue-card i{
     margin-right: 8px;
 }
 
-/* ===== MAP ===== */
+
 .contact-map-row{
-    margin-top: 30px;
+    margin-top: var(--spacing-section);
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow-md);
 }
+
 
 @media (max-width: 768px) {
     .form-group-row {
@@ -641,21 +646,7 @@ p {
   margin-top: 20px;
 }
 
-.nav-links {
-  display: flex;
-  text-align: center;
-  gap: 30px;
-  margin-top: 10px;
-}
-.nav-links a {
-  text-decoration: none;
-  color: var(--color-dark);
-  font-weight: 500;
-  transition: color var(--transition-normal);
-}
-.nav-links a:hover {
-  color: var(--color-primary);
-}
+
 
 #menu-toggle {
   display: none;
@@ -768,12 +759,6 @@ p {
     box-shadow: 0 0 8px rgba(0, 123, 255, 0.1);
 }
 
-.reservation-form textarea {
-    grid-column: span 2; 
-    height: 120px;
-    resize: none;
-    margin-bottom: 20px;
-}
 
 
 
@@ -784,11 +769,6 @@ p {
 
 
 
-.reservation-form textarea {
-    grid-column: span 2;
-    height: 80px; 
-    margin-top: 5px;
-}
 
 .reservation-form button {
     grid-column: span 2;
@@ -846,7 +826,7 @@ p {
   max-width: 360px;
   width: 80%;
   text-align: center;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+ 
 }
 .login-popup h2 {
   font-size: 1.8rem;
