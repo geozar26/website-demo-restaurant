@@ -56,6 +56,6 @@ This project was created to practice front-end development, responsive layouts, 
 
 ---
 
-## Note
+
 
 This project is front-end only and does not include a backend or real ordering system.
