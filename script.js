@@ -1,41 +1,3 @@
-var pizzaData = [
-    {
-        name: "Pizza Special",
-        price: "10.50€",
-        info: "Η πλούσια επιλογή με ζαμπόν, μπέικον, μανιτάρια και πιπεριές.",
-        ingredients: ["ζαμπον", "μπεικον", "μανιταρια", "τυρι", "pepperoni"],
-        img: "images/pizza.png"
-    },
-    {
-        name: "Pizza Margherita",
-        price: "8.50€",
-        info: "Απλή και κλασική με φρέσκια σάλτσα ντομάτας και μοτσαρέλα.",
-        ingredients: ["ντοματα", "μοτσαρελα", "βασιλικος", "τυρι"],
-        img: "images/pizza-2.png"
-    },
-    {
-        name: "Pizza BBQ Chicken",
-        price: "11.20€",
-        info: "Με καπνιστή σάλτσα BBQ, ψητό κοτόπουλο και κρεμμύδι.",
-        ingredients: ["κοτοπουλο", "bbq", "κρεμμυδι", "τυρι"],
-        img: "images/pizza-bbq.png"
-    },
-    {
-        name: "Spaghetti Carbonara",
-        price: "9.00€",
-        info: "Κλασική ιταλική συνταγή με κρέμα γάλακτος, μπέικον και παρμεζάνα.",
-        ingredients: ["μακαρονια", "μπεικον", "κρεμα γαλακτος", "παρμεζανα"],
-        img: "images/spaghetti-carbonara.png"
-    },
-    {
-        name: "Spaghetti Napolitana",
-        price: "7.50€",
-        info: "Απλή και γευστική με φρέσκια σάλτσα ντομάτας και μυρωδικά.",
-        ingredients: ["μακαρονια", "ντοματα", "βασιλικος", "σκορδο"],
-        img: "images/spaghetti-napolitana.png"
-    }
-];
-
 // --- APP CLASS ---
 var RestaurantApp = /** @class */ (function () {
     function RestaurantApp() {
@@ -101,58 +63,45 @@ var RestaurantApp = /** @class */ (function () {
                 new Carousel(selector);
         });
     };
-
-    // --- ΕΝΗΜΕΡΩΜΕΝΗ initGlobalEvents ---
     RestaurantApp.prototype.initGlobalEvents = function () {
         var _this = this;
         window.addEventListener('click', function (e) {
             var target = e.target;
             
-            // 1. Ελέγχουμε αν πατήθηκε συγκεκριμένα το μπλε εικονίδιο
-            var iconClicked = target.closest('.tooltip-icon');
-            
-            if (iconClicked) {
-                // Αν πατήθηκε το εικονίδιο, βρίσκουμε την κάρτα του για να διαβάσουμε το data-dish
-                var card = iconClicked.closest('.carousel-card, [data-dish]');
+            // --- ΕΞΥΠΝΟΣ ΕΛΕΓΧΟΣ: Πιάνει i, svg, span και κάθε στοιχείο με κλάση icon, fa-, bi-, info ---
+            var icon = target.closest('i, svg, .info-icon, .tooltip-btn, [class*="icon"], [class*="fa-"], [class*="bi-"], .info');
+            if (icon) {
+                var card = icon.closest('.carousel-card, [data-dish]');
                 if (card) {
                     _this.handleTooltip(card, e);
-                }
-            } 
-            else {
-                // 2. Αν πατήθηκε οπουδήποτε αλλού (π.χ. στην εικόνα), κλείνουμε τα tooltips
-                // Εξαιρούμε τα κλικ που γίνονται μέσα στο ίδιο το tooltip ή σε κάποιο modal
-                if (!target.closest('[id^="modal-"]') && !target.closest('.carousel-tooltip')) {
-                    _this.closeAllTooltips();
+                    return; // Σταματάει εδώ ώστε να μην κλείσει αμέσως το tooltip
                 }
             }
-
-            // Κλείσιμο του Recipe Modal
+            
+            // Αν πατηθεί οτιδήποτε άλλο εκτός από το εικονίδιο (π.χ. η εικόνα), κλείνουν όλα τα tooltips
+            if (!target.closest('[id^="modal-"]')) {
+                _this.closeAllTooltips();
+            }
             if (target === _this.recipeModal || target.classList.contains('modal')) {
                 _this.closeRecipeModal();
             }
         });
     };
-
     RestaurantApp.prototype.handleTooltip = function (card, e) {
         e.stopPropagation();
-        
         var dishId = card.getAttribute('data-dish');
-        if (!dishId) return;
-
+        if (!dishId)
+            return;
         var tooltip = document.getElementById('tooltip-' + dishId);
-        
         if (tooltip) {
             var isOpen = tooltip.classList.contains('active');
-
             this.closeAllTooltips();
-
             if (!isOpen) {
                 tooltip.classList.add('active');
                 tooltip.setAttribute('data-open', 'true');
             }
         }
     };
-
     // Αυτή κλείνει τα μικρά συννεφάκια (tooltips)
     RestaurantApp.prototype.closeAllTooltips = function () {
         var tooltips = document.querySelectorAll('.carousel-tooltip');
@@ -161,7 +110,6 @@ var RestaurantApp = /** @class */ (function () {
             t.setAttribute('data-open', 'false');
         });
     };
-
     // Αυτή κλείνει τα μεγάλα παράθυρα (modals)
     RestaurantApp.prototype.closeAllModals = function () {
         document.querySelectorAll('[id^="modal-"]').forEach(function (t) {
@@ -170,7 +118,6 @@ var RestaurantApp = /** @class */ (function () {
             el.setAttribute('data-open', 'false');
         });
     };
-       
     RestaurantApp.prototype.initLoginLogic = function () {
         var _a;
         var overlay = document.getElementById('loginOverlay');
@@ -275,18 +222,20 @@ var RestaurantApp = /** @class */ (function () {
         var _this = this;
         var _a;
         (_a = this.recipeModal) === null || _a === void 0 ? void 0 : _a.classList.remove('active');
-        setTimeout(function () { if (_this.recipeModal)
-            _this.recipeModal.style.display = 'none'; }, 300);
+        setTimeout(function () {
+            if (_this.recipeModal)
+                _this.recipeModal.style.display = 'none';
+        }, 300);
     };
     RestaurantApp.prototype.initSearch = function () {
         var searchIcon = document.getElementById('openSearch') || document.querySelector('.nav-search');
         var searchOverlay = document.getElementById('searchOverlay');
         var searchClose = document.getElementById('closeSearch') || document.getElementById('searchClose');
         var searchInput = document.getElementById('searchInput');
-        var mainWrapper = document.getElementById('page-wrapper');
-        var resultsPage = document.getElementById('searchResultsPage');
+        
         if (!searchIcon || !searchOverlay)
             return;
+            
         searchIcon.addEventListener('click', function (e) {
             e.preventDefault();
             searchOverlay.style.display = 'flex';
@@ -296,6 +245,7 @@ var RestaurantApp = /** @class */ (function () {
             }, 10);
             document.body.style.overflow = 'hidden';
         });
+        
         var closeSearch = function () {
             searchOverlay.classList.remove('active');
             setTimeout(function () {
@@ -303,57 +253,28 @@ var RestaurantApp = /** @class */ (function () {
                 document.body.style.overflow = 'auto';
             }, 300);
         };
+        
         searchClose === null || searchClose === void 0 ? void 0 : searchClose.addEventListener('click', closeSearch);
+        
         searchOverlay.addEventListener('click', function (e) {
             if (e.target === searchOverlay)
                 closeSearch();
         });
+        
         document.addEventListener('keydown', function (e) {
             if (e.key === "Escape" && searchOverlay.classList.contains('active'))
                 closeSearch();
         });
+        
         searchInput === null || searchInput === void 0 ? void 0 : searchInput.addEventListener('keypress', function (e) {
             if (e.key === 'Enter') {
                 e.preventDefault();
-                var query_1 = searchInput.value.toLowerCase().trim();
-                if (!query_1)
-                    return;
-                var results = pizzaData.filter(function (pizza) {
-                    return pizza.name.toLowerCase().includes(query_1) ||
-                        pizza.ingredients.some(function (ing) { return ing.includes(query_1); });
-                });
+                searchInput.value = '';
                 closeSearch();
-                if (mainWrapper && resultsPage) {
-                    mainWrapper.style.display = 'none';
-                    resultsPage.classList.add('active');
-                    resultsPage.style.display = 'flex';
-                    resultsPage.style.flexDirection = 'column';
-                    var grid_1 = document.getElementById('pizzasGrid');
-                    var title = document.getElementById('searchTitle');
-                    if (grid_1)
-                        grid_1.innerHTML = '';
-                    if (results.length > 0) {
-                        if (title)
-                            title.innerHTML = "<h1 class=\"search-results-title\" style=\"text-align:center; padding: 40px 0;\">\u0391\u03C0\u03BF\u03C4\u03B5\u03BB\u03AD\u03C3\u03BC\u03B1\u03C4\u03B1 \u03B3\u03B9\u03B1 \"".concat(query_1, "\"</h1>");
-                        results.forEach(function (item) {
-                            if (grid_1)
-                                grid_1.innerHTML += "\n                                <div class=\"search-card\">\n                                    <img src=\"".concat(item.img, "\" alt=\"").concat(item.name, "\">\n                                    <div class=\"card-body\" style=\"padding:15px;\">\n                                        <div style=\"display:flex; align-items:baseline; gap:5px; margin-bottom:10px;\">\n                                            <h2 style=\"margin:0; font-size:1.4rem;\">").concat(item.name, "</h2>\n                                            <span style=\"font-weight:bold; color:#e67e22; font-size:1.1rem; white-space:nowrap;\">").concat(item.price, "</span>\n                                        </div>\n                                        <p style=\"font-size:0.9rem; color:#555; margin-bottom:20px;\">").concat(item.info, "</p>\n                                        <button class=\"order-btn\" style=\"width:100%; display:flex; align-items:center; justify-content:center; gap:8px;\">\n                                            <svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"9\" cy=\"21\" r=\"1\"></circle><circle cx=\"20\" cy=\"21\" r=\"1\"></circle><path d=\"M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6\"></path></svg>\n                                            \u03A0\u0391\u03A1\u0391\u0393\u0393\u0395\u039B\u0399\u0391\n                                        </button>\n                                    </div>\n                                </div>");
-                        });
-                        grid_1 === null || grid_1 === void 0 ? void 0 : grid_1.insertAdjacentHTML('afterend', "\n                            <div class=\"back-btn-container\" style=\"text-align:center; margin: 80px 0 100px 0; width:100%;\">\n                                <button onclick=\"location.reload()\" class=\"order-btn\" style=\"background:#888; padding: 12px 50px; border-radius: 30px; border:none; color:white; cursor:pointer;\">\n                                    \u0395\u03A0\u0399\u03A3\u03A4\u03A1\u039F\u03A6\u0397 \u03A3\u03A4\u0397\u039D \u0391\u03A1\u03A7\u0399\u039A\u0397\n                                </button>\n                            </div>\n                        ");
-                    }
-                    else {
-                        if (title)
-                            title.innerHTML = "<h1 class=\"search-results-title\" style=\"text-align:center; padding: 40px 0;\">\u0394\u03B5\u03BD \u03B2\u03C1\u03AD\u03B8\u03B7\u03BA\u03B5 \u03BA\u03AC\u03C4\u03B9 \u03B3\u03B9\u03B1 \"".concat(query_1, "\"...</h1>");
-                        if (grid_1)
-                            grid_1.innerHTML = "<div style=\"grid-column:1/-1; text-align:center; margin-top:50px;\">\n                            <button onclick=\"location.reload()\" class=\"order-btn\" style=\"background:#888;\">\u03A0\u03AF\u03C3\u03C9 \u03C3\u03C4\u03B7\u03BD \u03B1\u03C1\u03C7\u03B9\u03BA\u03AE</button>\n                        </div>";
-                    }
-                    window.scrollTo(0, 0);
-                }
             }
         });
     };
     RestaurantApp.prototype.initGSAP = function () {
-        // @ts-ignore (Η βιβλιοθήκη gsap φορτώνεται εξωτερικά)
         if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined')
             return;
         // @ts-ignore
@@ -366,7 +287,6 @@ var RestaurantApp = /** @class */ (function () {
         gsap.from('.gallery-container .box', { scrollTrigger: { trigger: '.gallery', start: 'top 90%' }, opacity: 0, y: 15, duration: 0.4, stagger: 0.08, ease: 'power2.out' });
     };
     RestaurantApp.prototype.initLightbox = function () {
-        // @ts-ignore (Η βιβλιοθήκη GLightbox φορτώνεται εξωτερικά)
         if (typeof GLightbox !== 'undefined') {
             // @ts-ignore
             GLightbox({ selector: '.glightbox', touchNavigation: true, loop: true, autoplayVideos: true });
@@ -374,7 +294,6 @@ var RestaurantApp = /** @class */ (function () {
     };
     return RestaurantApp;
 }());
-
 // --- CAROUSEL CLASS (TS VERSION) ---
 var Carousel = /** @class */ (function () {
     function Carousel(selector) {
@@ -434,8 +353,10 @@ var Carousel = /** @class */ (function () {
                         reveal();
                 }
                 else {
-                    img.addEventListener('load', function () { if (++loaded === images.length)
-                        reveal(); });
+                    img.addEventListener('load', function () {
+                        if (++loaded === images.length)
+                            reveal();
+                    });
                 }
             });
         }
@@ -522,7 +443,6 @@ var Carousel = /** @class */ (function () {
     };
     return Carousel;
 }());
-
 // --- BOOTSTRAP ---
 document.addEventListener('DOMContentLoaded', function () {
     new RestaurantApp();
