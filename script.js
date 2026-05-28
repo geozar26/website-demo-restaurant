@@ -1,4 +1,3 @@
-// --- DATABASE ---
 var pizzaData = [
     {
         name: "Pizza Special",
@@ -36,6 +35,7 @@ var pizzaData = [
         img: "images/spaghetti-napolitana.png"
     }
 ];
+
 // --- APP CLASS ---
 var RestaurantApp = /** @class */ (function () {
     function RestaurantApp() {
@@ -101,61 +101,76 @@ var RestaurantApp = /** @class */ (function () {
                 new Carousel(selector);
         });
     };
+
+    // --- ΕΝΗΜΕΡΩΜΕΝΗ initGlobalEvents ---
     RestaurantApp.prototype.initGlobalEvents = function () {
         var _this = this;
         window.addEventListener('click', function (e) {
             var target = e.target;
-            var card = target.closest('.carousel-card, [data-dish]');
-            if (card) {
-                _this.handleTooltip(card, e);
+            
+            // 1. Ελέγχουμε αν πατήθηκε συγκεκριμένα το μπλε εικονίδιο
+            var iconClicked = target.closest('.tooltip-icon');
+            
+            if (iconClicked) {
+                // Αν πατήθηκε το εικονίδιο, βρίσκουμε την κάρτα του για να διαβάσουμε το data-dish
+                var card = iconClicked.closest('.carousel-card, [data-dish]');
+                if (card) {
+                    _this.handleTooltip(card, e);
+                }
+            } 
+            else {
+                // 2. Αν πατήθηκε οπουδήποτε αλλού (π.χ. στην εικόνα), κλείνουμε τα tooltips
+                // Εξαιρούμε τα κλικ που γίνονται μέσα στο ίδιο το tooltip ή σε κάποιο modal
+                if (!target.closest('[id^="modal-"]') && !target.closest('.carousel-tooltip')) {
+                    _this.closeAllTooltips();
+                }
             }
-            else if (!target.closest('[id^="modal-"]')) {
-                _this.closeAllTooltips();
-            }
+
+            // Κλείσιμο του Recipe Modal
             if (target === _this.recipeModal || target.classList.contains('modal')) {
                 _this.closeRecipeModal();
             }
         });
     };
-RestaurantApp.prototype.handleTooltip = function (card, e) {
-    e.stopPropagation();
-    
-    var dishId = card.getAttribute('data-dish');
-    if (!dishId) return;
 
-    var tooltip = document.getElementById('tooltip-' + dishId);
-    
-    if (tooltip) {
-        var isOpen = tooltip.classList.contains('active');
+    RestaurantApp.prototype.handleTooltip = function (card, e) {
+        e.stopPropagation();
+        
+        var dishId = card.getAttribute('data-dish');
+        if (!dishId) return;
 
-        this.closeAllTooltips();
+        var tooltip = document.getElementById('tooltip-' + dishId);
+        
+        if (tooltip) {
+            var isOpen = tooltip.classList.contains('active');
 
-        if (!isOpen) {
-            tooltip.classList.add('active');
-            tooltip.setAttribute('data-open', 'true');
+            this.closeAllTooltips();
+
+            if (!isOpen) {
+                tooltip.classList.add('active');
+                tooltip.setAttribute('data-open', 'true');
+            }
         }
-    }
-};
+    };
 
-// Αυτή κλείνει τα μικρά συννεφάκια (tooltips)
-RestaurantApp.prototype.closeAllTooltips = function () {
-    var tooltips = document.querySelectorAll('.carousel-tooltip');
-    tooltips.forEach(function (t) {
-        t.classList.remove('active');
-        t.setAttribute('data-open', 'false');
-    });
-};
+    // Αυτή κλείνει τα μικρά συννεφάκια (tooltips)
+    RestaurantApp.prototype.closeAllTooltips = function () {
+        var tooltips = document.querySelectorAll('.carousel-tooltip');
+        tooltips.forEach(function (t) {
+            t.classList.remove('active');
+            t.setAttribute('data-open', 'false');
+        });
+    };
 
-// ΑΛΛΑΞΕ ΤΟ ΟΝΟΜΑ ΕΔΩ: Αυτή κλείνει τα μεγάλα παράθυρα (modals)
-RestaurantApp.prototype.closeAllModals = function () {
-    document.querySelectorAll('[id^="modal-"]').forEach(function (t) {
-        var el = t;
-        el.style.display = 'none';
-        el.setAttribute('data-open', 'false');
-    });
-};
-   
-   
+    // Αυτή κλείνει τα μεγάλα παράθυρα (modals)
+    RestaurantApp.prototype.closeAllModals = function () {
+        document.querySelectorAll('[id^="modal-"]').forEach(function (t) {
+            var el = t;
+            el.style.display = 'none';
+            el.setAttribute('data-open', 'false');
+        });
+    };
+       
     RestaurantApp.prototype.initLoginLogic = function () {
         var _a;
         var overlay = document.getElementById('loginOverlay');
@@ -359,6 +374,7 @@ RestaurantApp.prototype.closeAllModals = function () {
     };
     return RestaurantApp;
 }());
+
 // --- CAROUSEL CLASS (TS VERSION) ---
 var Carousel = /** @class */ (function () {
     function Carousel(selector) {
@@ -506,6 +522,7 @@ var Carousel = /** @class */ (function () {
     };
     return Carousel;
 }());
+
 // --- BOOTSTRAP ---
 document.addEventListener('DOMContentLoaded', function () {
     new RestaurantApp();
