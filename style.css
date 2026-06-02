@@ -32,6 +32,7 @@
   --z-modal:3000;
   --img-home:url('images/restaurant.png');
   --spacing-section: 140px;
+  --spacing-section: 80px 10% 20px;
 }
 
 
@@ -46,8 +47,6 @@
 
 html, body {
     width: 100%;
-    margin: 0;
-    padding: 0;
     overflow-x: hidden; 
 }
 
@@ -407,7 +406,7 @@ html, body {
 
 
  .contact-info-section {
-    /* 120px πάνω, 20px δεξιά-αριστερά, 0px κάτω (για να κολλήσει ο χάρτης στο footer) */
+ 
     padding: 120px 20px 0px 20px; 
     background: var(--color-light);
     font-family: var(--font-stack);
@@ -840,7 +839,7 @@ p {
   font-size: 25px;
   cursor: pointer;
   color: #777;
-  color: var(--color-text-muted);
+ 
 }
 .login-popup .close:hover {
   color: var(--color-primary);
@@ -909,8 +908,8 @@ p {
   color: var(--color-primary);
   text-decoration: none;
   font-weight: bold;
-  color: var(--color-text-muted);
 }
+
 .register-link a:hover {
   color: var(--color-secondary);
 }
@@ -1001,7 +1000,7 @@ p {
     box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
 
-/* Το Λευκό Tooltip - Βελτιωμένο */
+
 .carousel-card .carousel-tooltip {
      position: absolute;
     bottom: 80px;
@@ -1253,32 +1252,28 @@ p {
   transform: scale(1.1);
 }
 
-.item {
-  position: relative;
-  padding-top: 50px;
-}
 
 .fab-wrapper {
   position: absolute;
-  top: 15px;       /* Το κατεβάζουμε λίγο για να ευθυγραμμιστεί όμορφα */
-  left: 20px;      /* Το φέρνουμε λίγο πιο μέσα από την άκρη */
+  top: 15px;       
+  left: 20px;     
   z-index: var(--z-fab);
   
-  /* ΟΙ ΙΔΙΟΤΗΤΕΣ ΠΟΥ ΕΛΕΙΠΑΝ ΚΑΙ ΠΡΕΠΕΙ ΝΑ ΠΡΟΣΘΕΣΕΙΣ: */
-  background: var(--color-primary); /* Δίνει το μπλε φόντο */
-  color: white;                     /* Κάνει το καρότσι λευκό */
-  width: 40px;                      /* Ορίζει το πλάτος */
-  height: 40px;                     /* Ορίζει το ύψος */
-  border-radius: var(--radius-md);  /* Το κάνει τετράγωνο με ελαφρώς στρογγυλές γωνίες */
-  display: flex;                    /* Κεντράρει το εικονίδιο */
-  align-items: center;              /* Κεντράρει κάθετα */
-  justify-content: center;           /* Κεντράρει οριζόντια */
-  box-shadow: var(--shadow-sm);     /* Δίνει τη σκιά για να ξεχωρίζει */
+
+  background: var(--color-primary); 
+  color: white;                   
+  width: 40px;                 
+  height: 40px;                  
+  border-radius: var(--radius-md);  
+  display: flex;                    
+  align-items: center;             
+  justify-content: center;           
+  box-shadow: var(--shadow-sm);     
   cursor: pointer;
   transition: var(--transition-normal);
 }
 
-/* Πρόσθεσε και το hover για να αλλάζει χρώμα όταν πάει το ποντίκι πάνω του */
+
 .fab-wrapper:hover {
   background: #005fcc;
   transform: scale(1.05);
@@ -1358,7 +1353,7 @@ p {
 }
 
 .testimonials-section {
-  padding: 15px;
+
   margin: 60px auto;
   max-width: 1300px;
   width: 90%;
@@ -1488,18 +1483,17 @@ p {
   display: flex;
 }
 
-
 .about-section {
-
-    padding: 120px 10% 60px; 
+    padding:var(--spacing-section);
     max-width: var(--container-width);
-    margin: 0 auto;
     overflow: hidden;
+    margin: 0 auto; /* Κεντράρει ολόκληρο το section στην οθόνη */
 }
+
 
 .about-intro {
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
 }
 
 .about-subtitle {
@@ -1521,7 +1515,7 @@ p {
     align-items: center;
     justify-content: space-between;
     gap: 50px;
-    margin-bottom: 100px;
+    margin-bottom: 70px;
 }
 
 
@@ -1535,7 +1529,8 @@ p {
 
 .about-image img {
     width: 100%;
-    height: 450px;
+    height: auto;
+    aspect-ratio: 4 / 5;
     object-fit: cover;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
@@ -1674,15 +1669,6 @@ p {
   overflow: hidden;
 }
 
-.contact-form-container.form-center {
-  width: 100%;
-  max-width: 500px;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  z-index: 2;
-  display: block;
-}
 
 .form-image-side {
   display: none;
@@ -1713,16 +1699,6 @@ p {
   box-shadow: 0 1px 0 0 var(--color-primary);
 }
 
-.contact-form-container.form-center {
-  position: static;
-  transform: none;
-  top: auto;
-  left: auto;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 450px;
-  flex-basis: auto;
-}
 
 .contact-card.form-card-style h3 {
   color: var(--color-primary);
