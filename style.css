@@ -2,6 +2,7 @@
   --color-primary:#0078ff;
   --color-dark:#222;
   --color-light:#F9F9F9;
+  --color-white:#ffffff;
   --color-text-main:#333;
   --color-text-secondary:#555;
   --color-accent-login:#58a6ad;
@@ -107,7 +108,7 @@ html, body {
 
 .nav-links a.btn-solid {
     background-color: var(--color-primary);
-    color: #ffffff;
+    color:var(--color-white);
     border-radius: var(--radius-pill);
     padding: 8px 22px;    
     font-size: 17px;     
@@ -195,7 +196,7 @@ html, body {
   position: absolute;
   top: 30px;
   right: 40px;
-  color: #fff;
+  color:var(--color-white);
   font-size: 40px;
   cursor: pointer;
   opacity: 0.6;
@@ -226,14 +227,7 @@ html, body {
   display: flex;
 }
 
-.search-results-title {
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: #2d3436;
-  margin-bottom: 50px;
-  text-align: center;
-  width: 100%;
-}
+
 
 .mega-menu-content {
   margin-top: 50px;
@@ -267,7 +261,7 @@ html, body {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 .mega-item h3 {
-  color: #fff;
+  color:var(--color-white);
   font-size: 1.1rem;
   font-weight: 500;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -291,15 +285,6 @@ html, body {
   }
 }
 
-
-#pizzasGrid {
-  display: grid;
-  width: 100%;
-  max-width: 1200px;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 30px;
-  justify-content: center;
-}
 
 
 #searchTitle {
@@ -1858,7 +1843,7 @@ p {
 .recipe-trigger-btn {
   align-self: flex-start;
   background: var(--color-primary);
-  color: #ffffff;
+  color:var(--color-white);
   padding: 12px 25px;
   border: none;
   border-radius: 30px;
@@ -1867,7 +1852,7 @@ p {
   font-size: 0.9rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  text-transform: upp2ercase;
+  text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 .recipe-trigger-btn:hover {
