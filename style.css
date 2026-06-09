@@ -413,13 +413,13 @@ body {
 }
 
 
-.contact-top-row{
+.contact-top-row {
     display: flex;
     gap: 80px;
     align-items: stretch;
     flex-wrap: wrap;
+    margin-bottom: 60px; /* Προσθέτει 60px κενό κάτω από ολόκληρη τη σειρά */
 }
-
 
 .contact-form-card{
     flex: 1;
@@ -1820,9 +1820,6 @@ p {
     margin: 0;
 }
 
-/* ==========================================================================
-   RESPONSIVE DESIGN (Media Queries)
-   ========================================================================== */
 
 .offers-header {
     
@@ -1858,9 +1855,8 @@ p {
     margin: 0 auto;
 }
 
-/* ==========================================================================
-   3. Offers Grid Container
-   ========================================================================== */
+
+
 .offers-container {
     max-width: var(--container-width);
     margin: 0 auto;
@@ -1872,27 +1868,25 @@ p {
     gap: 30px;
 }
 
-/* ==========================================================================
-   4. Offer Cards
-   ========================================================================== */
+
 .offer-card {
     background-color: var(--color-white);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
     overflow: hidden;
-    position: relative; /* Για να κλειδώσει το badge σωστά */
+    position: relative; 
     display: flex;
     flex-direction: column;
     transition: transform var(--transition-normal), box-shadow var(--transition-normal);
 }
 
-/* Εφέ όταν ο χρήστης περνάει το ποντίκι πάνω από την κάρτα */
+
 .offer-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
 }
 
-/* Badges (Εκπτώσεις / Φοιτητικό) */
+
 .offer-badge {
     position: absolute;
     top: 15px;
@@ -1907,12 +1901,9 @@ p {
     z-index: var(--z-normal);
 }
 
-/* Διαφορετικό χρώμα για το accent badge (π.χ. 1+1 Δώρο) */
-.offer-badge.badge-accent {
-    background-color: var(--color-accent-login);
-}
 
-/* Φωτογραφίες Φαγητών */
+
+
 .offer-image {
     height: 220px;
     background-size: cover;
@@ -1921,7 +1912,7 @@ p {
     background-color: #eee; /* Fallback χρώμα */
 }
 
-/* Προσωρινά placeholder images για να δείτε άμεσα το αποτέλεσμα */
+
 .img-family {
     background-image: url('https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80');
 }
@@ -1937,7 +1928,7 @@ p {
     padding: 25px;
     display: flex;
     flex-direction: column;
-    flex-grow: 1; /* Σπρώχνει τα κουμπιά να είναι στην ίδια ευθεία */
+    flex-grow: 1; 
 }
 
 .offer-content h2 {
@@ -1952,10 +1943,10 @@ p {
     font-size: 0.95rem;
     line-height: 1.5;
     margin-bottom: 20px;
-    flex-grow: 1; /* Ευθυγράμμιση κειμένου */
+    flex-grow: 1; 
 }
 
-/* Τιμές */
+
 .offer-pricing {
     display: flex;
     align-items: center;
