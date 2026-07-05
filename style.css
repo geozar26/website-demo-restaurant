@@ -2042,7 +2042,6 @@ p {
   color: var(--color-white);
   font-size: 3rem;
   margin-bottom: 10px;
-  text-transform: uppercase;
   letter-spacing: 2px;
 }
 
