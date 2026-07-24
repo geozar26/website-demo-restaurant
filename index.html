@@ -604,38 +604,25 @@
 
 
 
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-
-
-<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
-<script src="script.js"></script>
+<script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script defer src="script.js"></script>
 
    <script>
 
-    window.addEventListener('load', () => {
+document.addEventListener("DOMContentLoaded", () => {
 
-        // Αυτό το delay βοηθάει τα στοιχεία της λίστας να εμφανίζονται σταδιακά
+    document.querySelectorAll(".items .item").forEach((el,i)=>{
+        el.dataset.aosDelay=i*80;
+    });
 
-        document.querySelectorAll('.items .item').forEach((el, i) => {
+    AOS.init({
+        once:true,
+        duration:400,
+        easing:"ease-out"
+    });
 
-            el.setAttribute('data-aos-delay', i * 80);
-
-        });
-
-
-
-        AOS.init({
-
-            once: true,
-
-            duration: 500,
-
-            easing: "ease-out"
-
-        });
-
+});
     });
 
    </script>
