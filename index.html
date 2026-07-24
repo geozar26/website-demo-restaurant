@@ -2,927 +2,1324 @@
 
 
 
-
-Διεκδίκηση προσφοράς
-
-Ναι. Ένα domain (όνομα ιστοσελίδας) πληρώνεται συνήθως κάθε χρόνο για να παραμένει κατοχυρωμένο στο όνομά σου.
-
-Ενδεικτικές ετήσιες τιμές:
-
-.gr: περίπου 10–20 € / έτος
-
-.com: περίπου 12–20 € / έτος
-
-.net: περίπου 12–20 € / έτος
-
-.org: περίπου 10–20 € / έτος
-
-.shop: περίπου 20–40 € / έτος
-
-Μπορείς επίσης να το προπληρώσεις για περισσότερα χρόνια (π.χ. 2, 5 ή 10 χρόνια), αν θέλεις.
-
-Για να έχεις μια ιστοσελίδα online, συνήθως χρειάζεσαι:
-
-Domain: ~10–20 €/χρόνο.
-
-Hosting: ~30–100 €/χρόνο για ένα απλό site (ανάλογα με τον πάροχο και το πακέτο).
-
-Άρα για μια μικρή επαγγελματική ιστοσελίδα, το συνολικό ετήσιο κόστος είναι συχνά γύρω στα 40–120 €.
-
-Αν σκέφτεσαι να φτιάξεις e-shop για όλη την Ελλάδα (όπως ανέφερες), μπορώ να σου πω και πόσο θα κοστίζουν συνολικά:
-
-domain,
-
-hosting,
-
-SSL,
-
-Stripe,
-
-Snipcart (ή άλλη πλατφόρμα),
-
-και ποια έξοδα θα έχεις ανά πώληση.
-
-
-diafora org me gr 
-
-Η διαφορά μεταξύ .org και .gr είναι κυρίως στο τι δείχνει το domain και σε ποιο κοινό απευθύνεται.
-
-.org	.gr
-Διεθνές domain.	Ελληνικό domain.
-Συνδέεται συχνά με οργανισμούς, συλλόγους και μη κερδοσκοπικούς φορείς (αν και μπορεί να το αγοράσει οποιοσδήποτε).	Δείχνει ότι η ιστοσελίδα απευθύνεται κυρίως στην Ελλάδα.
-Κατάλληλο αν στοχεύεις σε διεθνές κοινό.	Κατάλληλο αν οι πελάτες σου είναι κυρίως στην Ελλάδα.
-Συνήθως κοστίζει περίπου 10–20 € τον χρόνο.	Συνήθως κοστίζει περίπου 10–20 € τον χρόνο.
-Αν θέλεις να πουλάς προϊόντα μόνο στην Ελλάδα, το .gr είναι συνήθως η καλύτερη επιλογή γιατί οι Έλληνες χρήστες το αναγνωρίζουν πιο εύκολα ως ελληνική επιχείρηση.
-
-Αν σκοπεύεις αργότερα να πουλάς και στο εξωτερικό, τότε συνήθως προτιμάται ένα .com.
-
-Για ένα ελληνικό e-shop, μια συνηθισμένη επιλογή είναι:
-
-example.gr (κύριο domain)
-
-και αν είναι διαθέσιμο, να κατοχυρώσεις και το example.com ώστε να το κρατήσεις για το μέλλον ή να μην το πάρει κάποιος άλλος.
-
-
-
-Επικολλημένο κείμενο(7).txt
-Έγγραφο
-
-Βλέπω ότι ανέβασες ένα αρχείο HTML (την αρχική σελίδα του restaurant website σου), αλλά δεν έγραψες τι θέλεις να κάνω με αυτό.
-
-Μπορώ, για παράδειγμα, να:
-
-Ελέγξω αν έχει λάθη σε HTML ή δομή.
-
-Προτείνω βελτιώσεις για SEO.
-
-Ελέγξω την προσβασιμότητα (accessibility).
-
-Βρω προβλήματα απόδοσης (performance).
-
-Ελέγξω αν είναι έτοιμο για δημοσίευση.
-
-Προτείνω βελτιώσεις στον κώδικα ή στο responsive design.
-
-Ελέγξω αν υπάρχουν περιττές ή διπλές ενότητες.
-
-Πες μου τι ακριβώς θέλεις να εξετάσω στο αρχείο.
-
-
-thelw na mou dosis to html me tropo na fortoni poio grigora to periexomeno giait isos logo animation argi 
-
-Από αυτό που βλέπω, το πρόβλημα δεν είναι κυρίως το HTML, αλλά το πώς φορτώνονται τα CSS, τα JavaScript και τα animations. Το HTML σου είναι ήδη αρκετά σωστό (έχει preload για την hero εικόνα, lazy loading στις περισσότερες εικόνες κ.λπ.). 
-
-
-Οι αλλαγές που θα έκανα είναι οι εξής:
-
-1. Βάλε defer στα scripts
-Αντί για:
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
-<script src="script.js"></script>
-χρησιμοποίησε:
-
-<script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-<script defer src="script.js"></script>
-Έτσι το HTML εμφανίζεται πριν εκτελεστεί η JavaScript.
-
-2. Μην περιμένεις το window.load
-Έχεις:
-
-window.addEventListener('load', () => {
-    AOS.init({
-        once: true,
-        duration: 500,
-        easing: "ease-out"
-    });
-});
-Το load περιμένει να κατέβουν όλες οι εικόνες.
-
-Καλύτερα:
-
-document.addEventListener("DOMContentLoaded", () => {
-
-    document.querySelectorAll(".items .item").forEach((el,i)=>{
-        el.dataset.aosDelay=i*80;
-    });
-
-    AOS.init({
-        once:true,
-        duration:400,
-        easing:"ease-out"
-    });
-
-});
-3. Μικρότερα animation
-Έχεις παντού:
-
-data-aos-duration="400"
-ή
-
-500
-Δοκίμασε:
-
-data-aos-duration="250"
-ή
-
-data-aos-duration="200"
-Θα φαίνεται πιο άμεσο.
-
-4. Μην βάζεις AOS σε όλα
-Έχεις animation σχεδόν σε κάθε element.
-
-Π.χ.
-
-<h4>
-<img>
-<p>
-δεν χρειάζονται animation.
-
-Κράτα animation μόνο σε:
-
-sections
-
-cards
-
-hero
-
-testimonials
-
-και όχι σε κάθε μικρό στοιχείο.
-
-5. Βάλε lazy loading παντού
-Είδα ότι αρκετές εικόνες το έχουν.
-
-Βάλε όμως σε όλες εκτός από την hero.
-
-<img
-src="..."
-loading="lazy"
-decoding="async"
-alt="">
-6. Μείωσε τα preload
-Έχεις preload για CSS και hero image.
-
-Μην κάνεις preload πολλές εικόνες.
-
-Κράτα μόνο:
-
-<link rel="preload" as="image" href="images/restaurant.webp">
-7. Χρησιμοποίησε WebP
-Βλέπω ότι χρησιμοποιείς:
-
-<picture>
-<source srcset="image.webp">
-<img src="image.png">
-</picture>
-Αυτό είναι πολύ σωστό.
-
-8. Βάλε διαστάσεις στις εικόνες
-Π.χ.
-
-<img
-src="..."
-width="400"
-height="300"
-loading="lazy"
-decoding="async">
-Έτσι αποφεύγονται τα layout shifts.
-
-9. Άλλαξε το AOS
-Αν έχεις:
-
-data-aos="zoom-in"
-είναι πιο βαρύ.
-
-Προτίμησε:
-
-data-aos="fade-up"
-ή
-
-fade
-που είναι πιο ελαφριά animations.
-
-10. Το μεγαλύτερο πρόβλημα
-Βλέπω ότι χρησιμοποιείς περίπου 70-100 στοιχεία με data-aos. 
-
-
-Αυτό σημαίνει ότι το AOS πρέπει να παρακολουθεί όλα αυτά καθώς κάνεις scroll.
-
-Αν τα μειώσεις στα 20-25, θα δεις αισθητή διαφορά.
-
-Η εκτίμησή μου
-Το HTML σου είναι ήδη σε καλό επίπεδο. Η μεγαλύτερη καθυστέρηση πιθανότατα οφείλεται:
-
-50% στα πολλά AOS animations.
-
-30% στις πολλές εικόνες που υπάρχουν στην αρχική σελίδα.
-
-20% στη JavaScript και στις εξωτερικές βιβλιοθήκες (AOS, GLightbox, Font Awesome).
-
-Αν εφαρμόσεις τις παραπάνω αλλαγές, είναι ρεαλιστικό να δεις βελτίωση της τάξης του 30–50% στον χρόνο που χρειάζεται για να εμφανιστεί και να γίνει πλήρως διαδραστική η σελίδα.
-
-
-to defer ti einai ? kai auto einai epaggelmaitki h arxaria lisi document.addEventListener("DOMContentLoaded", () => {
-
-    document.querySelectorAll(".items .item").forEach((el,i)=>{
-        el.dataset.aosDelay=i*80;
-    });
-
-    AOS.init({
-        once:true,
-        duration:400,
-        easing:"ease-out"
-    });
-
-});?
-
-Ναι, είναι επαγγελματική λύση. Στην πραγματικότητα είναι η λύση που χρησιμοποιούν οι περισσότεροι προγραμματιστές σήμερα.
-
-1. Τι κάνει το defer;
-Όταν έχεις:
-
-<script src="script.js"></script>
-ο browser κάνει τα εξής:
-
-Διαβάζει το HTML.
-
-Βλέπει το <script>.
-
-Σταματάει να διαβάζει το HTML.
-
-Κατεβάζει το JavaScript.
-
-Το εκτελεί.
-
-Μετά συνεχίζει το HTML.
-
-Αυτό μπορεί να καθυστερήσει την εμφάνιση της σελίδας.
-
-Με το defer:
-
-<script defer src="script.js"></script>
-γίνεται:
-
-Διαβάζει το HTML.
-
-Κατεβάζει παράλληλα το JavaScript.
-
-Συνεχίζει να εμφανίζει τη σελίδα.
-
-Όταν τελειώσει το HTML, τότε εκτελεί το JavaScript.
-
-Έτσι η σελίδα εμφανίζεται πιο γρήγορα.
-
-Για αυτό σχεδόν όλες οι σύγχρονες ιστοσελίδες χρησιμοποιούν defer.
-
-2. Γιατί είναι καλύτερο το DOMContentLoaded;
-Εσύ έχεις:
-
-window.addEventListener("load", () => {
-
-    AOS.init();
-
-});
-Το load σημαίνει:
-
-Περίμενε να φορτώσουν όλα.
-
-Δηλαδή:
-
-όλες οι εικόνες ✔
-
-όλα τα webp ✔
-
-όλα τα css ✔
-
-όλα τα fonts ✔
-
-όλα τα scripts ✔
-
-Αν έχεις 60 εικόνες, μπορεί να περιμένει αρκετά.
-
-Το
-
-document.addEventListener("DOMContentLoaded", () => {
-
-});
-σημαίνει:
-
-Μόλις τελειώσει το HTML, ξεκίνα.
-
-Δεν περιμένει τις εικόνες.
-
-Έτσι το menu, τα κουμπιά και το AOS ενεργοποιούνται νωρίτερα.
-
-3. Είναι επαγγελματική λύση;
-Ναι.
-
-Σχεδόν όλα τα frameworks κάνουν κάτι αντίστοιχο.
-
-React ✔
-
-Vue ✔
-
-Angular ✔
-
-Next.js ✔
-
-Δεν χρησιμοποιούν window.load για τέτοια πράγματα.
-
-4. Εγώ θα έγραφα έτσι
-document.addEventListener("DOMContentLoaded", () => {
-
-    document.querySelectorAll(".items .item").forEach((el, i) => {
-        el.dataset.aosDelay = i * 80;
-    });
-
-    AOS.init({
-        once: true,
-        duration: 400,
-        easing: "ease-out"
-    });
-
-});
-Είναι καθαρό, γρήγορο και επαγγελματικό.
-
-Μια μικρή βελτίωση
-Αφού βάλεις:
-
-<script defer src="script.js"></script>
-δεν χρειάζεσαι καν το DOMContentLoaded, γιατί το defer εγγυάται ότι το script θα εκτελεστεί αφού έχει φορτωθεί όλο το HTML.
-
-Άρα μπορείς απλά να γράψεις:
-
-document.querySelectorAll(".items .item").forEach((el, i) => {
-    el.dataset.aosDelay = i * 80;
-});
-
-AOS.init({
-    once: true,
-    duration: 400,
-    easing: "ease-out"
-});
-Αυτή είναι επίσης μια απολύτως επαγγελματική και πολύ συνηθισμένη προσέγγιση, αρκεί όλα τα scripts να φορτώνονται με defer.
-
-
-A confident 25-year-old woman in a stylish summer outfit, standing in a modern café while ordering coffee, front-side profile view. She has long wavy light brown hair, a small nose, and a relaxed confident expression. She is wearing a white fitted tank top, high-waisted beige linen trousers, white sneakers, and a lightweight pastel cardigan casually draped over her shoulders with the sleeves loosely tied in front. Warm morning sunlight, natural lighting, realistic fashion photography, candid lifestyle shot, shallow depth of field.
-
-Δημιουργημένη εικόνα: Φωτεινός καφές με χαλαρή ατμόσφαιρα
-
-
-Επεξεργασία
-
-post code ti shmaini 
-
-
-
 <!DOCTYPE html>
 
-<html lang="en"> <head> <meta charset="UTF-8" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <title>website restaurant</title>
+
+
+<html lang="en">
+
+<head>
+
+ <meta charset="UTF-8" />
+
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+ <title>website restaurant</title>
+
+
 
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+
+
  <link rel="preload" as="image" href="images/restaurant.png">
 
+
+
 <link rel="stylesheet" href="style.css">
+
+
+
 <link rel="icon" href="data:,">
 
+
+
 <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" 
+
       onload="this.onload=null;this.rel='stylesheet'">
+
 <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
 
-<link rel="preload" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" as="style" 
-      onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"></noscript>
-</head> <body>
 
-<div id="loginOverlay" class="login-overlay"></div> <div id="loginPopup" class="login-popup"> <span id="loginClose" class="close">&times;</span> <h2>Σύνδεση</h2>
+
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" as="style" 
+
+      onload="this.onload=null;this.rel='stylesheet'">
+
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"></noscript>
+
+
+
+</head>
+
+<body>
+
+
+
+<div id="loginOverlay" class="login-overlay"></div>
+
+<div id="loginPopup" class="login-popup">
+
+    <span id="loginClose" class="close">&times;</span>
+
+    <h2>Σύνδεση</h2>
+
+
 
 <form id="loginForm" action="#" method="POST"> 
+
     
+
     <input type="text" id="usernameInput" placeholder="Όνομα Χρήστη ή Email" required/>
+
     <input type="password" id="passwordInput" placeholder="Κωδικός Πρόσβασης..." required />
+
     
+
     <div class="remember-me-container">
+
         <input type="checkbox" id="rememberMeCheck">
+
         <label for="rememberMeCheck">Να με θυμάσαι</label>
+
     </div>
+
+
 
     <button type="submit" id="loginButton">Συνδεθείτε</button>
+
     
+
 </form>    <p class="social-text"> Συνέχεια με</p>
+
 <div class="social-icons-modal">
+
     <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+
     <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+
 </div>
+
+
 
 <p class="register-link">
+
     Δεν είστε μέλος; <a href="#">Εγγραφείτε</a>
+
 </p>
+
+
+
 </div>
 
-<header class="navbar"> <div class="logo" data-aos="fade-right" data-aos-delay="0"> kitchen grid </div>
+
+
+<header class="navbar">
+
+    <div class="logo" data-aos="fade-right" data-aos-delay="0">
+
+        kitchen grid
+
+    </div>
+
+
 
 <input type="checkbox" id="menu-toggle">
+
 <label for="menu-toggle" class="menu-overlay"></label>
 
+
+
 <label for="menu-toggle" class="menu-icon">
+
     <i class="fa-solid fa-bars"></i>
+
 </label>
 
+
+
 <nav class="nav-links">
+
     <div class="search-trigger" id="openSearch" data-aos="fade-right" data-aos-duration="400" data-aos-anchor=".navbar">
+
         <i class="fa-solid fa-magnifying-glass"></i>
+
     </div>
+
+
 
     <a href="index.html" data-aos="fade-right" data-aos-duration="400"  data-aos-anchor=".navbar">Αρχική</a>
+
     <a href="index1.html" data-aos="fade-right" data-aos-duration="400"  data-aos-anchor=".navbar">Σχετικά με εμάς</a>
+
     <a href="index3.html" data-aos="fade-right" data-aos-duration="400"  data-aos-anchor=".navbar">Επικοινωνία</a>
+
     <a href="index8.html" class="btn-solid" data-aos-duration="400" data-aos="fade-right"  data-aos-anchor=".navbar">Κράτηση</a>
 
+
+
     <div class="nav-footer">
+
         <div class="social-row">
+
             <a href="#"><i class="fa-brands fa-facebook"></i></a>
+
             <a href="#"><i class="fa-brands fa-instagram"></i></a>
+
         </div>
+
+
 
         <a href="#" class="order-btn">
+
             ONLINE ΠΑΡΑΓΓΕΛΙΑ
+
         </a>
+
+
 
         <div class="contact-box">
+
          <p>
+
                 <i class="fa-solid fa-location-dot"></i> Πανεπιστημίου 42, Αθήνα
+
             </p>
+
             <a href="tel:1234567890">
+
                 <i class="fa-solid fa-phone"></i> 1234567890
+
             </a>
+
         </div>
+
     </div>
+
 </nav>
+
+
+
 </header>
 
-<div class="search-overlay" id="searchOverlay"> <span class="search-close" id="closeSearch">&times;</span> <div class="search-container"> <input type="text" id="searchInput" placeholder="Αναζήτηση για γεύσεις..." autocomplete="off"> <div class="search-bar-line"></div> <div class="mega-menu-content"> <div class="mega-row"> <div class="mega-item">
+
+
+<div class="search-overlay" id="searchOverlay">
+
+    <span class="search-close" id="closeSearch">&times;</span>
+
+    <div class="search-container">
+
+        <input type="text" id="searchInput" placeholder="Αναζήτηση για γεύσεις..." autocomplete="off">
+
+        <div class="search-bar-line"></div>
+
+        <div class="mega-menu-content">
+
+            <div class="mega-row">
+
+                <div class="mega-item">
+
+
 
                  <a href="index6.html">
+
     <img src="images/menu.jpg" alt="Menu">
+
     <h3>Μενού</h3>
+
         </a>
+
         </div>
+
             <div class="mega-item">
+
                         <a href="index9.html">
+
                 <img src="images/steak.png" alt="Offers">
+
                 <h3>πρoσφορές</h3>
+
             </a>
+
             </div>
+
             <div class="mega-item">
+
                   <a href="index11.html">
+
                 <img src="images/solomon.png" alt="New">
+
                 <h3>Νέες γεύσεις</h3>
+
                   </a>
+
             </div>
+
         </div>
+
         <div class="mega-divider"></div>
+
         <div class="mega-row">
+
             <div class="mega-item">
+
                   <a href="index8.html">
+
             <img src="images/reservations.png" alt="Table">
+
                 <h3>Κράτηση τραπεζιού</h3>
+
                 </a>
+
             </div>
+
             <div class="mega-item">
+
                 <img src="images/events.jpg" alt="Loyalty">
+
                   <a href="index7.html">
+
                 <h3>Εκδηλώσεις</h3>
+
                 </a>
+
             </div>
+
             <div class="mega-item">
+
                 <a href="index10.html">
+
                 <img src="images/drinks.png" alt="Chef">
+
                 <h3>Ποτά & Αναψυκτικά</h3>
+
                 </a>
+
             </div>
+
         </div>
+
     </div>
-</div>
+
 </div>
 
-<section id="home" class="hero"> <div class="hero-content"> <h1 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="400"> Η Γεύση που Ψάχνετε, με Φρέσκα Υλικά. </h1>
+
+
+</div>
+
+
+
+ <section id="home" class="hero">
+
+    <div class="hero-content">
+
+        <h1 data-aos="fade-up" 
+
+            data-aos-anchor-placement="bottom-bottom" 
+
+            data-aos-duration="400">
+
+            Η Γεύση που Ψάχνετε, με Φρέσκα Υλικά.
+
+        </h1>
+
+
 
     <p data-aos="fade-up" 
+
        data-aos-anchor-placement="bottom-bottom" 
+
       data-aos-duration="400">
+
         Ετοιμάζουμε καθημερινά νόστιμα πιάτα με τα καλύτερα υλικά.
+
     </p>
 
+
+
     <a href="" class="btn" 
+
        data-aos="fade-up" 
+
        data-aos-anchor-placement="bottom-bottom"
+
        data-aos-duration="400">
+
         Εξερευνήστε το Μενού
+
     </a>
+
 </div>
+
+
+
 </section>
 
-<section class="todays-specials"> <h2 data-aos="fade-up" data-aos-duration="400">Σημερινά Πιάτα</h2>
+
+
+ <section class="todays-specials">
+
+    <h2 data-aos="fade-up" data-aos-duration="400">Σημερινά Πιάτα</h2>
+
+
 
 <div class="carousel-container">
+
     <div class="carousel-track">
 
+
+
       <div class="carousel-card" data-aos="fade-up" data-aos-duration="400" data-dish="pastitsio">
+
 <div class="tooltip-icon"><i class="fa-solid fa-utensils"></i></div>
 
+
+
 <div id="tooltip-pastitsio" class="carousel-tooltip">
+
     <b>Υλικά</b>
+
     <p>μακαρόνια,μοσχαρίσιος κιμάς,μπεσαμέλ</p>
+
 </div>
+
+
 
 <picture>
+
     <source srcset="images/pastitsio.webp" type="image/webp">
+
     <img src="images/pastitsio.png" alt="παστίτσιο">
+
 </picture>
+
 <p>Παστίτσιο</p>
+
+
+
 </div>
 
+
+
         <div class="carousel-card" data-aos="fade-up" data-aos-duration="400"  data-dish="kalamarakia">
+
             <div class="tooltip-icon"><i class="fa-solid fa-utensils"></i></div>
+
             
+
          
+
             <div id="tooltip-kalamarakia" class="carousel-tooltip">
+
                    <b>Υλικά</b>
+
                 <p>ρύζι, κουκουνάρι και μυρωδικα</p>
+
             </div>
 
+
+
             <picture>
+
                 <source srcset="images/gemista-kalamarakia.webp" type="image/webp">
+
                 <img src="images/gemista-kalamarakia.png" alt="καλαμάρια">
+
             </picture>
+
             <p>Γεμιστά Καλαμαράκια</p>
+
         </div>
+
+
 
   
+
         <div class="carousel-card" data-aos="fade-up" data-aos-duration="400" data-dish="krepes">
+
             <div class="tooltip-icon"><i class="fa-solid fa-utensils"></i></div>
+
             
+
        
+
             <div id="tooltip-krepes" class="carousel-tooltip">
+
                   <b>Υλικά</b>
+
                 <p>ζαμπόν και κρέμα γάλακτος,τυριά(γκούντα,ένταμ).</p>
+
             </div>
 
+
+
             <picture>
+
                 <source srcset="images/gemistes-krepes.webp" type="image/webp">
+
                 <img src="images/gemistes-krepes.png" alt="Κρέπες">
+
             </picture>
+
             <p>Γεμιστές Κρέπες</p>
+
         </div>
+
+
 
      
+
         <div class="carousel-card" data-aos="fade-up" data-aos-duration="400" data-dish="garidomakaronada">
+
             <div class="tooltip-icon"><i class="fa-solid fa-utensils"></i></div>
+
             
+
       
+
             <div id="tooltip-garidomakaronada" class="carousel-tooltip">
+
                    <b>Υλικά</b>
+
                 <p>γαρίδες,λιγκουίνι,σάλτσα ντομάτας.</p>
+
             </div>
 
+
+
             <picture>
+
                 <source srcset="images/garidomakaronada.webp" type="image/webp">
+
                 <img src="images/garidomakaronada.png" alt="Γαριδομακαρονάδα">
+
             </picture>
+
             <p>Γαριδομακαρονάδα</p>
+
         </div>
+
+
 
   
+
         <div class="carousel-card" data-dish="gioubetsi">
+
             <div class="tooltip-icon"><i class="fa-solid fa-utensils"></i></div>
+
             
 
+
+
             <div id="tooltip-gioubetsi" class="carousel-tooltip">
+
                    <b>Υλικά</b>
+
                 <p κριθαράκι, σάλτσα ντομάτας</p>
+
             </div>
 
+
+
             <picture>
+
                 <source srcset="images/giouvetsi-kritharaki.webp" type="image/webp">
+
                 <img src="images/giouvetsi-kritharaki.png" alt="Γιουβέτσι">
+
             </picture>
+
             <p>Γιουβέτσι με Κριθαράκι</p>
+
         </div>
 
+
+
     </div> 
+
 </div> 
+
+
 
 <div class="carousel-dots">
 
+
+
 </div>
+
+
+
 </section>
 
-<section class="items"> <h2 data-aos="zoom-in" data-aos-duration="400"> Προτάσεις Γεύσεων </h2>
 
-<div class="item" data-aos="zoom-in" data-aos-duration="400"> <picture> <source srcset="images/pizza.webp" type="image/webp">
+
+ <section class="items">
+
+    <h2 data-aos="zoom-in" data-aos-duration="400">
+
+        Προτάσεις Γεύσεων
+
+    </h2>
+
+
+
+  <div class="item" data-aos="zoom-in" data-aos-duration="400">
+
+    <picture>
+
+        <source srcset="images/pizza.webp" type="image/webp">
+
+
 
     <img class="recipe-img" 
+
          src="images/pizza.png" 
+
          alt="Πίτσα" 
+
          loading="lazy"
+
          data-title="Πίτσα Special" 
+
          data-description="Πλούσια γέμιση με ζαμπόν, μπέικον, φρέσκα μανιτάρια, πιπεριά και λιωμένη μοτσαρέλα."> 
+
 </picture>
+
 <button class="info-btn" aria-label="Πληροφορίες"><i class="fa-solid fa-utensils"></i></button>
+
 <h4>Πίτσα</h4>
+
+
+
 </div>
 
-<div class="item" data-aos="zoom-in" data-aos-duration="400"> <picture> <source srcset="images/gyros.webp" type="image/webp"> <img class="recipe-img" src="images/gyros.png" alt="Πίτα Γύρο" loading="lazy" data-title="Πίτα Γύρος Χοιρινός" data-description="Παραδοσιακή πίτα με ζουμερό χοιρινό γύρο, φρέσκια ντομάτα, κρεμμύδι, πατάτες τηγανητές και χειροποίητο τζατζίκι."> </picture> <button class="info-btn" aria-label="Πληροφορίες"><i class="fa-solid fa-utensils"></i></button> <h4>Πίτα Γύρο</h4> </div>
 
-<div class="item" data-aos="zoom-in" data-aos-duration="400"> <picture> <source srcset="images/chicken.webp" type="image/webp"> <img class="recipe-img" src="images/chicken.png" alt="Κοτόπουλο" loading="lazy" data-title="Κοτόπουλο Ψητό" data-description="κοτόπουλο ψημένo στο φούρνο με πατάτες, λεμόνι και μυρωδικά."> </picture> <button class="info-btn" aria-label="Πληροφορίες"><i class="fa-solid fa-utensils"></i></button> <h4>Κοτόπουλο</h4> </div>
 
-<div class="item" data-aos="zoom-in" data-aos-duration="400"> <picture> <source srcset="images/crepes.webp" type="image/webp"> <img class="recipe-img" src="images/crepes.png" alt="Κρέπα" loading="lazy" data-title="Κρέπα Special" data-description="Λεπτή, αφράτη ζύμη κρέπας γεμισμένη με πλούσια πραλίνα φουντουκιού και φρέσκια μπανάνα."> </picture> <button class="info-btn" aria-label="Πληροφορίες"><i class="fa-solid fa-utensils"></i></button> <h4>Κρέπα</h4> </div>
+<div class="item" data-aos="zoom-in" data-aos-duration="400">
+
+    <picture>
+
+        <source srcset="images/gyros.webp" type="image/webp">
+
+        <img class="recipe-img" 
+
+             src="images/gyros.png" 
+
+             alt="Πίτα Γύρο" 
+
+             loading="lazy"
+
+             data-title="Πίτα Γύρος Χοιρινός" 
+
+             data-description="Παραδοσιακή πίτα με ζουμερό χοιρινό γύρο, φρέσκια ντομάτα, κρεμμύδι, πατάτες τηγανητές και χειροποίητο τζατζίκι."> 
+
+    </picture>
+
+    <button class="info-btn" aria-label="Πληροφορίες"><i class="fa-solid fa-utensils"></i></button>
+
+    <h4>Πίτα Γύρο</h4>
+
+</div>
+
+
+
+  <div class="item" data-aos="zoom-in" data-aos-duration="400">
+
+    <picture>
+
+        <source srcset="images/chicken.webp" type="image/webp">
+
+        <img class="recipe-img" 
+
+             src="images/chicken.png" 
+
+             alt="Κοτόπουλο" 
+
+             loading="lazy"
+
+             data-title="Κοτόπουλο Ψητό" 
+
+             data-description="κοτόπουλο ψημένo στο φούρνο με πατάτες, λεμόνι και μυρωδικά.">
+
+    </picture>
+
+    <button class="info-btn" aria-label="Πληροφορίες"><i class="fa-solid fa-utensils"></i></button>
+
+    <h4>Κοτόπουλο</h4>
+
+</div>
+
+
+
+<div class="item" data-aos="zoom-in" data-aos-duration="400">
+
+    <picture>
+
+        <source srcset="images/crepes.webp" type="image/webp">
+
+        <img class="recipe-img" 
+
+             src="images/crepes.png" 
+
+             alt="Κρέπα" 
+
+             loading="lazy"
+
+             data-title="Κρέπα Special" 
+
+             data-description="Λεπτή, αφράτη ζύμη κρέπας γεμισμένη με πλούσια πραλίνα φουντουκιού και φρέσκια μπανάνα.">
+
+    </picture>
+
+    <button class="info-btn" aria-label="Πληροφορίες"><i class="fa-solid fa-utensils"></i></button>
+
+    <h4>Κρέπα</h4>
+
+</div>
+
+
 
 <div class="item" data-aos="zoom-in" data-aos-delay="400">
+
     <picture>
+
         <source srcset="images/beef.webp" type="image/webp">
+
         <img class="recipe-img" src="images/beef.png" alt="Μπιφτέκια" loading="lazy"
+
     data-title="Μπιφτέκια"
+
     data-description="Αφράτα,καλοψημένα μπιφτέκια από φρέσκο κιμά">
+
     </picture>
+
     <button class="info-btn" aria-label="Πληροφορίες"><i class="fa-solid fa-utensils"></i></button>
+
     <h4>Μπιφτέκια</h4>
+
 </div>
-<div class="item" data-aos="zoom-in" data-aos-duration="400"> <picture> <source srcset="images/soutzoukakia.webp" type="image/webp"> <img class="recipe-img" src="images/soutzoukakia.png" alt="Σουτζουκάκια" loading="lazy" data-title="Σουτζουκάκια Σμυρνέικα" data-description="κεφτεδάκια με κύμινo και σκόρδο, μαγειρεμένα σε σάλτσα ντομάτας με συνοδεία ρυζιού."> </picture> <button class="info-btn" aria-label="Πληροφορίες"><i class="fa-solid fa-utensils"></i></button> <h4>Σουτζουκάκια</h4> </div>
+
+
 
 <div class="item" data-aos="zoom-in" data-aos-duration="400">
+
     <picture>
+
+        <source srcset="images/soutzoukakia.webp" type="image/webp">
+
+        <img class="recipe-img" 
+
+             src="images/soutzoukakia.png" 
+
+             alt="Σουτζουκάκια" 
+
+             loading="lazy"
+
+             data-title="Σουτζουκάκια Σμυρνέικα" 
+
+             data-description="κεφτεδάκια με κύμινo και σκόρδο, μαγειρεμένα σε σάλτσα ντομάτας με συνοδεία ρυζιού.">
+
+    </picture>
+
+    <button class="info-btn" aria-label="Πληροφορίες"><i class="fa-solid fa-utensils"></i></button>
+
+    <h4>Σουτζουκάκια</h4>
+
+</div>
+
+
+
+<div class="item" data-aos="zoom-in" data-aos-duration="400">
+
+    <picture>
+
         <source srcset="images/spaghetti-mpolonez.webp" type="image/webp">
+
         <img class="recipe-img" src="images/spaghetti-mpolonez.png" alt="" loading="lazy"
+
         data-title="Σπαγγέτι Μπολονέζ"
+
         data-description="">
+
     </picture>
+
     <button class="info-btn" aria-label="Πληροφορίες"><i class="fa-solid fa-utensils"></i></button>
+
     <h4>Σπαγγέττι Μπολονέζ</h4>
+
 </div>
+
+
+
 
 
 <div class="item" data-aos="zoom-in" data-aos-duration="400">
+
     <picture>
+
         <source srcset="images/solomon.webp" type="image/webp">
+
         <img class="recipe-img" src="images/solomon.jpg" alt="Σολομός" loading="lazy"
+
         data-title="Σολομός"
+
         data-description="Φρέσκο,ζουμερό φιλέτο σολομού σχάρας με άνηθο περιχυμένο με λαδολέμονο ">
+
     </picture>
+
     <button class="info-btn" aria-label="Πληροφορίες"><i class="fa-solid fa-utensils"></i></button>
+
     <h4>Σολομός</h4>
+
 </div>
+
+
+
 </section>
 
-<div id="recipeModal" class="modal"> <div class="modal-content">
+
+
+ <div id="recipeModal" class="modal">
+
+    <div class="modal-content">
+
+
 
     <span class="close" id="recipeClose">&times;</span>
 
+
+
 <div class="fab-wrapper">
+
 <button class="modal-fab" id="toggleOrderBtn">
+
     <i class="fa-solid fa-cart-shopping"></i>
+
 </button>
 
+
+
 <div class="order-panel" id="orderPanel">
+
     <div class="order-content">
+
         <span class="panel-title">Ποσότητα</span>
+
         
+
         <div class="qty-container">
+
             <button class="qty-btn" id="qtyMinus"><i class="fa-solid fa-minus"></i></button>
+
             <span id="qtyValue">1</span>
+
             <button class="qty-btn" id="qtyPlus"><i class="fa-solid fa-plus"></i></button>
+
         </div>
+
+
 
         <button class="add-to-cart-confirm">
+
             ΠΡΟΣΘΗΚΗ <span class="price-hint">| 12.50€</span>
+
         </button>
+
     </div>
+
 </div>
+
+
+
 </div>
+
+
 
     <h2 id="modalTitle"></h2>
+
     <img id="modalImage" src="" alt="">
+
     <p id="modalDescription"></p>
 
+
+
 </div>
+
+
+
 </div>
 
 
 
-<section class="testimonials-section container"> <h2 data-aos="fade-right" data-aos-duration="400">Κριτικές πελατών</h2>
+
+
+
+
+   <section class="testimonials-section container">
+
+    <h2 data-aos="fade-right" data-aos-duration="400">Κριτικές πελατών</h2>
+
+
 
 <div class="testimonials-grid">
+
     
+
     <div class="testimonial-card" data-aos="fade-right"  data-aos-duration="400" >
+
         <div class="client-info">
+
             <picture>
+
                 <source srcset="images/testimo1.webp" type="image/webp">
+
                 <img src="images/testimo1.jpg" alt="Πελάτης 1" class="client-img" loading="lazy">
+
             </picture>
+
             <div class="client-details"><h4>Μαρία Κ.</h4></div>
+
         </div>
+
         <p>Ο Μουσακάς ήταν σαν σπιτικός! Είδα ότι έχετε και άλλα πιάτα ημέρας, οπότε θα ξαναπαραγγείλουμε σίγουρα με την παρέα.</p>
+
         <div class="rating">
+
             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+
             <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+
         </div>
+
     </div>
+
+
 
     <div class="testimonial-card" data-aos="fade-right"  data-aos-duration="400">
+
         <div class="client-info">
+
             <picture>
+
                 <source srcset="images/testimo2.webp" type="image/webp">
+
                 <img src="images/testimo2.jpg" alt="Πελάτης" class="client-img" loading="lazy">
+
             </picture>
+
             <div class="client-details"><h4>Γιάννης Δ.</h4></div>
+
         </div>
+
         <p>Πρέπει να δοκιμάσετε τα Σουτζουκάκια! Είναι πολύ νόστιμα. Μου άρεσε που το μενού έχει τόσες πολλές επιλογές από παραδοσιακά μέχρι πιο μοντέρνα. Πολύ καλή εμπειρία.</p>
+
         <div class="rating">
+
             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+
             <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+
         </div>
+
     </div>
+
+
 
     <div class="testimonial-card" data-aos="fade-right"  data-aos-duration="400" >
+
         <div class="client-info">
+
             <picture>
+
                 <source srcset="images/testimo3.webp" type="image/webp">
+
                 <img src="images/testimo3.jpg" alt="Πελάτης" class="client-img" loading="lazy">
+
             </picture>
+
             <div class="client-details"><h4>Μάριος Λ.</h4></div>
+
         </div>
+
         <p>Παραγγέλνω από εδώ συχνά. Το Παστίτσιο είναι απλά τέλειο.</p>
+
         <div class="rating">
+
             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+
             <i class="fas fa-star"></i><i class="fas fa-star"></i>
+
         </div>
+
     </div>
+
+
 
     <div class="testimonial-card" data-aos="fade-right" data-aos-duration="400" >
+
         <div class="client-info">
+
             <picture>
+
                 <source srcset="images/testimo4.webp" type="image/webp">
+
                 <img src="images/testimo4.png" alt="Εικόνα Πελάτη 4" class="client-img" loading="lazy">
+
             </picture>
+
             <div class="client-details"><h4>Ελένη Π.</h4></div>
+
         </div>
+
         <p>Σωτήριο για μέρες που δεν προλαβαίνω να μαγειρέψω. Τα παιδιά λατρεύουν τις Κρέπες και εμείς βρίσκουμε πάντα ένα καλό μαγειρευτό!</p>
+
         <div class="rating">
+
             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+
             <i class="fas fa-star"></i><i class="fas fa-star"></i>
+
         </div>
+
     </div>
 
+
+
 </div>
+
+
+
 </section>
 
-<section class="gallery"> <h2 data-aos="zoom-in" data-aos-duration="400">Φωτογραφίες / Γκαλερί</h2>
+
+
+<section class="gallery">
+
+    <h2 data-aos="zoom-in" data-aos-duration="400">Φωτογραφίες / Γκαλερί</h2>
+
+
 
 <div class="gallery-container">
+
     <a href="images/carbonara.png" class="box glightbox" data-aos="zoom-in" data-aos-duration="" >
+
         <picture>
+
             <source srcset="images/carbonara.webp" type="image/webp">
+
             <img src="images/carbonara.png" alt="Καρμπονάρα" loading="lazy">
+
         </picture>
+
         <div class="icon"><i class="fas fa-plus"></i></div>
+
     </a>
+
+
 
     <a href="images/calzone.png" class="box glightbox" data-aos="zoom-in" data-aos-duration="400" >
+
         <picture>
+
             <source srcset="images/calzone.webp" type="image/webp">
+
             <img src="images/calzone.png" alt="Καλτσόνε" loading="lazy">
+
         </picture>
+
         <div class="icon"><i class="fas fa-plus"></i></div>
+
     </a>
+
+
 
     <a href="images/pizza-2.png" class="box glightbox" data-aos="zoom-in" data-aos-duration="400">
+
         <picture>
+
             <source srcset="images/pizza-2.webp" type="image/webp">
+
             <img src="images/pizza-2.png" alt="Πίτσα" loading="lazy">
+
         </picture>
+
         <div class="icon"><i class="fas fa-plus"></i></div>
+
     </a>
+
+
 
     <a href="images/caesar-salad.png" class="box glightbox" data-aos="zoom-in" data-aos-duration="400" >
+
         <picture>
+
             <source srcset="images/caesar-salad.webp" type="image/webp">
+
             <img src="images/caesar-salad.png" alt="Σαλάτα του Καίσαρα" loading="lazy">
+
         </picture>
+
         <div class="icon"><i class="fas fa-plus"></i></div>
+
     </a>
+
+
 
     <a href="images/peinirli.png" class="box glightbox" data-aos="zoom-in" data-aos-duration="400">
+
         <picture>
+
             <source srcset="images/peinirli.webp" type="image/webp">
+
             <img src="images/peinirli.png" alt="Πεϊνιρλί" loading="lazy">
+
         </picture>
+
         <div class="icon"><i class="fas fa-plus"></i></div>
+
     </a>
+
+
 
     <a href="images/burger.png" class="box glightbox" data-aos="zoom-in" data-aos-duration="400" >
+
         <picture>
+
             <source srcset="images/burger.webp" type="image/webp">
+
             <img src="images/burger.png" alt="Burger" loading="lazy">
+
         </picture>
+
         <div class="icon"><i class="fas fa-plus"></i></div>
+
     </a>
+
+
 
     <a href="images/sokolatopita.png" class="box glightbox" data-aos="zoom-in" data-aos-duration="400" >
+
         <picture>
+
             <source srcset="images/sokolatopita.webp" type="image/webp">
+
             <img src="images/sokolatopita.png" alt="Σοκολατόπιτα" loading="lazy">
+
         </picture>
+
         <div class="icon"><i class="fas fa-plus"></i></div>
+
     </a>
+
+
 
     <a href="images/profiterol.png" class="box glightbox" data-aos="zoom-in" data-aos-duration="400" >
+
         <picture>
+
             <source srcset="images/profiterol.webp" type="image/webp">
+
             <img src="images/profiterol.png" alt="Προφιτερόλ">
+
         </picture>
+
         <div class="icon"><i class="fas fa-plus"></i></div>
+
     </a>
+
 </div>
+
+
+
 </section>
 
-<footer class="footer" style="overflow: hidden;"> <div class="footer-container"> <div class="footer-col" data-aos="fade-up" data-aos-anchor-placement="top-bottom"> <h3>Ακολουθηστε μας</h3> <div class="social-icons"> <a href="#"><i class="fab fa-facebook-f"></i></a> <a href="#"><i class="fab fa-twitter"></i></a> <a href="#"><i class="fab fa-instagram"></i></a> </div> </div>
+
+
+<footer class="footer" style="overflow: hidden;">
+
+    <div class="footer-container">
+
+        <div class="footer-col" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+
+            <h3>Ακολουθηστε μας</h3>
+
+            <div class="social-icons">
+
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                <a href="#"><i class="fab fa-twitter"></i></a>
+
+                <a href="#"><i class="fab fa-instagram"></i></a>
+
+            </div>
+
+        </div>
+
+
 
     <div class="footer-col" data-aos="fade-up"  data-aos-anchor-placement="top-bottom">
+
         <h3>Συνδεσμοι</h3>
+
         <ul>
+
             <li><a href="#home">Αρχική</a></li>
+
             <li><a href="index1.html">Σχετικά</a></li>
+
             <li><a href="index3.html">Επικοινωνία</a></li>
+
         </ul>
+
     </div>
 
+
+
     <div class="footer-col" data-aos="fade-up"  data-aos-anchor-placement="top-bottom">
+
         <h3>Πληροφοριες</h3>
+
         <ul>
+
             <li><a href="#">Συνταγές</a></li>
+
             <li><a href="#">Blog</a></li>
+
             <li><a href="#">Γκάλερι</a></li>
+
         </ul>
+
     </div>
+
+
 
     <div class="footer-col" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+
         <h3>Επικοινωνια</h3>
+
         <ul>
+
             <li><a href="mailto:info@kitchengrid.gr">info@kitchengrid.gr</a></li>
+
             <li><a href="tel:+302101234567">+30 210 1234567</a></li>
+
         </ul>
+
     </div>
+
 </div>
 
+
+
 <div class="footer-bottom" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+
     © 2025 The kitchen grid. Όλα τα δικαιώματα διατηρούνται.
+
 </div>
+
+
+
 </footer>
 
 
 
 
 
+
+
+
+
+
+
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+
+
 
 
 
 <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
 
+
+
 <script src="script.js"></script>
 
-<script> window.addEventListener('load', () => { // Αυτό το delay βοηθάει τα στοιχεία της λίστας να εμφανίζονται σταδιακά document.querySelectorAll('.items .item').forEach((el, i) => { el.setAttribute('data-aos-delay', i * 80); }); AOS.init({ once: true, duration: 500, easing: "ease-out" }); }); </script>
 
-<div id="searchOverlay" class="search-overlay"> <span id="searchClose" class="search-close">&times;</span> <div class="search-container"> <input type="text" id="searchInput" placeholder="Αναζήτηση..." autocomplete="off"> <div class="search-bar-line"></div> </div> </div>
 
-</body> </html>
+   <script>
 
 
 
+    window.addEventListener('load', () => {
 
-Κλείσιμο
+
+
+        // Αυτό το delay βοηθάει τα στοιχεία της λίστας να εμφανίζονται σταδιακά
+
+
+
+        document.querySelectorAll('.items .item').forEach((el, i) => {
+
+
+
+            el.setAttribute('data-aos-delay', i * 80);
+
+
+
+        });
+
+
+
+
+
+
+
+        AOS.init({
+
+
+
+            once: true,
+
+
+
+            duration: 500,
+
+
+
+            easing: "ease-out"
+
+
+
+        });
+
+
+
+    });
+
+
+
+   </script>
+
+
+
+<div id="searchOverlay" class="search-overlay">
+
+    <span id="searchClose" class="search-close">&times;</span>
+
+    <div class="search-container">
+
+        <input type="text" id="searchInput" placeholder="Αναζήτηση..." autocomplete="off">
+
+        <div class="search-bar-line"></div>
+
+    </div>
+
+</div>
+
+
+
+</body>
+
+</html>
