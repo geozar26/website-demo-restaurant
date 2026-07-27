@@ -26,7 +26,6 @@ var RestaurantApp = /** @class */ (function () {
         this.initLoginLogic();
         this.initGlobalEvents();
         this.initModalsAndOrder();
-        this.initGSAP();
         this.initSearch();
         this.initLightbox();
         this.initScrollAnimations();
@@ -274,18 +273,7 @@ var RestaurantApp = /** @class */ (function () {
             }
         });
     };
-    RestaurantApp.prototype.initGSAP = function () {
-        if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined')
-            return;
-        // @ts-ignore
-        gsap.registerPlugin(ScrollTrigger);
-        // @ts-ignore
-        gsap.from('.items .item', { scrollTrigger: { trigger: '.items', start: 'top 90%' }, opacity: 0, y: 15, duration: 0.4, stagger: 0.1, ease: 'power2.out' });
-        // @ts-ignore
-        gsap.from('.testimonial-card', { scrollTrigger: { trigger: '.testimonials-section', start: 'top 90%' }, opacity: 0, y: 15, duration: 0.3, stagger: 0.1, ease: 'power1.out' });
-        // @ts-ignore
-        gsap.from('.gallery-container .box', { scrollTrigger: { trigger: '.gallery', start: 'top 90%' }, opacity: 0, y: 15, duration: 0.4, stagger: 0.08, ease: 'power2.out' });
-    };
+ 
     RestaurantApp.prototype.initLightbox = function () {
         if (typeof GLightbox !== 'undefined') {
             // @ts-ignore
