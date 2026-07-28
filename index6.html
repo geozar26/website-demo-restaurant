@@ -27,7 +27,6 @@
             <i class="fa-solid fa-magnifying-glass"></i>
         </div>
 
-        <!-- Διορθώθηκαν τα διπλά data-aos-delay -->
         <a href="index.html" data-aos="fade-down" data-aos-delay="100">Αρχική</a>
         <a href="index1.html" data-aos="fade-down" data-aos-delay="150">Σχετικά με εμάς</a>
         <a href="index3.html" data-aos="fade-down" data-aos-delay="200">Επικοινωνία</a>
@@ -134,7 +133,7 @@
 </div>
 
 
-
+    <!-- LANDING / HERO SECTION -->
     <section class="hero menu-hero" style="min-height: 40vh; padding-top: 120px;">
         <div class="hero-content">
             <h1 data-aos="fade-up" data-aos-duration="600">Ο Κατάλογός μας</h1>
@@ -142,12 +141,17 @@
         </div>
     </section>
 
-<div class="menu-tabs">
-    <button class="tab-btn active" data-aos="fade-up" data-aos-delay="0" onclick="filterMenu('all', event)">Όλα</button>
-    <button class="tab-btn" data-aos="fade-up" data-aos-delay="50" onclick="filterMenu('main', event)">Κυρίως Πιάτα</button>
-    <button class="tab-btn" data-aos="fade-up" data-aos-delay="100" onclick="filterMenu('pizza', event)">Πίτσες</button>
-    <button class="tab-btn" data-aos="fade-up" data-aos-delay="150" onclick="filterMenu('dessert', event)">Γλυκά</button>
-</div>
+    <!-- MENU SECTION (Περιλαμβάνει τα tabs και το grid) -->
+    <section class="menu-section container">
+        
+        <!-- Tabs με σταδιακό animation (staggered) -->
+        <div class="menu-tabs">
+            <button class="tab-btn active" data-aos="fade-up" data-aos-delay="0" onclick="filterMenu('all', event)">Όλα</button>
+            <button class="tab-btn" data-aos="fade-up" data-aos-delay="100" onclick="filterMenu('main', event)">Κυρίως Πιάτα</button>
+            <button class="tab-btn" data-aos="fade-up" data-aos-delay="200" onclick="filterMenu('pizza', event)">Πίτσες</button>
+            <button class="tab-btn" data-aos="fade-up" data-aos-delay="300" onclick="filterMenu('dessert', event)">Γλυκά</button>
+        </div>
+
         <div class="menu-grid">
             <div class="menu-item main" data-aos="zoom-in" data-aos-delay="0">
                 <div class="menu-item-info">
@@ -249,7 +253,7 @@
         </div>
     </section>
 
-    <!-- FOOTER SECTION (Διορθώθηκε το σχόλιο) -->
+    <!-- FOOTER SECTION -->
     <footer class="footer" style="overflow: hidden;">
         <div class="footer-container">
             <div class="footer-col" data-aos="fade-up" data-aos-anchor=".footer" data-aos-delay="0">
