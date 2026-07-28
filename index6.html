@@ -23,16 +23,15 @@
     </label>
 
     <nav class="nav-links">
-        <!-- Animation στο Icon Αναζήτησης -->
         <div class="search-trigger" id="openSearch" data-aos="fade-down" data-aos-delay="50">
             <i class="fa-solid fa-magnifying-glass"></i>
         </div>
 
-        <!-- Animations στα Links & Buttons του Navbar -->
-        <a href="index.html" data-aos="fade-down" data-aos-delay="200" data-aos-delay="100">Αρχική</a>
-        <a href="index1.html" data-aos="fade-down" data-aos-delay="300" data-aos-delay="150">Σχετικά με εμάς</a>
-        <a href="index3.html" data-aos="fade-down" data-aos-delay="400" data-aos-delay="200">Επικοινωνία</a>
-        <a href="index8.html" class="btn-solid" data-aos="fade-down" data-aos-delay="250" data-aos-duration="500">Κράτηση</a>
+        <!-- Διορθώθηκαν τα διπλά data-aos-delay -->
+        <a href="index.html" data-aos="fade-down" data-aos-delay="100">Αρχική</a>
+        <a href="index1.html" data-aos="fade-down" data-aos-delay="150">Σχετικά με εμάς</a>
+        <a href="index3.html" data-aos="fade-down" data-aos-delay="200">Επικοινωνία</a>
+        <a href="index8.html" class="btn-solid" data-aos="fade-down" data-aos-delay="250">Κράτηση</a>
         
         <div class="nav-footer">
             <div class="social-row">
@@ -174,7 +173,7 @@
                 </div>
             </div>
 
-            <div class="menu-item all" data-aos="zoom-in" data-aos-duration="150">
+            <div class="menu-item all" data-aos="zoom-in" data-aos-delay="150">
                 <div class="menu-item-info">
                     <h3>Γιουβέτσι Μοσχάρι <span class="price">11.00€</span></h3>
                     <p>Σιγομαγειρεμένο στο φούρνο με κριθαράκι και σάλτσα ντομάτας.</p>
@@ -244,7 +243,7 @@
                 </div>
             </div>
 
-            <div class="menu-item main" data-aos="zoom-in" data-aos-duration="650">
+            <div class="menu-item main" data-aos="zoom-in" data-aos-delay="650">
                 <div class="menu-item-info">
                     <h3>Μπολονέζ <span class="price">5.50€</span></h3>
                     <p>Al dente ζυμαρικά με πλούσια σάλτσα από φρέσκο μοσχαρίσιο κιμά και αρωματικά βότανα.</p>
@@ -253,7 +252,7 @@
         </div>
     </section>
 
-    <!-- FOOTER SECTION (Με data-aos-anchor=".footer" 
+    <!-- FOOTER SECTION (Διορθώθηκε το σχόλιο) -->
     <footer class="footer" style="overflow: hidden;">
         <div class="footer-container">
             <div class="footer-col" data-aos="fade-up" data-aos-anchor=".footer" data-aos-delay="0">
@@ -302,14 +301,6 @@
         <div id="pizzasGrid"></div>
     </div>
 
-    <div id="searchOverlay" class="search-overlay">
-        <span id="searchClose" class="search-close">&times;</span>
-        <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Αναζήτηση..." autocomplete="off">
-            <div class="search-bar-line"></div>
-        </div>
-    </div>
-  
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
     <script src="script.js"></script>
@@ -317,11 +308,12 @@
     <!-- AOS Initializer -->
     <script>
         AOS.init({
-            once: true
+            once: true,
+            duration: 600
         });
     </script>
 
-    <!-- JS Function για τα Tabs με επανεκκίνηση AOS -->
+    <!-- JS Function για τα Tabs -->
     <script>
         function filterMenu(category, e) {
             const items = document.querySelectorAll('.menu-item');
@@ -338,7 +330,6 @@
                 }
             });
 
-            // Επαναφέρει τα animations της βιβλιοθήκης AOS για τα νέα πιάτα
             AOS.refresh();
         }
     </script>
