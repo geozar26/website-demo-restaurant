@@ -511,11 +511,15 @@
 <script src="script.js"></script>
 
 <script>
-  AOS.init({
-      once: true,
-      duration: 500,
-      easing: "ease-out"
-  });
+window.addEventListener("load", () => {
+    AOS.init({
+        once: true,
+        duration: 500,
+        easing: "ease-out"
+    });
+
+    AOS.refresh();
+});
 </script>
 
 </body>
