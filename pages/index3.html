@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Restaurant</title>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    
+  
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="icon" href="data:,">
+
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" 
+          onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" as="style" 
+          onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"></noscript>
+</head>
+<body>
+
+<div id="loginOverlay" class="login-overlay"></div>
+<div id="loginPopup" class="login-popup">
+    <span id="loginClose" class="close">&times;</span>
+    <h2>Σύνδεση</h2>
+    
+    <form id="loginForm" action="#" method="POST"> 
+        <input type="text" id="usernameInput" placeholder="Όνομα Χρήστη ή Email" required/>
+        <input type="password" id="passwordInput" placeholder="Κωδικός Πρόσβασης..." required />
+        
+        <div class="remember-me-container">
+            <input type="checkbox" id="rememberMeCheck">
+            <label for="rememberMeCheck">Να με θυμάσαι</label>
+        </div>
+
+        <button type="submit" id="loginButton">Συνδεθείτε</button>
+    </form>    
+    
+    <p class="social-text">Συνέχεια με</p>
+    <div class="social-icons-modal">
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+    </div>
+
+    <p class="register-link">
+        Δεν είστε μέλος; <a href="#">Εγγραφείτε</a>
+    </p>
+</div>
+
+<header class="navbar">
+    <div class="logo" data-aos="fade-right" data-aos-delay="0">
+        kitchen grid
+    </div>
+
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-overlay"></label>
+
+    <label for="menu-toggle" class="menu-icon">
+        <i class="fa-solid fa-bars"></i>
+    </label>
+
+    <nav class="nav-links">
+        <div class="search-trigger" id="openSearch" data-aos="fade-right" data-aos-delay="150" data-aos-anchor=".navbar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <a href="index.html" data-aos="fade-right" data-aos-duration="400"  data-aos-anchor=".navbar">Αρχική</a>
+        <a href="index1.html" data-aos="fade-right" data-aos-duration="400"  data-aos-anchor=".navbar">Σχετικά με εμάς</a>
+        <a href="index3.html" data-aos="fade-right" data-aos-duration="400"  data-aos-anchor=".navbar">Επικοινωνία</a>
+        <a href="index8.html" class="btn-solid" data-aos-duration="400" data-aos="fade-right"  data-aos-anchor=".navbar">Κράτηση</a>
+
+        <div class="nav-footer">
+            <div class="social-row">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+
+            <a href="#" class="order-btn">
+                ONLINE ΠΑΡΑΓΓΕΛΙΑ
+            </a>
+
+            <div class="contact-box">
+             <p>
+                    <i class="fa-solid fa-location-dot"></i> Πανεπιστημίου 42, Αθήνα
+                </p>
+                <a href="tel:1234567890">
+                    <i class="fa-solid fa-phone"></i> 1234567890
+                </a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div id="loginOverlay" class="login-overlay"></div>
+<div id="loginPopup" class="login-popup">
+    <span id="loginClose" class="close">&times;</span>
+    <h2>Σύνδεση</h2>
+    
+    <form id="loginForm" action="#" method="POST"> 
+        
+        <input type="text" id="usernameInput" placeholder="Όνομα Χρήστη ή Email" required/>
+        <input type="password" id="passwordInput" placeholder="Κωδικός Πρόσβασης..." required />
+        
+        <div class="remember-me-container">
+            <input type="checkbox" id="rememberMeCheck">
+            <label for="rememberMeCheck">Να με θυμάσαι</label>
+        </div>
+
+        <button type="submit" id="loginButton">Συνδεθείτε</button>
+        
+    </form>    <p class="social-text"> Συνέχεια με</p>
+    <div class="social-icons-modal">
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+    </div>
+
+    <p class="register-link">
+        Δεν είστε μέλος; <a href="#">Εγγραφείτε</a>
+    </p>
+</div>
+
+
+<div class="search-overlay" id="searchOverlay">
+    <span class="search-close" id="closeSearch">&times;</span>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Αναζήτηση για γεύσεις..." autocomplete="off">
+        <div class="search-bar-line"></div>
+        <div class="mega-menu-content">
+            <div class="mega-row">
+                <div class="mega-item">
+                
+                                <a href="index6.html">
+        <img src="../images/menu.webp" alt="Menu">
+        <h3>Μενού</h3>
+            </a>
+                </div>
+                <div class="mega-item">
+                     <a href="index9.html">
+                    <img src="../images/steak.webp" alt="Offers">
+                    <h3>πρoσφορές</h3>
+                     </a>
+                </div>
+                <div class="mega-item">
+                       <a href="index11.html">
+                    <img src="../images/solomon.webp" alt="New">
+                    <h3>Νέες γεύσεις</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="mega-divider"></div>
+            <div class="mega-row">
+                <div class="mega-item">
+                <img src="../images/reservations.webp" alt="Table">
+                    <a href="index8.html">
+                    <h3>Κράτηση τραπεζιού</h3>
+                    </a>
+                </div>
+                <div class="mega-item">
+                    <img src="../images/events.webp" alt="Loyalty">
+                      <a href="index7.html">
+                    <h3>Εκδηλώσεις</h3>
+                    </a>
+                </div>
+                <div class="mega-item">
+                      <a href="index10.html">
+                      <img src="../images/drinks.webp" alt="Loyalty">
+                    <h3>Ποτά & Αναψυκτικά</h3>
+                      </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+ <section id="home" class="hero">
+    <div class="hero-content">
+        <h1 data-aos="fade-up" 
+            data-aos-anchor-placement="bottom-bottom" 
+            data-aos-duration="700"
+            data-aos-delay="0">
+             Επικοινωνήστε μαζί μας
+        </h1>
+
+        <p data-aos="fade-up" 
+           data-aos-anchor-placement="bottom-bottom" 
+          data-aos-duration="700"
+           data-aos-delay="50">
+            Είμαστε στη διάθεσή σας για κρατήσεις, απορίες ή για να οργανώσουμε μαζί την επόμενη εκδήλωσή σας.
+        </p>
+
+    </div>
+</section>
+
+<section class="contact-info-section">
+    <div class="contact-container">
+        
+        <div class="contact-top-row">
+            
+            <div class="contact-form-card"data-aos="zoom-in" >
+                <h2>Στείλε μήνυμα</h2>
+                <form>
+                    <div class="form-group-row">
+                        <input type="text" placeholder="Όνομα" required>
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <input type="text" placeholder="Θέμα">
+                    <textarea rows="5" placeholder="Μήνυμα..."></textarea>
+                    <button type="submit">Αποστολή</button>
+                </form>
+            </div>
+
+            <div class="contact-blue-card" data-aos="zoom-in">
+                <div class="card-top">
+                    <h3>Ωράριο Λειτουργίας</h3>
+                    <p><i class="fa-solid fa-calendar-days"></i> Δευτέρα - Παρασκευή</p>
+                    <p class="hours-spec">13:00 - 23:00</p>
+                    <p><i class="fa-solid fa-calendar-days"></i> Σάββατο - Κυριακή</p>
+                    <p class="hours-spec">12:00 - 00:00</p>
+                </div>
+                
+                <div class="card-divider"></div>
+                
+                <div class="card-bottom">
+                    <h3>Επικοινωνία</h3>
+                    <p><i class="fa-solid fa-phone"></i> 1234567890</p>
+                    <p><i class="fa-solid fa-envelope"></i> info@kitchengrid.gr</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Πανεπιστημίου 42, Αθήνα</p>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="contact-map-row">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3144.8906977227464!2d23.7317734!3d37.9808381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bd39fa95e4e7%3A0xc48419f9b5c3ff3b!2sPanepistimiou%2042%2C%20Athina%20106%2079!5e0!3m2!1sen!2sgr!4v1710000000000!5m2!1sen!2sgr" 
+                width="100%" 
+                height="380" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+    </div>
+</section>
+
+<footer class="footer" style="overflow: hidden;">
+    <div class="footer-container">
+        <div class="footer-col" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            <h3>Ακολουθηστε μας</h3>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-col" data-aos="fade-up"  data-aos-anchor-placement="top-bottom">
+            <h3>Συνδεσμοι</h3>
+            <ul>
+                <li><a href="#home">Αρχική</a></li>
+                <li><a href="index1.html">Σχετικά</a></li>
+                <li><a href="index3.html">Επικοινωνία</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col" data-aos="fade-up"  data-aos-anchor-placement="top-bottom">
+            <h3>Πληροφοριες</h3>
+            <ul>
+                <li><a href="#">Συνταγές</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Γκάλερι</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            <h3>Επικοινωνια</h3>
+            <ul>
+                <li><a href="mailto:info@kitchengrid.gr">info@kitchengrid.gr</a></li>
+                <li><a href="tel:+302101234567">+30 210 1234567</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+        © 2025 The kitchen grid. Όλα τα δικαιώματα διατηρούνται.
+    </div>
+</footer>
+
+<div id="searchResultsPage">
+    <h1 id="searchTitle">Αποτελέσματα Αναζήτησης</h1>
+    <div id="pizzasGrid"></div>
+</div>
+
+
+<div id="searchOverlay" class="search-overlay">
+    <span id="searchClose" class="search-close">&times;</span>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Αναζήτηση..." autocomplete="off">
+        <div class="search-bar-line"></div>
+    </div>
+</div>
+  
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+<script src="script.js"></script>
+
+
+<script>
+AOS.init({
+        once: true
+    });
+</script>
+
+
+
+</body>
+</html>
