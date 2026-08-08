@@ -270,28 +270,25 @@
 
 
 <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
-<script src="script.js"></script>
+<script src="../js/script.js"></script>
 
   <script>
-    /**
-     * Λειτουργία Φιλτραρίσματος Μενού
-     * Φιλτράρει τις κάρτες με βάση την CSS κλάση τους και ανανεώνει το AOS animation.
-     */
+
     function filterMenu(category, event) {
         const items = document.querySelectorAll('.menu-grid .menu-item');
         const btns = document.querySelectorAll('.menu-filters .filter-btn');
         
-        // 1. Αφαίρεση της κλάσης active από όλα τα κουμπιά
+   
         btns.forEach(btn => btn.classList.remove('active'));
         
-        // 2. Προσθήκη της κλάσης active στο κουμπί που πατήθηκε
+      
         if (event && event.currentTarget) {
             event.currentTarget.classList.add('active');
         } else if (event && event.target) {
             event.target.classList.add('active');
         }
 
-        // 3. Έλεγχος κλάσεων και εναλλαγή display (flex / none)
+ 
         items.forEach(item => {
             if (category === 'all' || item.classList.contains(category)) {
                 item.style.display = 'flex';
@@ -300,15 +297,13 @@
             }
         });
 
-        // 4. Ανανέωση του AOS για να μην «κολλάνε» τα animations λόγω αλλαγής ύψους
+
         if (typeof AOS !== 'undefined') {
             AOS.refresh();
         }
     }
 
-    /**
-     * Αρχικοποίηση κατά το φόρτωμα της σελίδας
-     */
+   
     window.addEventListener('load', () => {
         // Ο δικός σου κώδικας για το σταδιακό delay των στοιχείων (.items .item)
         document.querySelectorAll('.items .item').forEach((el, i) => {
