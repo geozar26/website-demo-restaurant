@@ -1,4 +1,4 @@
-import RestaurantApp from './app/RestaurantApp.js';
+import RestaurantApp from './RestaurantApp.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     new RestaurantApp();
