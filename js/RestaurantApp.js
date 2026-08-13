@@ -1,4 +1,4 @@
-import Carousel from '../components/Carousel.js';
+import Carousel from './Carousel.js';
 
 // --- APP CLASS ---
 export default class RestaurantApp {
