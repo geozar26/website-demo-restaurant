@@ -941,104 +941,81 @@ p {
   padding-bottom: 30px;
 }
 
+/* 1. Σωστή στοίχιση του track ώστε να κεντράρει τις κάρτες */
 .carousel-track {
-  display: flex;
-  gap: 30px;
-  width: -moz-max-content;
-  width: max-content;
-  padding: 10px;
-  transition: transform 0.5s ease;
-  overflow: visible;
-}
-
-.carousel-card {
-  position: relative;
-  text-align: left;
-  flex: 0 0 300px;
-  max-width: calc(100vw - 60px);
-  background: #fff;
-  border-radius: var(--radius-lg);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  padding: 12px;
-  box-sizing: border-box;
-}
-.carousel-card:hover {
-  z-index: 999;
-}
-
-.carousel-card .tooltip-icon {
-    position: absolute;
-    bottom: 55px;  
-    left: 15px;     
-    
-    width: 35px;
-    height: 35px;
-    background-color: #007bff;
-    border-radius: 4px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    z-index: 10;
-    cursor: pointer;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+    transition: transform 0.5s ease;
 }
 
-
-.carousel-card .carousel-tooltip {
-     position: absolute;
-    bottom: 80px;
-    left: 50%; 
-    width: 260px;
-    padding: 20px 20px;
-    background: white;
+/* 2. Σταθερό μέγεθος κάρτας όπως στην εικόνα */
+.carousel-card {
+    position: relative;
+    flex: 0 0 240px; /* Σταθερό πλάτος για κάθε κάρτα */
+    background: #ffffff;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-
-    opacity: 0;
-    pointer-events: none; 
-   
-   
-    transform: translateX(-50%) scale(0.8) translateY(20px);
-    transform-origin: bottom center;
-   
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 99;
+    padding: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    text-align: left;
+    box-sizing: border-box;
 }
 
+/* 3. Διορθώσεις στις εικόνες για να μην ξεφεύγουν */
+.carousel-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    margin-bottom: 10px;
+}
 
-.carousel-card .carousel-tooltip.active {
+/* 4. Τοποθέτηση του Tooltip στο ΠΑΝΩ μέρος της κάρτας */
+.carousel-card .carousel-tooltip {
+    position: absolute;
+    top: 15px; /* Εμφάνιση πάνω από την εικόνα */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background: #ffffff;
+    padding: 12px 15px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    z-index: 20;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+}
+
+/* Εμφάνιση tooltip (είτε με class .active είτε με :hover) */
+.carousel-card .carousel-tooltip.active,
+.carousel-card:hover .carousel-tooltip {
     opacity: 1;
     visibility: visible;
-    bottom: 100px;
+    transform: translateX(-50%) translateY(-5px);
 }
 
-
-
-.carousel-card .carousel-tooltip p {
-    font-size: 1rem;
-    line-height: 1.4;
-    color: #444;
-    margin: 0;
-}
-
-.carousel-card .tooltip-icon i {
-    color: #ffffff;
-    font-size: 16px;
-    pointer-events: none; 
-}
-
+/* 5. Στυλ για τον τίτλο "Υλικά" μέσα στο Tooltip */
 .carousel-tooltip b {
     display: block;
-    margin:5px;
-      color: var(--color-primary); 
+    color: #0078ff;
     font-size: 0.85rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-
-  
+    font-weight: 700;
+    margin-bottom: 4px;
 }
 
+.carousel-tooltip p {
+    font-size: 0.85rem;
+    color: #444;
+    line-height: 1.3;
+    margin: 0;
+}
 
 .carousel-dots {
   display: flex;
