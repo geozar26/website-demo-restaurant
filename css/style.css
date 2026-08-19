@@ -1,4 +1,4 @@
-:root {
+root {
   --color-primary:#0078ff;
   --color-dark:#222;
   --color-light:#F9F9F9;
@@ -944,13 +944,13 @@ p {
 .carousel-track {
   display: flex;
   gap: 30px;
+  width: -moz-max-content;
   width: max-content;
   padding: 10px;
   transition: transform 0.5s ease;
   overflow: visible;
-
-  visibility: visible;
-  opacity: 1;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .carousel-card {
