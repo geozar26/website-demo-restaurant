@@ -975,85 +975,96 @@ p {
     margin-bottom: 10px;
 }
 
-/* 1. Σωστή τοποθέτηση του εικονιδίου ΠΑΝΩ στην εικόνα */
+/* 4. Το εικονίδιο πάνω στην εικόνα */
 .carousel-card .tooltip-icon {
-  position: absolute;
-  top: 120px; /* Το κατεβάζει ακριβώς πάνω στην εικόνα */
-  left: 20px;
-  z-index: 10;
-  
-  /* 2. Εμφάνιση: Στρογγυλό Μπλε Κουμπί */
-  width: 36px;
-  height: 36px;
-  background-color: #0078ff; /* Το μπλε χρώμα */
-  border-radius: 50%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  
-  /* 3. Κεντράρισμα του λευκού εικονιδίου */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+    position: absolute;
+    top: 120px;
+    left: 20px;
+    z-index: 10;
+    width: 36px;
+    height: 36px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-/* Χρώμα και μέγεθος του μαχαιροπίρουνου */
 .carousel-card .tooltip-icon i {
-  color: #ffffff;
-  font-size: 0.9rem;
+    color: #ffffff;
+    font-size: 0.9rem;
 }
 
-/* Hover εφέ στο κουμπί */
-.carousel-card .tooltip-icon:hover {
-  background-color: #005fcc;
-  transform: scale(1.08);
+/* 5. Το Tooltip (Συνεφάκι) - Absolute για να μην σπρώχνει τα στοιχεία */
+.carousel-tooltip {
+    position: absolute;
+    bottom: 80px; /* Εμφανίζεται πάνω από το εικονίδιο */
+    left: 20px;
+    background: #ffffff;
+    padding: 10px 12px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 20;
+    width: 200px;
+    
+    /* Αρχικά κρυμμένο */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    pointer-events: none;
 }
-/* Εμφάνιση tooltip (είτε με class .active είτε με :hover) */
+
+/* Εμφάνιση όταν προστίθεται η κλάση .active μέσω JS ή με Hover */
 .carousel-card .carousel-tooltip.active,
 .carousel-card:hover .carousel-tooltip {
     opacity: 1;
     visibility: visible;
-    transform: translateX(-50%) translateY(-5px);
+    transform: translateY(0);
 }
 
-/* 5. Στυλ για τον τίτλο "Υλικά" μέσα στο Tooltip */
 .carousel-tooltip b {
     display: block;
-    color: #0078ff;
+    color: var(--color-primary);
     font-size: 0.85rem;
     font-weight: 700;
     margin-bottom: 4px;
 }
 
 .carousel-tooltip p {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: #444;
     line-height: 1.3;
     margin: 0;
 }
 
-
-
+/* 6. Διόρθωση για τα Dots που εξαφανίστηκαν */
 .carousel-dots {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px;
+    width: 100%;
 }
 
 .dot {
-  width: 10px;
-  height: 10px;
-  background-color: #ddd;
-  border-radius: var(--radius-circle);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.dot.active {
-  background-color: var(--color-primary);
-  transform: scale(1.2);
+    width: 12px;
+    height: 12px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    transition: all 0.3s ease;
 }
 
+.dot.active {
+    background-color: var(--color-primary);
+    transform: scale(1.2);
+}
 
 
 @keyframes tooltipShow {
