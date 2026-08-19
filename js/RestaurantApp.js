@@ -2024,7 +2024,7 @@
 
 <script
     type="module"
-    src="./js/main.js"
+    src="./main.js"
 ></script>
 
 
