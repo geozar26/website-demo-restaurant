@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html lang="el">
 
@@ -2016,9 +2016,6 @@
 <!-- =========================================================
      FOOTER
 ========================================================= -->
-<!-- =========================================================
-     FOOTER
-========================================================= -->
 
 <footer class="footer">
 
@@ -2026,28 +2023,21 @@
     <div class="footer-container">
 
 
-        <!-- =====================================================
-             COLUMN 1
-        ===================================================== -->
+        <!-- COLUMN 1 -->
 
-        <div class="footer-col">
+        <div
+            class="footer-col"
+            data-aos="fade"
+            data-aos-duration="350"
+            data-aos-delay="0"
+        >
 
-
-            <h3
-                data-aos="fade"
-                data-aos-duration="350"
-                data-aos-delay="0"
-            >
+            <h3>
                 Ακολουθήστε μας
             </h3>
 
 
-            <div
-                class="social-icons"
-                data-aos="fade"
-                data-aos-duration="350"
-                data-aos-delay="80"
-            >
+            <div class="social-icons">
 
                 <a href="#">
                     <i class="fab fa-facebook-f"></i>
@@ -2069,29 +2059,23 @@
 
 
 
-        <!-- =====================================================
-             COLUMN 2
-        ===================================================== -->
+        <!-- COLUMN 2 -->
 
-        <div class="footer-col">
+        <div
+            class="footer-col"
+            data-aos="fade"
+            data-aos-duration="350"
+            data-aos-delay="100"
+        >
 
-
-            <h3
-                data-aos="fade"
-                data-aos-duration="350"
-                data-aos-delay="160"
-            >
+            <h3>
                 Σύνδεσμοι
             </h3>
 
 
             <ul>
 
-                <li
-                    data-aos="fade"
-                    data-aos-duration="350"
-                    data-aos-delay="240"
-                >
+                <li>
 
                     <a href="#home">
                         Αρχική
@@ -2100,11 +2084,7 @@
                 </li>
 
 
-                <li
-                    data-aos="fade"
-                    data-aos-duration="350"
-                    data-aos-delay="320"
-                >
+                <li>
 
                     <a href="pages/index1.html">
                         Σχετικά
@@ -2113,11 +2093,7 @@
                 </li>
 
 
-                <li
-                    data-aos="fade"
-                    data-aos-duration="350"
-                    data-aos-delay="400"
-                >
+                <li>
 
                     <a href="pages/index3.html">
                         Επικοινωνία
@@ -2131,29 +2107,23 @@
 
 
 
-        <!-- =====================================================
-             COLUMN 3
-        ===================================================== -->
+        <!-- COLUMN 3 -->
 
-        <div class="footer-col">
+        <div
+            class="footer-col"
+            data-aos="fade"
+            data-aos-duration="350"
+            data-aos-delay="200"
+        >
 
-
-            <h3
-                data-aos="fade"
-                data-aos-duration="350"
-                data-aos-delay="480"
-            >
+            <h3>
                 Πληροφορίες
             </h3>
 
 
             <ul>
 
-                <li
-                    data-aos="fade"
-                    data-aos-duration="350"
-                    data-aos-delay="560"
-                >
+                <li>
 
                     <a href="#">
                         Συνταγές
@@ -2162,11 +2132,7 @@
                 </li>
 
 
-                <li
-                    data-aos="fade"
-                    data-aos-duration="350"
-                    data-aos-delay="640"
-                >
+                <li>
 
                     <a href="#">
                         Blog
@@ -2175,11 +2141,7 @@
                 </li>
 
 
-                <li
-                    data-aos="fade"
-                    data-aos-duration="350"
-                    data-aos-delay="720"
-                >
+                <li>
 
                     <a href="#">
                         Γκάλερι
@@ -2193,29 +2155,23 @@
 
 
 
-        <!-- =====================================================
-             COLUMN 4
-        ===================================================== -->
+        <!-- COLUMN 4 -->
 
-        <div class="footer-col">
+        <div
+            class="footer-col"
+            data-aos="fade"
+            data-aos-duration="350"
+            data-aos-delay="300"
+        >
 
-
-            <h3
-                data-aos="fade"
-                data-aos-duration="350"
-                data-aos-delay="800"
-            >
+            <h3>
                 Επικοινωνία
             </h3>
 
 
             <ul>
 
-                <li
-                    data-aos="fade"
-                    data-aos-duration="350"
-                    data-aos-delay="880"
-                >
+                <li>
 
                     <a href="mailto:info@kitchengrid.gr">
                         info@kitchengrid.gr
@@ -2224,11 +2180,7 @@
                 </li>
 
 
-                <li
-                    data-aos="fade"
-                    data-aos-duration="350"
-                    data-aos-delay="960"
-                >
+                <li>
 
                     <a href="tel:+302101234567">
                         +30 210 1234567
@@ -2246,14 +2198,14 @@
 
     <!-- =========================================================
          FOOTER BOTTOM
-         ΑΜΕΣΩΣ ΜΕΤΑ ΤΑ ΥΠΟΛΟΙΠΑ ΚΕΙΜΕΝΑ
+         ΕΜΦΑΝΙΖΕΤΑΙ ΑΜΕΣΩΣ ΜΕΤΑ ΤΑ 4 COLUMNS
     ========================================================= -->
 
     <div
         class="footer-bottom"
         data-aos="fade"
         data-aos-duration="350"
-        data-aos-delay="1040"
+        data-aos-delay="400"
     >
 
         © 2025 The kitchen grid.
@@ -2322,12 +2274,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+
+window.addEventListener("load", () => {
+
+    if (typeof AOS !== "undefined") {
+
+        AOS.refreshHard();
+
+    }
+
+});
+
 </script>
 
 
-<!-- =========================================================
-     MAIN JAVASCRIPT
-========================================================= -->
+
+
 
 <script
     type="module"
@@ -2336,6 +2298,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 </body>
-
 </html>
-```
+
