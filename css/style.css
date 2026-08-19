@@ -928,7 +928,7 @@ p {
   color: #333;
 }
 
-.carousel-container::-webkit-scrollbar {
+.-container::-webkit-scrollbar {
   display: none;
 }
 .carousel-container {
@@ -1041,31 +1041,43 @@ p {
     margin: 0;
 }
 
-/* 6. Διόρθωση για τα Dots που εξαφανίστηκαν */
+.carousel-card .carousel-tooltip.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto; /* Επιτρέπει αλληλεπίδραση όταν είναι ενεργό */
+}
+
+
+
+/* Dots Container: Σωστό κεντράρισμα κάτω από το carousel */
 .carousel-dots {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin-top: 25px;
+    margin: 20px auto 0 auto;
     width: 100%;
+    position: relative;
+    z-index: 5;
 }
 
+/* Εμφάνιση των κουκκίδων */
 .dot {
     width: 12px;
     height: 12px;
-    background-color: #ccc;
+    background-color: #ccc; /* Γκρι όταν είναι ανενεργό */
     border-radius: 50%;
     cursor: pointer;
     display: inline-block;
     transition: all 0.3s ease;
 }
 
+/* Ενεργό μπλε dot */
 .dot.active {
     background-color: var(--color-primary);
     transform: scale(1.2);
 }
-
 
 @keyframes tooltipShow {
   from {
