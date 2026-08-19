@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="el">
 
@@ -2259,6 +2259,49 @@
 
 
 
+<!-- =========================================================
+     AOS INITIALIZATION
+========================================================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    if (typeof AOS === "undefined") {
+
+        console.warn(
+            "AOS library δεν φορτώθηκε."
+        );
+
+        return;
+
+    }
+
+
+    AOS.init({
+
+        once: true,
+
+        duration: 350,
+
+        easing: "ease-out",
+
+        offset: 60,
+
+        delay: 0,
+
+        mirror: false,
+
+        disable: false,
+
+        anchorPlacement: "top-bottom"
+
+    });
+
+});
+
+</script>
+
 
 
 <!-- =========================================================
@@ -2272,5 +2315,6 @@
 
 
 </body>
-</html>
 
+</html>
+```
