@@ -975,24 +975,39 @@ p {
     margin-bottom: 10px;
 }
 
-/* 4. Τοποθέτηση του Tooltip στο ΠΑΝΩ μέρος της κάρτας */
-.carousel-card .carousel-tooltip {
-    position: absolute;
-    top: 15px; /* Εμφάνιση πάνω από την εικόνα */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    background: #ffffff;
-    padding: 12px 15px;
-    border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-    z-index: 20;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    pointer-events: none;
+/* 1. Σωστή τοποθέτηση του εικονιδίου ΠΑΝΩ στην εικόνα */
+.carousel-card .tooltip-icon {
+  position: absolute;
+  top: 120px; /* Το κατεβάζει ακριβώς πάνω στην εικόνα */
+  left: 20px;
+  z-index: 10;
+  
+  /* 2. Εμφάνιση: Στρογγυλό Μπλε Κουμπί */
+  width: 36px;
+  height: 36px;
+  background-color: #0078ff; /* Το μπλε χρώμα */
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  
+  /* 3. Κεντράρισμα του λευκού εικονιδίου */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
+/* Χρώμα και μέγεθος του μαχαιροπίρουνου */
+.carousel-card .tooltip-icon i {
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+
+/* Hover εφέ στο κουμπί */
+.carousel-card .tooltip-icon:hover {
+  background-color: #005fcc;
+  transform: scale(1.08);
+}
 /* Εμφάνιση tooltip (είτε με class .active είτε με :hover) */
 .carousel-card .carousel-tooltip.active,
 .carousel-card:hover .carousel-tooltip {
@@ -1016,6 +1031,8 @@ p {
     line-height: 1.3;
     margin: 0;
 }
+
+
 
 .carousel-dots {
   display: flex;
