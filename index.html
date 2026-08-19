@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="el">
 <head>
@@ -11,10 +12,14 @@
     <link rel="icon" href="data:,">
 
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </noscript>
 
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"></noscript>
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+    </noscript>
 </head>
 
 <body>
@@ -23,9 +28,10 @@
 
 <div id="loginPopup" class="login-popup">
     <span id="loginClose" class="close">&times;</span>
+
     <h2>Σύνδεση</h2>
 
-    <form id="loginForm" action="#" method="POST"> 
+    <form id="loginForm" action="#" method="POST">
         <input
             type="text"
             id="usernameInput"
@@ -63,7 +69,7 @@
     </div>
 
     <p class="register-link">
-        Δεν είστε μέλος;
+        Δεν είστε μέλος?
         <a href="#">Εγγραφείτε</a>
     </p>
 </div>
@@ -163,6 +169,7 @@
         </div>
 
     </nav>
+
 </header>
 
 
@@ -237,6 +244,7 @@
 
         </div>
     </div>
+
 </div>
 
 
@@ -420,8 +428,7 @@
                 >
                     <b>Υλικά</b>
                     <p>
-                        γαρίδες, λιγκουίνι,
-                        σάλτσα ντομάτας.
+                        γαρίδες, λιγκουίνι, σάλτσα ντομάτας.
                     </p>
                 </div>
 
@@ -480,6 +487,7 @@
             </div>
 
         </div>
+
     </div>
 
     <div class="carousel-dots"></div>
@@ -502,6 +510,7 @@
         data-aos="zoom-in"
         data-aos-delay="0"
     >
+
         <picture>
             <source
                 srcset="images/pizza.webp"
@@ -512,6 +521,7 @@
                 class="recipe-img"
                 src="images/pizza.webp"
                 alt="Πίτσα"
+                loading="lazy"
                 data-title="Πίτσα Special"
                 data-description="Πλούσια γέμιση με ζαμπόν, μπέικον, φρέσκα μανιτάρια, πιπεριά και λιωμένη μοτσαρέλα."
             >
@@ -525,6 +535,7 @@
         </button>
 
         <h4>Πίτσα</h4>
+
     </div>
 
 
@@ -533,6 +544,7 @@
         data-aos="zoom-in"
         data-aos-delay="70"
     >
+
         <picture>
             <source
                 srcset="images/gyros.webp"
@@ -543,6 +555,7 @@
                 class="recipe-img"
                 src="images/gyros.webp"
                 alt="Πίτα Γύρο"
+                loading="lazy"
                 data-title="Πίτα Γύρος Χοιρινός"
                 data-description="Παραδοσιακή πίτα με ζουμερό χοιρινό γύρο, φρέσκια ντομάτα, κρεμμύδι, πατάτες τηγανητές και χειροποίητο τζατζίκι."
             >
@@ -556,6 +569,7 @@
         </button>
 
         <h4>Πίτα Γύρο</h4>
+
     </div>
 
 
@@ -564,6 +578,7 @@
         data-aos="zoom-in"
         data-aos-delay="90"
     >
+
         <picture>
             <source
                 srcset="images/chicken.webp"
@@ -574,6 +589,7 @@
                 class="recipe-img"
                 src="images/chicken.webp"
                 alt="Κοτόπουλο"
+                loading="lazy"
                 data-title="Κοτόπουλο Ψητό"
                 data-description="Κοτόπουλο ψημένo στο φούρνο με πατάτες, λεμόνι και μυρωδικά."
             >
@@ -587,6 +603,7 @@
         </button>
 
         <h4>Κοτόπουλο</h4>
+
     </div>
 
 
@@ -595,6 +612,7 @@
         data-aos="zoom-in"
         data-aos-delay="110"
     >
+
         <picture>
             <source
                 srcset="images/crepes.webp"
@@ -605,6 +623,7 @@
                 class="recipe-img"
                 src="images/crepes.webp"
                 alt="Κρέπα"
+                loading="lazy"
                 data-title="Κρέπα Special"
                 data-description="Λεπτή, αφράτη ζύμη κρέπας γεμισμένη με πλούσια πραλίνα φουντουκιού και φρέσκια μπανάνα."
             >
@@ -618,6 +637,7 @@
         </button>
 
         <h4>Κρέπα</h4>
+
     </div>
 
 
@@ -626,6 +646,7 @@
         data-aos="zoom-in"
         data-aos-delay="120"
     >
+
         <picture>
             <source
                 srcset="images/beef.webp"
@@ -636,6 +657,7 @@
                 class="recipe-img"
                 src="../images/beef.webp"
                 alt="Μπιφτέκια"
+                loading="lazy"
                 data-title="Μπιφτέκια"
                 data-description="Αφράτα, καλοψημένα μπιφτέκια από φρέσκο κιμά."
             >
@@ -649,6 +671,7 @@
         </button>
 
         <h4>Μπιφτέκια</h4>
+
     </div>
 
 
@@ -657,6 +680,7 @@
         data-aos="zoom-in"
         data-aos-delay="140"
     >
+
         <picture>
             <source
                 srcset="images/soutzoukakia.webp"
@@ -667,6 +691,7 @@
                 class="recipe-img"
                 src="../images/soutzoukakia.webp"
                 alt="Σουτζουκάκια"
+                loading="lazy"
                 data-title="Σουτζουκάκια Σμυρνέικα"
                 data-description="Κεφτεδάκια με κύμινo και σκόρδο, μαγειρεμένα σε σάλτσα ντομάτας με συνοδεία ρυζιού."
             >
@@ -680,6 +705,7 @@
         </button>
 
         <h4>Σουτζουκάκια</h4>
+
     </div>
 
 
@@ -688,6 +714,7 @@
         data-aos="zoom-in"
         data-aos-delay="160"
     >
+
         <picture>
             <source
                 srcset="images/spaghetti-mpolonez.webp"
@@ -698,6 +725,7 @@
                 class="recipe-img"
                 src="../images/spaghetti-mpolonez.webp"
                 alt="Σπαγγέτι"
+                loading="lazy"
                 data-title="Σπαγγέτι Μπολονέζ"
                 data-description="Παραδοσιακή σπαγγέτι με πλούσια σάλτσα κιμά."
             >
@@ -711,6 +739,7 @@
         </button>
 
         <h4>Σπαγγέττι Μπολονέζ</h4>
+
     </div>
 
 
@@ -719,6 +748,7 @@
         data-aos="zoom-in"
         data-aos-delay="180"
     >
+
         <picture>
             <source
                 srcset="images/solomon.webp"
@@ -729,6 +759,7 @@
                 class="recipe-img"
                 src="../images/solomon.webp"
                 alt="Σολομός"
+                loading="lazy"
                 data-title="Σολομός"
                 data-description="Φρέσκο, ζουμερό φιλέτο σολομού σχάρας με άνηθο περιχυμένο με λαδολέμονο."
             >
@@ -742,6 +773,7 @@
         </button>
 
         <h4>Σολομός</h4>
+
     </div>
 
 </section>
@@ -787,9 +819,7 @@
                             <i class="fa-solid fa-minus"></i>
                         </button>
 
-                        <span id="qtyValue">
-                            1
-                        </span>
+                        <span id="qtyValue">1</span>
 
                         <button
                             class="qty-btn"
@@ -808,6 +838,7 @@
                     </button>
 
                 </div>
+
             </div>
 
         </div>
@@ -823,6 +854,7 @@
         <p id="modalDescription"></p>
 
     </div>
+
 </div>
 
 
@@ -842,6 +874,7 @@
             data-aos="fade-right"
             data-aos-delay="0"
         >
+
             <div class="client-info">
 
                 <picture>
@@ -854,6 +887,7 @@
                         src="images/testimo1.webp"
                         alt="Πελάτης 1"
                         class="client-img"
+                        loading="lazy"
                     >
                 </picture>
 
@@ -876,6 +910,7 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
+
         </div>
 
 
@@ -884,6 +919,7 @@
             data-aos="fade-right"
             data-aos-delay="50"
         >
+
             <div class="client-info">
 
                 <picture>
@@ -896,6 +932,7 @@
                         src="../images/testimo2.webp"
                         alt="Πελάτης"
                         class="client-img"
+                        loading="lazy"
                     >
                 </picture>
 
@@ -920,6 +957,7 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
+
         </div>
 
 
@@ -928,6 +966,7 @@
             data-aos="fade-right"
             data-aos-delay="60"
         >
+
             <div class="client-info">
 
                 <picture>
@@ -940,6 +979,7 @@
                         src="../images/testimo3.webp"
                         alt="Πελάτης"
                         class="client-img"
+                        loading="lazy"
                     >
                 </picture>
 
@@ -961,6 +1001,7 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
             </div>
+
         </div>
 
 
@@ -969,6 +1010,7 @@
             data-aos="fade-right"
             data-aos-delay="70"
         >
+
             <div class="client-info">
 
                 <picture>
@@ -981,6 +1023,7 @@
                         src="images/testimo4.webp"
                         alt="Εικόνα Πελάτη 4"
                         class="client-img"
+                        loading="lazy"
                     >
                 </picture>
 
@@ -1003,9 +1046,11 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
             </div>
+
         </div>
 
     </div>
+
 </section>
 
 
@@ -1018,7 +1063,6 @@
         Φωτογραφίες / Γκαλερί
     </h2>
 
-
     <div class="gallery-container">
 
         <a
@@ -1026,6 +1070,7 @@
             class="box glightbox"
             data-aos="zoom-in"
         >
+
             <picture>
 
                 <source
@@ -1036,6 +1081,7 @@
                 <img
                     src="images/carbonara.webp"
                     alt="Καρμπονάρα"
+                    loading="lazy"
                 >
 
             </picture>
@@ -1043,6 +1089,7 @@
             <div class="icon">
                 <i class="fas fa-plus"></i>
             </div>
+
         </a>
 
 
@@ -1052,6 +1099,7 @@
             data-aos="zoom-in"
             data-aos-delay="0"
         >
+
             <picture>
 
                 <source
@@ -1062,6 +1110,7 @@
                 <img
                     src="images/calzone.webp"
                     alt="Καλτσόνε"
+                    loading="lazy"
                 >
 
             </picture>
@@ -1069,6 +1118,7 @@
             <div class="icon">
                 <i class="fas fa-plus"></i>
             </div>
+
         </a>
 
 
@@ -1078,6 +1128,7 @@
             data-aos="zoom-in"
             data-aos-delay="50"
         >
+
             <picture>
 
                 <source
@@ -1088,6 +1139,7 @@
                 <img
                     src="images/pizza-2.webp"
                     alt="Πίτσα"
+                    loading="lazy"
                 >
 
             </picture>
@@ -1095,6 +1147,7 @@
             <div class="icon">
                 <i class="fas fa-plus"></i>
             </div>
+
         </a>
 
 
@@ -1104,6 +1157,7 @@
             data-aos="zoom-in"
             data-aos-delay="60"
         >
+
             <picture>
 
                 <source
@@ -1114,6 +1168,7 @@
                 <img
                     src="images/caesar-salad.png"
                     alt="Σαλάτα του Καίσαρα"
+                    loading="lazy"
                 >
 
             </picture>
@@ -1121,6 +1176,7 @@
             <div class="icon">
                 <i class="fas fa-plus"></i>
             </div>
+
         </a>
 
 
@@ -1130,6 +1186,7 @@
             data-aos="zoom-in"
             data-aos-duration="70"
         >
+
             <picture>
 
                 <source
@@ -1140,6 +1197,7 @@
                 <img
                     src="images/peinirli.webp"
                     alt="Πεϊνιρλί"
+                    loading="lazy"
                 >
 
             </picture>
@@ -1147,6 +1205,7 @@
             <div class="icon">
                 <i class="fas fa-plus"></i>
             </div>
+
         </a>
 
 
@@ -1156,6 +1215,7 @@
             data-aos="zoom-in"
             data-aos-delay="80"
         >
+
             <picture>
 
                 <source
@@ -1166,6 +1226,7 @@
                 <img
                     src="images/burger.webp"
                     alt="Burger"
+                    loading="lazy"
                 >
 
             </picture>
@@ -1173,6 +1234,7 @@
             <div class="icon">
                 <i class="fas fa-plus"></i>
             </div>
+
         </a>
 
 
@@ -1182,6 +1244,7 @@
             data-aos="zoom-in"
             data-aos-delay="90"
         >
+
             <picture>
 
                 <source
@@ -1192,6 +1255,7 @@
                 <img
                     src="images/sokolatopita.webp"
                     alt="Σοκολατόπιτα"
+                    loading="lazy"
                 >
 
             </picture>
@@ -1199,6 +1263,7 @@
             <div class="icon">
                 <i class="fas fa-plus"></i>
             </div>
+
         </a>
 
 
@@ -1208,6 +1273,7 @@
             data-aos="zoom-in"
             data-aos-delay="100"
         >
+
             <picture>
 
                 <source
@@ -1225,6 +1291,7 @@
             <div class="icon">
                 <i class="fas fa-plus"></i>
             </div>
+
         </a>
 
     </div>
@@ -1247,7 +1314,6 @@
             <h3>Ακολουθήστε μας</h3>
 
             <div class="social-icons">
-
                 <a href="#">
                     <i class="fab fa-facebook-f"></i>
                 </a>
@@ -1259,7 +1325,6 @@
                 <a href="#">
                     <i class="fab fa-instagram"></i>
                 </a>
-
             </div>
         </div>
 
@@ -1272,7 +1337,6 @@
             <h3>Σύνδεσμοι</h3>
 
             <ul>
-
                 <li>
                     <a href="#home">
                         Αρχική
@@ -1290,7 +1354,6 @@
                         Επικοινωνία
                     </a>
                 </li>
-
             </ul>
         </div>
 
@@ -1303,7 +1366,6 @@
             <h3>Πληροφορίες</h3>
 
             <ul>
-
                 <li>
                     <a href="#">
                         Συνταγές
@@ -1321,7 +1383,6 @@
                         Γκάλερι
                     </a>
                 </li>
-
             </ul>
         </div>
 
@@ -1334,7 +1395,6 @@
             <h3>Επικοινωνία</h3>
 
             <ul>
-
                 <li>
                     <a href="mailto:info@kitchengrid.gr">
                         info@kitchengrid.gr
@@ -1346,7 +1406,6 @@
                         +30 210 1234567
                     </a>
                 </li>
-
             </ul>
         </div>
 
@@ -1375,14 +1434,40 @@
     src="./js/main.js"
 ></script>
 
+
 <script>
-AOS.init({
-    once: true,
-    duration: 400,
-    easing: "ease-out",
-    offset: 50
+document.addEventListener("DOMContentLoaded", () => {
+
+    AOS.init({
+        once: true,
+        duration: 400,
+        easing: "ease-out",
+        offset: 50,
+        delay: 0,
+        mirror: false
+    });
+
+    requestAnimationFrame(() => {
+        AOS.refreshHard();
+    });
+
 });
+
+window.addEventListener("load", () => {
+    AOS.refreshHard();
+});
+
+document
+    .querySelectorAll("img[loading='lazy']")
+    .forEach((img) => {
+
+        img.addEventListener("load", () => {
+            AOS.refreshHard();
+        });
+
+    });
 </script>
 
 </body>
 </html>
+```
