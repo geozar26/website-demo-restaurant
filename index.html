@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="el">
 
@@ -12,9 +13,9 @@
     <title>Website Restaurant</title>
 
 
-    <!-- =====================================================
-         AOS
-    ====================================================== -->
+    <!-- =========================================================
+         AOS CSS
+    ========================================================= -->
 
     <link
         href="https://unpkg.com/aos@2.3.1/dist/aos.css"
@@ -22,9 +23,9 @@
     >
 
 
-    <!-- =====================================================
+    <!-- =========================================================
          CRITICAL IMAGE PRELOAD
-    ====================================================== -->
+    ========================================================= -->
 
     <link
         rel="preload"
@@ -33,9 +34,9 @@
     >
 
 
-    <!-- =====================================================
+    <!-- =========================================================
          MAIN CSS
-    ====================================================== -->
+    ========================================================= -->
 
     <link
         rel="stylesheet"
@@ -43,9 +44,9 @@
     >
 
 
-    <!-- =====================================================
+    <!-- =========================================================
          FAVICON
-    ====================================================== -->
+    ========================================================= -->
 
     <link
         rel="icon"
@@ -53,9 +54,9 @@
     >
 
 
-    <!-- =====================================================
+    <!-- =========================================================
          FONT AWESOME
-    ====================================================== -->
+    ========================================================= -->
 
     <link
         rel="preload"
@@ -65,18 +66,16 @@
     >
 
     <noscript>
-
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
         >
-
     </noscript>
 
 
-    <!-- =====================================================
-         GLIGHTBOX
-    ====================================================== -->
+    <!-- =========================================================
+         GLIGHTBOX CSS
+    ========================================================= -->
 
     <link
         rel="preload"
@@ -86,12 +85,10 @@
     >
 
     <noscript>
-
         <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
         >
-
     </noscript>
 
 </head>
@@ -123,7 +120,9 @@
     </span>
 
 
-    <h2>Σύνδεση</h2>
+    <h2>
+        Σύνδεση
+    </h2>
 
 
     <form
@@ -154,7 +153,6 @@
                 type="checkbox"
                 id="rememberMeCheck"
             >
-
 
             <label for="rememberMeCheck">
                 Να με θυμάσαι
@@ -218,7 +216,6 @@
 
 <header class="navbar">
 
-
     <div class="logo">
         kitchen grid
     </div>
@@ -240,22 +237,17 @@
         for="menu-toggle"
         class="menu-icon"
     >
-
         <i class="fa-solid fa-bars"></i>
-
     </label>
 
 
     <nav class="nav-links">
 
-
         <div
             class="search-trigger"
             id="openSearch"
         >
-
             <i class="fa-solid fa-magnifying-glass"></i>
-
         </div>
 
 
@@ -284,12 +276,12 @@
 
         <div class="nav-footer">
 
-
             <div class="social-row">
 
                 <a href="#">
                     <i class="fa-brands fa-facebook"></i>
                 </a>
+
 
                 <a href="#">
                     <i class="fa-brands fa-instagram"></i>
@@ -344,7 +336,6 @@
     id="searchOverlay"
 >
 
-
     <span
         class="search-close"
         id="closeSearch"
@@ -354,7 +345,6 @@
 
 
     <div class="search-container">
-
 
         <input
             type="text"
@@ -369,9 +359,7 @@
 
         <div class="mega-menu-content">
 
-
             <div class="mega-row">
-
 
                 <div class="mega-item">
 
@@ -433,7 +421,6 @@
 
 
             <div class="mega-row">
-
 
                 <div class="mega-item">
 
@@ -509,10 +496,10 @@
 
     <div class="hero-content">
 
-
         <h1
             data-aos="fade-up"
-            data-aos-duration="400"
+            data-aos-duration="350"
+            data-aos-delay="0"
         >
             Η Γεύση που Ψάχνετε, με Φρέσκα Υλικά.
         </h1>
@@ -520,7 +507,7 @@
 
         <p
             data-aos="fade-up"
-            data-aos-duration="400"
+            data-aos-duration="350"
             data-aos-delay="80"
         >
             Ετοιμάζουμε καθημερινά νόστιμα πιάτα με τα καλύτερα υλικά.
@@ -531,8 +518,8 @@
             href="#items"
             class="btn"
             data-aos="fade-up"
-            data-aos-duration="400"
-            data-aos-delay="140"
+            data-aos-duration="350"
+            data-aos-delay="160"
         >
             Εξερευνήστε το Μενού
         </a>
@@ -545,6 +532,7 @@
 
 <!-- =========================================================
      TODAY'S SPECIALS
+     CAROUSEL
 ========================================================= -->
 
 <section class="todays-specials">
@@ -552,7 +540,8 @@
 
     <h2
         data-aos="fade-up"
-        data-aos-duration="400"
+        data-aos-duration="350"
+        data-aos-delay="0"
     >
         Σημερινά Πιάτα
     </h2>
@@ -560,13 +549,12 @@
 
     <div class="carousel-container">
 
-
         <div class="carousel-track">
 
 
             <!-- =================================================
                  CARD 1
-            ================================================== -->
+            ================================================= -->
 
             <div
                 class="carousel-card"
@@ -596,17 +584,22 @@
                 </div>
 
 
-                <picture>
+                <picture
+                    data-aos="fade-up"
+                    data-aos-duration="350"
+                    data-aos-delay="0"
+                    data-aos-anchor-placement="top-bottom"
+                >
 
                     <source
                         srcset="images/pastitsio.webp"
                         type="image/webp"
                     >
 
+
                     <img
                         src="images/pastitsio.webp"
                         alt="Παστίτσιο"
-                        loading="lazy"
                     >
 
                 </picture>
@@ -622,7 +615,7 @@
 
             <!-- =================================================
                  CARD 2
-            ================================================== -->
+            ================================================= -->
 
             <div
                 class="carousel-card"
@@ -652,17 +645,22 @@
                 </div>
 
 
-                <picture>
+                <picture
+                    data-aos="fade-up"
+                    data-aos-duration="350"
+                    data-aos-delay="100"
+                    data-aos-anchor-placement="top-bottom"
+                >
 
                     <source
                         srcset="images/gemista-kalamarakia.webp"
                         type="image/webp"
                     >
 
+
                     <img
                         src="images/gemista-kalamarakia.webp"
                         alt="Καλαμάρια"
-                        loading="lazy"
                     >
 
                 </picture>
@@ -678,7 +676,7 @@
 
             <!-- =================================================
                  CARD 3
-            ================================================== -->
+            ================================================= -->
 
             <div
                 class="carousel-card"
@@ -708,17 +706,22 @@
                 </div>
 
 
-                <picture>
+                <picture
+                    data-aos="fade-up"
+                    data-aos-duration="350"
+                    data-aos-delay="200"
+                    data-aos-anchor-placement="top-bottom"
+                >
 
                     <source
                         srcset="images/gemistes-krepes.webp"
                         type="image/webp"
                     >
 
+
                     <img
                         src="images/gemistes-krepes.webp"
                         alt="Κρέπες"
-                        loading="lazy"
                     >
 
                 </picture>
@@ -734,7 +737,7 @@
 
             <!-- =================================================
                  CARD 4
-            ================================================== -->
+            ================================================= -->
 
             <div
                 class="carousel-card"
@@ -764,17 +767,22 @@
                 </div>
 
 
-                <picture>
+                <picture
+                    data-aos="fade-up"
+                    data-aos-duration="350"
+                    data-aos-delay="300"
+                    data-aos-anchor-placement="top-bottom"
+                >
 
                     <source
                         srcset="images/garidomakaronada.webp"
                         type="image/webp"
                     >
 
+
                     <img
                         src="images/garidomakaronada.webp"
                         alt="Γαριδομακαρονάδα"
-                        loading="lazy"
                     >
 
                 </picture>
@@ -790,7 +798,7 @@
 
             <!-- =================================================
                  CARD 5
-            ================================================== -->
+            ================================================= -->
 
             <div
                 class="carousel-card"
@@ -820,17 +828,22 @@
                 </div>
 
 
-                <picture>
+                <picture
+                    data-aos="fade-up"
+                    data-aos-duration="350"
+                    data-aos-delay="400"
+                    data-aos-anchor-placement="top-bottom"
+                >
 
                     <source
                         srcset="images/giouvetsi-kritharaki.webp"
                         type="image/webp"
                     >
 
+
                     <img
                         src="images/giouvetsi-kritharaki.webp"
                         alt="Γιουβέτσι"
-                        loading="lazy"
                     >
 
                 </picture>
@@ -864,8 +877,9 @@
 
 
     <h2
-        data-aos="zoom-in"
-        data-aos-duration="400"
+        data-aos="fade-up"
+        data-aos-duration="350"
+        data-aos-delay="0"
     >
         Προτάσεις Γεύσεων
     </h2>
@@ -877,7 +891,8 @@
     <div
         class="item"
         data-aos="zoom-in"
-        data-aos-duration="400"
+        data-aos-duration="350"
+        data-aos-delay="80"
     >
 
         <picture>
@@ -886,6 +901,7 @@
                 srcset="images/pizza.webp"
                 type="image/webp"
             >
+
 
             <img
                 class="recipe-img"
@@ -922,7 +938,8 @@
     <div
         class="item"
         data-aos="zoom-in"
-        data-aos-duration="400"
+        data-aos-duration="350"
+        data-aos-delay="160"
     >
 
         <picture>
@@ -931,6 +948,7 @@
                 srcset="images/gyros.webp"
                 type="image/webp"
             >
+
 
             <img
                 class="recipe-img"
@@ -967,7 +985,8 @@
     <div
         class="item"
         data-aos="zoom-in"
-        data-aos-duration="400"
+        data-aos-duration="350"
+        data-aos-delay="240"
     >
 
         <picture>
@@ -976,6 +995,7 @@
                 srcset="images/chicken.webp"
                 type="image/webp"
             >
+
 
             <img
                 class="recipe-img"
@@ -1012,7 +1032,8 @@
     <div
         class="item"
         data-aos="zoom-in"
-        data-aos-duration="400"
+        data-aos-duration="350"
+        data-aos-delay="320"
     >
 
         <picture>
@@ -1021,6 +1042,7 @@
                 srcset="images/crepes.webp"
                 type="image/webp"
             >
+
 
             <img
                 class="recipe-img"
@@ -1057,7 +1079,8 @@
     <div
         class="item"
         data-aos="zoom-in"
-        data-aos-duration="400"
+        data-aos-duration="350"
+        data-aos-delay="400"
     >
 
         <picture>
@@ -1066,6 +1089,7 @@
                 srcset="images/beef.webp"
                 type="image/webp"
             >
+
 
             <img
                 class="recipe-img"
@@ -1102,7 +1126,8 @@
     <div
         class="item"
         data-aos="zoom-in"
-        data-aos-duration="400"
+        data-aos-duration="350"
+        data-aos-delay="480"
     >
 
         <picture>
@@ -1111,6 +1136,7 @@
                 srcset="images/soutzoukakia.webp"
                 type="image/webp"
             >
+
 
             <img
                 class="recipe-img"
@@ -1147,7 +1173,8 @@
     <div
         class="item"
         data-aos="zoom-in"
-        data-aos-duration="400"
+        data-aos-duration="350"
+        data-aos-delay="560"
     >
 
         <picture>
@@ -1156,6 +1183,7 @@
                 srcset="images/spaghetti-mpolonez.webp"
                 type="image/webp"
             >
+
 
             <img
                 class="recipe-img"
@@ -1192,7 +1220,8 @@
     <div
         class="item"
         data-aos="zoom-in"
-        data-aos-duration="400"
+        data-aos-duration="350"
+        data-aos-delay="640"
     >
 
         <picture>
@@ -1201,6 +1230,7 @@
                 srcset="images/solomon.webp"
                 type="image/webp"
             >
+
 
             <img
                 class="recipe-img"
@@ -1243,7 +1273,6 @@
     class="modal"
 >
 
-
     <div class="modal-content">
 
 
@@ -1272,7 +1301,6 @@
                 class="order-panel"
                 id="orderPanel"
             >
-
 
                 <div class="order-content">
 
@@ -1356,17 +1384,12 @@
 
     <h2
         data-aos="fade-up"
-        data-aos-duration="400"
+        data-aos-duration="350"
+        data-aos-delay="0"
     >
         Κριτικές πελατών
     </h2>
 
-
-    <!--
-        IMPORTANT:
-        Δεν βάζουμε AOS στο testimonials-grid.
-        Τα cards παραμένουν κανονικά διαθέσιμα.
-    -->
 
     <div class="testimonials-grid">
 
@@ -1377,12 +1400,10 @@
             class="testimonial-card"
             data-aos="fade-up"
             data-aos-duration="350"
-            data-aos-delay="0"
+            data-aos-delay="80"
         >
 
-
             <div class="client-info">
-
 
                 <picture>
 
@@ -1390,6 +1411,7 @@
                         srcset="images/testimo1.webp"
                         type="image/webp"
                     >
+
 
                     <img
                         src="images/testimo1.webp"
@@ -1439,12 +1461,10 @@
             class="testimonial-card"
             data-aos="fade-up"
             data-aos-duration="350"
-            data-aos-delay="70"
+            data-aos-delay="160"
         >
 
-
             <div class="client-info">
-
 
                 <picture>
 
@@ -1452,6 +1472,7 @@
                         srcset="images/testimo2.webp"
                         type="image/webp"
                     >
+
 
                     <img
                         src="images/testimo2.webp"
@@ -1503,12 +1524,10 @@
             class="testimonial-card"
             data-aos="fade-up"
             data-aos-duration="350"
-            data-aos-delay="140"
+            data-aos-delay="240"
         >
 
-
             <div class="client-info">
-
 
                 <picture>
 
@@ -1516,6 +1535,7 @@
                         srcset="images/testimo3.webp"
                         type="image/webp"
                     >
+
 
                     <img
                         src="images/testimo3.webp"
@@ -1564,12 +1584,10 @@
             class="testimonial-card"
             data-aos="fade-up"
             data-aos-duration="350"
-            data-aos-delay="210"
+            data-aos-delay="320"
         >
 
-
             <div class="client-info">
-
 
                 <picture>
 
@@ -1577,6 +1595,7 @@
                         srcset="images/testimo4.webp"
                         type="image/webp"
                     >
+
 
                     <img
                         src="images/testimo4.webp"
@@ -1633,17 +1652,12 @@
 
     <h2
         data-aos="fade-up"
-        data-aos-duration="400"
+        data-aos-duration="350"
+        data-aos-delay="0"
     >
         Φωτογραφίες / Γκαλερί
     </h2>
 
-
-    <!--
-        IMPORTANT:
-        Δεν βάζουμε AOS στο gallery-container.
-        Κάθε εικόνα έχει το δικό της AOS.
-    -->
 
     <div class="gallery-container">
 
@@ -1653,7 +1667,7 @@
         <a
             href="images/carbonara.webp"
             class="box glightbox"
-            data-aos="fade-up"
+            data-aos="zoom-in"
             data-aos-duration="350"
             data-aos-delay="0"
         >
@@ -1664,6 +1678,7 @@
                     srcset="images/carbonara.webp"
                     type="image/webp"
                 >
+
 
                 <img
                     src="images/carbonara.webp"
@@ -1689,9 +1704,9 @@
         <a
             href="images/calzone.png"
             class="box glightbox"
-            data-aos="fade-up"
+            data-aos="zoom-in"
             data-aos-duration="350"
-            data-aos-delay="60"
+            data-aos-delay="100"
         >
 
             <picture>
@@ -1700,6 +1715,7 @@
                     srcset="images/calzone.webp"
                     type="image/webp"
                 >
+
 
                 <img
                     src="images/calzone.webp"
@@ -1725,9 +1741,9 @@
         <a
             href="images/pizza-2.png"
             class="box glightbox"
-            data-aos="fade-up"
+            data-aos="zoom-in"
             data-aos-duration="350"
-            data-aos-delay="120"
+            data-aos-delay="200"
         >
 
             <picture>
@@ -1736,6 +1752,7 @@
                     srcset="images/pizza-2.webp"
                     type="image/webp"
                 >
+
 
                 <img
                     src="images/pizza-2.webp"
@@ -1761,9 +1778,9 @@
         <a
             href="images/caesar-salad.webp"
             class="box glightbox"
-            data-aos="fade-up"
+            data-aos="zoom-in"
             data-aos-duration="350"
-            data-aos-delay="180"
+            data-aos-delay="300"
         >
 
             <picture>
@@ -1773,8 +1790,9 @@
                     type="image/webp"
                 >
 
+
                 <img
-                    src="images/caesar-salad.webp"
+                    src="images/caesar-salad.png"
                     alt="Σαλάτα του Καίσαρα"
                     loading="lazy"
                 >
@@ -1797,9 +1815,9 @@
         <a
             href="images/peinirli.png"
             class="box glightbox"
-            data-aos="fade-up"
+            data-aos="zoom-in"
             data-aos-duration="350"
-            data-aos-delay="240"
+            data-aos-delay="400"
         >
 
             <picture>
@@ -1808,6 +1826,7 @@
                     srcset="images/peinirli.webp"
                     type="image/webp"
                 >
+
 
                 <img
                     src="images/peinirli.webp"
@@ -1833,9 +1852,9 @@
         <a
             href="images/burger.png"
             class="box glightbox"
-            data-aos="fade-up"
+            data-aos="zoom-in"
             data-aos-duration="350"
-            data-aos-delay="300"
+            data-aos-delay="500"
         >
 
             <picture>
@@ -1844,6 +1863,7 @@
                     srcset="images/burger.webp"
                     type="image/webp"
                 >
+
 
                 <img
                     src="images/burger.webp"
@@ -1869,9 +1889,9 @@
         <a
             href="images/sokolatopita.webp"
             class="box glightbox"
-            data-aos="fade-up"
+            data-aos="zoom-in"
             data-aos-duration="350"
-            data-aos-delay="360"
+            data-aos-delay="600"
         >
 
             <picture>
@@ -1880,6 +1900,7 @@
                     srcset="images/sokolatopita.webp"
                     type="image/webp"
                 >
+
 
                 <img
                     src="images/sokolatopita.webp"
@@ -1905,9 +1926,9 @@
         <a
             href="images/profiterol.png"
             class="box glightbox"
-            data-aos="fade-up"
+            data-aos="zoom-in"
             data-aos-duration="350"
-            data-aos-delay="420"
+            data-aos-delay="700"
         >
 
             <picture>
@@ -1916,6 +1937,7 @@
                     srcset="images/profiterol.webp"
                     type="image/webp"
                 >
+
 
                 <img
                     src="images/profiterol.webp"
@@ -1947,26 +1969,12 @@
 <footer class="footer">
 
 
-    <!--
-        IMPORTANT:
-        Δεν χρησιμοποιούμε AOS στο footer-container.
-        Κάθε column παίρνει δικό του animation.
-        Έτσι δεν κρύβεται ολόκληρο το footer.
-    -->
-
-
     <div class="footer-container">
 
 
-        <!-- FOOTER COLUMN 1 -->
+        <!-- COLUMN 1 -->
 
-        <div
-            class="footer-col"
-            data-aos="fade-up"
-            data-aos-duration="350"
-            data-aos-delay="0"
-        >
-
+        <div class="footer-col">
 
             <h3>
                 Ακολουθήστε μας
@@ -1975,25 +1983,18 @@
 
             <div class="social-icons">
 
-
                 <a href="#">
-
                     <i class="fab fa-facebook-f"></i>
-
                 </a>
 
 
                 <a href="#">
-
                     <i class="fab fa-twitter"></i>
-
                 </a>
 
 
                 <a href="#">
-
                     <i class="fab fa-instagram"></i>
-
                 </a>
 
             </div>
@@ -2002,15 +2003,9 @@
 
 
 
-        <!-- FOOTER COLUMN 2 -->
+        <!-- COLUMN 2 -->
 
-        <div
-            class="footer-col"
-            data-aos="fade-up"
-            data-aos-duration="350"
-            data-aos-delay="70"
-        >
-
+        <div class="footer-col">
 
             <h3>
                 Σύνδεσμοι
@@ -2019,31 +2014,24 @@
 
             <ul>
 
-
                 <li>
-
                     <a href="#home">
                         Αρχική
                     </a>
-
                 </li>
 
 
                 <li>
-
                     <a href="pages/index1.html">
                         Σχετικά
                     </a>
-
                 </li>
 
 
                 <li>
-
                     <a href="pages/index3.html">
                         Επικοινωνία
                     </a>
-
                 </li>
 
             </ul>
@@ -2052,15 +2040,9 @@
 
 
 
-        <!-- FOOTER COLUMN 3 -->
+        <!-- COLUMN 3 -->
 
-        <div
-            class="footer-col"
-            data-aos="fade-up"
-            data-aos-duration="350"
-            data-aos-delay="140"
-        >
-
+        <div class="footer-col">
 
             <h3>
                 Πληροφορίες
@@ -2069,31 +2051,24 @@
 
             <ul>
 
-
                 <li>
-
                     <a href="#">
                         Συνταγές
                     </a>
-
                 </li>
 
 
                 <li>
-
                     <a href="#">
                         Blog
                     </a>
-
                 </li>
 
 
                 <li>
-
                     <a href="#">
                         Γκάλερι
                     </a>
-
                 </li>
 
             </ul>
@@ -2102,15 +2077,9 @@
 
 
 
-        <!-- FOOTER COLUMN 4 -->
+        <!-- COLUMN 4 -->
 
-        <div
-            class="footer-col"
-            data-aos="fade-up"
-            data-aos-duration="350"
-            data-aos-delay="210"
-        >
-
+        <div class="footer-col">
 
             <h3>
                 Επικοινωνία
@@ -2118,7 +2087,6 @@
 
 
             <ul>
-
 
                 <li>
 
@@ -2145,14 +2113,7 @@
 
 
 
-    <!-- FOOTER BOTTOM -->
-
-    <div
-        class="footer-bottom"
-        data-aos="fade-up"
-        data-aos-duration="350"
-        data-aos-delay="280"
-    >
+    <div class="footer-bottom">
 
         © 2025 The kitchen grid.
         Όλα τα δικαιώματα διατηρούνται.
@@ -2164,7 +2125,7 @@
 
 
 <!-- =========================================================
-     AOS
+     AOS JAVASCRIPT
 ========================================================= -->
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -2172,21 +2133,10 @@
 
 
 <!-- =========================================================
-     GLIGHTBOX
+     GLIGHTBOX JAVASCRIPT
 ========================================================= -->
 
 <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
-
-
-
-<!-- =========================================================
-     MAIN JS
-========================================================= -->
-
-<script
-    type="module"
-    src="/website-demo-restaurant/js/main.js"
-></script>
 
 
 
@@ -2198,6 +2148,17 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
+    if (typeof AOS === "undefined") {
+
+        console.warn(
+            "AOS library δεν φορτώθηκε."
+        );
+
+        return;
+
+    }
+
+
     AOS.init({
 
         once: true,
@@ -2206,21 +2167,46 @@ document.addEventListener("DOMContentLoaded", () => {
 
         easing: "ease-out",
 
-        offset: 40,
+        offset: 60,
 
         delay: 0,
 
         mirror: false,
 
-        disable: false
+        disable: false,
+
+        anchorPlacement: "top-bottom"
 
     });
+
+});
+
+
+window.addEventListener("load", () => {
+
+    if (typeof AOS !== "undefined") {
+
+        AOS.refreshHard();
+
+    }
 
 });
 
 </script>
 
 
+
+<!-- =========================================================
+     MAIN JAVASCRIPT
+========================================================= -->
+
+<script
+    type="module"
+    src="/website-demo-restaurant/js/main.js"
+></script>
+
+
 </body>
 
 </html>
+```
