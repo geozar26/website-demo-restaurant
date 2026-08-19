@@ -14,33 +14,6 @@
 
 
     <!-- =========================================================
-         HTML LAYOUT RESET
-    ========================================================== -->
-
-    <style>
-
-        html,
-        body {
-            margin: 0 !important;
-            padding: 0 !important;
-        }
-
-        body {
-            min-height: 0 !important;
-        }
-
-        footer.footer {
-            margin-bottom: 0 !important;
-        }
-
-        .footer-bottom {
-            margin-bottom: 0 !important;
-        }
-
-    </style>
-
-
-    <!-- =========================================================
          AOS CSS
     ========================================================== -->
 
@@ -51,7 +24,7 @@
 
 
     <!-- =========================================================
-         PRELOAD HERO IMAGE
+         PRELOAD
     ========================================================== -->
 
     <link
@@ -325,7 +298,6 @@
                     <i class="fa-brands fa-facebook"></i>
                 </a>
 
-
                 <a href="#">
                     <i class="fa-brands fa-instagram"></i>
                 </a>
@@ -344,20 +316,14 @@
             <div class="contact-box">
 
                 <p>
-
                     <i class="fa-solid fa-location-dot"></i>
-
                     Πανεπιστημίου 42, Αθήνα
-
                 </p>
 
 
                 <a href="tel:1234567890">
-
                     <i class="fa-solid fa-phone"></i>
-
                     1234567890
-
                 </a>
 
             </div>
@@ -371,7 +337,7 @@
 
 
 <!-- =========================================================
-     SEARCH OVERLAY
+     SEARCH
 ========================================================== -->
 
 <div
@@ -388,7 +354,6 @@
 
 
     <div class="search-container">
-
 
         <input
             type="text"
@@ -493,7 +458,7 @@
 
                         <img
                             src="./images/events.webp"
-                            alt="Loyalty"
+                            alt="Events"
                         >
 
                         <h3>
@@ -511,7 +476,7 @@
 
                         <img
                             src="./images/drinks.webp"
-                            alt="Chef"
+                            alt="Drinks"
                         >
 
                         <h3>
@@ -540,7 +505,6 @@
     id="home"
     class="hero"
 >
-
 
     <div class="hero-content">
 
@@ -595,16 +559,17 @@
     </h2>
 
 
+    <!--
+        Ο container ΔΕΝ έχει AOS.
+        Ο track ΔΕΝ έχει AOS.
+        Μόνο τα cards έχουν AOS.
+    -->
+
     <div class="carousel-container">
 
 
-        <div
-            class="carousel-track"
-            style="visibility: visible; opacity: 1;"
-        >
+        <div class="carousel-track">
 
-
-            <!-- CARD 1 -->
 
             <div
                 class="carousel-card"
@@ -662,8 +627,6 @@
 
 
 
-            <!-- CARD 2 -->
-
             <div
                 class="carousel-card"
                 data-aos="fade-up"
@@ -719,8 +682,6 @@
             </div>
 
 
-
-            <!-- CARD 3 -->
 
             <div
                 class="carousel-card"
@@ -779,8 +740,6 @@
 
 
 
-            <!-- CARD 4 -->
-
             <div
                 class="carousel-card"
                 data-aos="fade-up"
@@ -836,8 +795,6 @@
             </div>
 
 
-
-            <!-- CARD 5 -->
 
             <div
                 class="carousel-card"
@@ -936,7 +893,6 @@
                 type="image/webp"
             >
 
-
             <img
                 class="recipe-img"
                 src="./images/pizza.webp"
@@ -976,7 +932,6 @@
                 srcset="./images/gyros.webp"
                 type="image/webp"
             >
-
 
             <img
                 class="recipe-img"
@@ -1018,7 +973,6 @@
                 type="image/webp"
             >
 
-
             <img
                 class="recipe-img"
                 src="./images/chicken.webp"
@@ -1058,7 +1012,6 @@
                 srcset="./images/crepes.webp"
                 type="image/webp"
             >
-
 
             <img
                 class="recipe-img"
@@ -1100,7 +1053,6 @@
                 type="image/webp"
             >
 
-
             <img
                 class="recipe-img"
                 src="./images/beef.webp"
@@ -1140,7 +1092,6 @@
                 srcset="./images/soutzoukakia.webp"
                 type="image/webp"
             >
-
 
             <img
                 class="recipe-img"
@@ -1182,7 +1133,6 @@
                 type="image/webp"
             >
 
-
             <img
                 class="recipe-img"
                 src="./images/spaghetti-mpolonez.webp"
@@ -1222,7 +1172,6 @@
                 srcset="./images/solomon.webp"
                 type="image/webp"
             >
-
 
             <img
                 class="recipe-img"
@@ -1386,14 +1335,12 @@
 
             <div class="client-info">
 
-
                 <picture>
 
                     <source
                         srcset="./images/testimo1.webp"
                         type="image/webp"
                     >
-
 
                     <img
                         src="./images/testimo1.webp"
@@ -1444,14 +1391,12 @@
 
             <div class="client-info">
 
-
                 <picture>
 
                     <source
                         srcset="./images/testimo2.webp"
                         type="image/webp"
                     >
-
 
                     <img
                         src="./images/testimo2.webp"
@@ -1499,11 +1444,10 @@
         <div
             class="testimonial-card"
             data-aos="fade-right"
-            data-aos-delay="60"
+            data-aos-delay="100"
         >
 
             <div class="client-info">
-
 
                 <picture>
 
@@ -1511,7 +1455,6 @@
                         srcset="./images/testimo3.webp"
                         type="image/webp"
                     >
-
 
                     <img
                         src="./images/testimo3.webp"
@@ -1556,11 +1499,10 @@
         <div
             class="testimonial-card"
             data-aos="fade-right"
-            data-aos-delay="70"
+            data-aos-delay="150"
         >
 
             <div class="client-info">
-
 
                 <picture>
 
@@ -1568,7 +1510,6 @@
                         srcset="./images/testimo4.webp"
                         type="image/webp"
                     >
-
 
                     <img
                         src="./images/testimo4.webp"
@@ -1884,10 +1825,7 @@
      FOOTER
 ========================================================== -->
 
-<footer
-    class="footer"
-    style="margin-bottom: 0 !important;"
->
+<footer class="footer">
 
 
     <div class="footer-container">
@@ -1924,7 +1862,6 @@
             </div>
 
         </div>
-
 
 
         <div
@@ -1966,7 +1903,6 @@
         </div>
 
 
-
         <div
             class="footer-col"
             data-aos="fade-up"
@@ -2006,7 +1942,6 @@
         </div>
 
 
-
         <div
             class="footer-col"
             data-aos="fade-up"
@@ -2041,16 +1976,7 @@
     </div>
 
 
-
-    <!-- =====================================================
-         FOOTER BOTTOM
-         NO AOS HERE
-    ====================================================== -->
-
-    <div
-        class="footer-bottom"
-        style="margin-bottom: 0 !important;"
-    >
+    <div class="footer-bottom">
 
         © 2025 The kitchen grid.
         Όλα τα δικαιώματα διατηρούνται.
@@ -2062,27 +1988,24 @@
 
 
 <!-- =========================================================
-     AOS JS
+     LIBRARIES
 ========================================================== -->
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script
+    src="https://unpkg.com/aos@2.3.1/dist/aos.js"
+></script>
 
 
-<!-- =========================================================
-     GLIGHTBOX JS
-========================================================== -->
+<script
+    src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"
+></script>
 
-<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
-
-
-<!-- =========================================================
-     MAIN JS
-========================================================== -->
 
 <script
     type="module"
     src="./js/main.js"
 ></script>
+
 
 
 <!-- =========================================================
