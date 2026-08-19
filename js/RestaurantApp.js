@@ -1,2066 +1,558 @@
-```html
-<!DOCTYPE html>
-<html lang="el">
-
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>website restaurant</title>
-
-
-    <!-- =========================================================
-         AOS CSS
-    ========================================================= -->
-
-    <link
-        href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-        rel="stylesheet"
-    >
-
-
-    <!-- =========================================================
-         MAIN CSS
-    ========================================================= -->
-
-    <link
-        rel="stylesheet"
-        href="css/style.css"
-    >
-
-
-    <!-- Favicon -->
-
-    <link
-        rel="icon"
-        href="data:,"
-    >
-
-
-    <!-- =========================================================
-         FONT AWESOME
-    ========================================================= -->
-
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    >
-
-
-    <!-- =========================================================
-         GLIGHTBOX CSS
-    ========================================================= -->
-
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
-    >
-
-</head>
-
-
-<body>
-
-
-<!-- =========================================================
-     LOGIN
-========================================================= -->
-
-<div
-    id="loginOverlay"
-    class="login-overlay"
-></div>
-
-
-<div
-    id="loginPopup"
-    class="login-popup"
->
-
-    <span
-        id="loginClose"
-        class="close"
-    >
-        &times;
-    </span>
-
-
-    <h2>
-        Σύνδεση
-    </h2>
-
-
-    <form
-        id="loginForm"
-        action="#"
-        method="POST"
-    >
-
-        <input
-            type="text"
-            id="usernameInput"
-            placeholder="Όνομα Χρήστη ή Email"
-            required
-        >
-
-
-        <input
-            type="password"
-            id="passwordInput"
-            placeholder="Κωδικός Πρόσβασης..."
-            required
-        >
-
-
-        <div class="remember-me-container">
-
-            <input
-                type="checkbox"
-                id="rememberMeCheck"
-            >
-
-            <label for="rememberMeCheck">
-                Να με θυμάσαι
-            </label>
-
-        </div>
-
-
-        <button
-            type="submit"
-            id="loginButton"
-        >
-            Συνδεθείτε
-        </button>
-
-    </form>
-
-
-    <p class="social-text">
-        Συνέχεια με
-    </p>
-
-
-    <div class="social-icons-modal">
-
-        <a
-            href="#"
-            class="social-icon"
-        >
-            <i class="fab fa-instagram"></i>
-        </a>
-
-
-        <a
-            href="#"
-            class="social-icon"
-        >
-            <i class="fab fa-facebook-f"></i>
-        </a>
-
-    </div>
-
-
-    <p class="register-link">
-
-        Δεν είστε μέλος;
-
-        <a href="#">
-            Εγγραφείτε
-        </a>
-
-    </p>
-
-</div>
-
-
-
-<!-- =========================================================
-     NAVBAR
-========================================================= -->
-
-<header class="navbar">
-
-
-    <div
-        class="logo"
-        data-aos="fade-right"
-        data-aos-delay="0"
-    >
-        kitchen grid
-    </div>
-
-
-    <input
-        type="checkbox"
-        id="menu-toggle"
-    >
-
-
-    <label
-        for="menu-toggle"
-        class="menu-overlay"
-    ></label>
-
-
-    <label
-        for="menu-toggle"
-        class="menu-icon"
-    >
-        <i class="fa-solid fa-bars"></i>
-    </label>
-
-
-    <nav class="nav-links">
-
-
-        <div
-            class="search-trigger"
-            id="openSearch"
-            data-aos="fade-right"
-            data-aos-duration="400"
-        >
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </div>
-
-
-        <a
-            href="pages/index.html"
-            data-aos="fade-right"
-            data-aos-duration="400"
-            data-aos-delay="50"
-        >
-            Αρχική
-        </a>
-
-
-        <a
-            href="pages/index1.html"
-            data-aos="fade-right"
-            data-aos-duration="400"
-            data-aos-delay="100"
-        >
-            Σχετικά με εμάς
-        </a>
-
-
-        <a
-            href="pages/index3.html"
-            data-aos="fade-right"
-            data-aos-duration="400"
-            data-aos-delay="150"
-        >
-            Επικοινωνία
-        </a>
-
-
-        <a
-            href="pages/index8.html"
-            class="btn-solid"
-            data-aos="fade-right"
-            data-aos-duration="400"
-            data-aos-delay="200"
-        >
-            Κράτηση
-        </a>
-
-
-        <div class="nav-footer">
-
-            <div class="social-row">
-
-                <a href="#">
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
-
-                <a href="#">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-
-            </div>
-
-
-            <a
-                href="#"
-                class="order-btn"
-            >
-                ONLINE ΠΑΡΑΓΓΕΛΙΑ
-            </a>
-
-
-            <div class="contact-box">
-
-                <p>
-
-                    <i class="fa-solid fa-location-dot"></i>
-
-                    Πανεπιστημίου 42, Αθήνα
-
-                </p>
-
-
-                <a href="tel:1234567890">
-
-                    <i class="fa-solid fa-phone"></i>
-
-                    1234567890
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </nav>
-
-</header>
-
-
-
-<!-- =========================================================
-     SEARCH
-========================================================= -->
-
-<div
-    class="search-overlay"
-    id="searchOverlay"
->
-
-    <span
-        class="search-close"
-        id="closeSearch"
-    >
-        &times;
-    </span>
-
-
-    <div class="search-container">
-
-
-        <input
-            type="text"
-            id="searchInput"
-            placeholder="Αναζήτηση για γεύσεις..."
-            autocomplete="off"
-        >
-
-
-        <div class="search-bar-line"></div>
-
-
-        <div class="mega-menu-content">
-
-
-            <div class="mega-row">
-
-
-                <div class="mega-item">
-
-                    <a href="pages/index6.html">
-
-                        <img
-                            src="images/menu.webp"
-                            alt="Menu"
-                        >
-
-                        <h3>
-                            Μενού
-                        </h3>
-
-                    </a>
-
-                </div>
-
-
-                <div class="mega-item">
-
-                    <a href="pages/index9.html">
-
-                        <img
-                            src="images/steak.webp"
-                            alt="Offers"
-                        >
-
-                        <h3>
-                            Προσφορές
-                        </h3>
-
-                    </a>
-
-                </div>
-
-
-                <div class="mega-item">
-
-                    <a href="pages/index11.html">
-
-                        <img
-                            src="images/solomon.webp"
-                            alt="New"
-                        >
-
-                        <h3>
-                            Νέες γεύσεις
-                        </h3>
-
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <div class="mega-divider"></div>
-
-
-            <div class="mega-row">
-
-
-                <div class="mega-item">
-
-                    <a href="pages/index8.html">
-
-                        <img
-                            src="images/reservations.webp"
-                            alt="Table"
-                        >
-
-                        <h3>
-                            Κράτηση τραπεζιού
-                        </h3>
-
-                    </a>
-
-                </div>
-
-
-                <div class="mega-item">
-
-                    <a href="pages/index7.html">
-
-                        <img
-                            src="images/events.webp"
-                            alt="Events"
-                        >
-
-                        <h3>
-                            Εκδηλώσεις
-                        </h3>
-
-                    </a>
-
-                </div>
-
-
-                <div class="mega-item">
-
-                    <a href="pages/index10.html">
-
-                        <img
-                            src="images/drinks.webp"
-                            alt="Drinks"
-                        >
-
-                        <h3>
-                            Ποτά & Αναψυκτικά
-                        </h3>
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-
-<!-- =========================================================
-     HERO
-========================================================= -->
-
-<section
-    id="home"
-    class="hero"
->
-
-
-    <div class="hero-content">
-
-
-        <h1
-            data-aos="fade-up"
-            data-aos-anchor-placement="bottom-bottom"
-            data-aos-duration="400"
-        >
-            Η Γεύση που Ψάχνετε, με Φρέσκα Υλικά.
-        </h1>
-
-
-        <p
-            data-aos="fade-up"
-            data-aos-anchor-placement="bottom-bottom"
-            data-aos-duration="400"
-        >
-            Ετοιμάζουμε καθημερινά νόστιμα πιάτα με τα καλύτερα υλικά.
-        </p>
-
-
-        <a
-            href="#items"
-            class="btn"
-            data-aos="fade-up"
-            data-aos-anchor-placement="bottom-bottom"
-            data-aos-duration="400"
-        >
-            Εξερευνήστε το Μενού
-        </a>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     TODAY'S SPECIALS / CAROUSEL
-========================================================= -->
-
-<section class="todays-specials">
-
-
-    <h2
-        data-aos="fade-up"
-        data-aos-duration="400"
-    >
-        Σημερινά Πιάτα
-    </h2>
-
-
-    <div class="carousel-container">
-
-        <div class="carousel-track">
-
-
-            <div
-                class="carousel-card"
-                data-aos="fade-up"
-                data-aos-delay="0"
-                data-dish="pastitsio"
-            >
-
-                <div class="tooltip-icon">
-
-                    <i class="fa-solid fa-utensils"></i>
-
-                </div>
-
-
-                <div
-                    id="tooltip-pastitsio"
-                    class="carousel-tooltip"
-                >
-
-                    <b>
-                        Υλικά
-                    </b>
-
-                    <p>
-                        μακαρόνια, μοσχαρίσιος κιμάς, μπεσαμέλ
-                    </p>
-
-                </div>
-
-
-                <picture>
-
-                    <source
-                        srcset="images/pastitsio.webp"
-                        type="image/webp"
-                    >
-
-
-                    <img
-                        src="images/pastitsio.webp"
-                        alt="Παστίτσιο"
-                    >
-
-                </picture>
-
-
-                <p>
-                    Παστίτσιο
-                </p>
-
-            </div>
-
-
-
-            <div
-                class="carousel-card"
-                data-aos="fade-up"
-                data-aos-delay="50"
-                data-dish="kalamarakia"
-            >
-
-                <div class="tooltip-icon">
-
-                    <i class="fa-solid fa-utensils"></i>
-
-                </div>
-
-
-                <div
-                    id="tooltip-kalamarakia"
-                    class="carousel-tooltip"
-                >
-
-                    <b>
-                        Υλικά
-                    </b>
-
-                    <p>
-                        ρύζι, κουκουνάρι και μυρωδικά
-                    </p>
-
-                </div>
-
-
-                <picture>
-
-                    <source
-                        srcset="images/gemista-kalamarakia.webp"
-                        type="image/webp"
-                    >
-
-
-                    <img
-                        src="images/gemista-kalamarakia.webp"
-                        alt="Καλαμάρια"
-                    >
-
-                </picture>
-
-
-                <p>
-                    Γεμιστά Καλαμαράκια
-                </p>
-
-            </div>
-
-
-
-            <div
-                class="carousel-card"
-                data-aos="fade-up"
-                data-aos-delay="100"
-                data-dish="krepes"
-            >
-
-                <div class="tooltip-icon">
-
-                    <i class="fa-solid fa-utensils"></i>
-
-                </div>
-
-
-                <div
-                    id="tooltip-krepes"
-                    class="carousel-tooltip"
-                >
-
-                    <b>
-                        Υλικά
-                    </b>
-
-                    <p>
-                        ζαμπόν και κρέμα γάλακτος,
-                        τυριά (γκούντα, ένταμ).
-                    </p>
-
-                </div>
-
-
-                <picture>
-
-                    <source
-                        srcset="images/gemistes-krepes.webp"
-                        type="image/webp"
-                    >
-
-
-                    <img
-                        src="images/gemistes-krepes.webp"
-                        alt="Κρέπες"
-                    >
-
-                </picture>
-
-
-                <p>
-                    Γεμιστές Κρέπες
-                </p>
-
-            </div>
-
-
-
-            <div
-                class="carousel-card"
-                data-aos="fade-up"
-                data-aos-delay="150"
-                data-dish="garidomakaronada"
-            >
-
-                <div class="tooltip-icon">
-
-                    <i class="fa-solid fa-utensils"></i>
-
-                </div>
-
-
-                <div
-                    id="tooltip-garidomakaronada"
-                    class="carousel-tooltip"
-                >
-
-                    <b>
-                        Υλικά
-                    </b>
-
-                    <p>
-                        γαρίδες, λιγκουίνι,
-                        σάλτσα ντομάτας.
-                    </p>
-
-                </div>
-
-
-                <picture>
-
-                    <source
-                        srcset="images/garidomakaronada.webp"
-                        type="image/webp"
-                    >
-
-
-                    <img
-                        src="images/garidomakaronada.webp"
-                        alt="Γαριδομακαρονάδα"
-                    >
-
-                </picture>
-
-
-                <p>
-                    Γαριδομακαρονάδα
-                </p>
-
-            </div>
-
-
-
-            <div
-                class="carousel-card"
-                data-aos="fade-up"
-                data-aos-delay="200"
-                data-dish="gioubetsi"
-            >
-
-                <div class="tooltip-icon">
-
-                    <i class="fa-solid fa-utensils"></i>
-
-                </div>
-
-
-                <div
-                    id="tooltip-gioubetsi"
-                    class="carousel-tooltip"
-                >
-
-                    <b>
-                        Υλικά
-                    </b>
-
-                    <p>
-                        κριθαράκι, σάλτσα ντομάτας
-                    </p>
-
-                </div>
-
-
-                <picture>
-
-                    <source
-                        srcset="images/giouvetsi-kritharaki.webp"
-                        type="image/webp"
-                    >
-
-
-                    <img
-                        src="images/giouvetsi-kritharaki.webp"
-                        alt="Γιουβέτσι"
-                    >
-
-                </picture>
-
-
-                <p>
-                    Γιουβέτσι με Κριθαράκι
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <div class="carousel-dots"></div>
-
-</section>
-
-
-
-<!-- =========================================================
-     ITEMS
-========================================================= -->
-
-<section
-    id="items"
-    class="items"
->
-
-
-    <h2
-        data-aos="zoom-in"
-        data-aos-duration="400"
-    >
-        Προτάσεις Γεύσεων
-    </h2>
-
-
-    <div
-        class="item"
-        data-aos="zoom-in"
-        data-aos-delay="0"
-    >
-
-        <picture>
-
-            <source
-                srcset="images/pizza.webp"
-                type="image/webp"
-            >
-
-            <img
-                class="recipe-img"
-                src="images/pizza.webp"
-                alt="Πίτσα"
-                data-title="Πίτσα Special"
-                data-description="Πλούσια γέμιση με ζαμπόν, μπέικον, φρέσκα μανιτάρια, πιπεριά και λιωμένη μοτσαρέλα."
-            >
-
-        </picture>
-
-
-        <button
-            class="info-btn"
-            aria-label="Πληροφορίες"
-        >
-
-            <i class="fa-solid fa-utensils"></i>
-
-        </button>
-
-
-        <h4>
-            Πίτσα
-        </h4>
-
-    </div>
-
-
-
-    <div
-        class="item"
-        data-aos="zoom-in"
-        data-aos-delay="70"
-    >
-
-        <picture>
-
-            <source
-                srcset="images/gyros.webp"
-                type="image/webp"
-            >
-
-
-            <img
-                class="recipe-img"
-                src="images/gyros.webp"
-                alt="Πίτα Γύρο"
-                data-title="Πίτα Γύρος Χοιρινός"
-                data-description="Παραδοσιακή πίτα με ζουμερό χοιρινό γύρο, φρέσκια ντομάτα, κρεμμύδι, πατάτες τηγανητές και χειροποίητο τζατζίκι."
-            >
-
-        </picture>
-
-
-        <button
-            class="info-btn"
-            aria-label="Πληροφορίες"
-        >
-
-            <i class="fa-solid fa-utensils"></i>
-
-        </button>
-
-
-        <h4>
-            Πίτα Γύρο
-        </h4>
-
-    </div>
-
-
-
-    <div
-        class="item"
-        data-aos="zoom-in"
-        data-aos-delay="90"
-    >
-
-        <picture>
-
-            <source
-                srcset="images/chicken.webp"
-                type="image/webp"
-            >
-
-
-            <img
-                class="recipe-img"
-                src="images/chicken.webp"
-                alt="Κοτόπουλο"
-                data-title="Κοτόπουλο Ψητό"
-                data-description="Κοτόπουλο ψημένο στο φούρνο με πατάτες, λεμόνι και μυρωδικά."
-            >
-
-        </picture>
-
-
-        <button
-            class="info-btn"
-            aria-label="Πληροφορίες"
-        >
-
-            <i class="fa-solid fa-utensils"></i>
-
-        </button>
-
-
-        <h4>
-            Κοτόπουλο
-        </h4>
-
-    </div>
-
-
-
-    <div
-        class="item"
-        data-aos="zoom-in"
-        data-aos-delay="110"
-    >
-
-        <picture>
-
-            <source
-                srcset="images/crepes.webp"
-                type="image/webp"
-            >
-
-
-            <img
-                class="recipe-img"
-                src="images/crepes.webp"
-                alt="Κρέπα"
-                data-title="Κρέπα Special"
-                data-description="Λεπτή, αφράτη ζύμη κρέπας γεμισμένη με πλούσια πραλίνα φουντουκιού και φρέσκια μπανάνα."
-            >
-
-        </picture>
-
-
-        <button
-            class="info-btn"
-            aria-label="Πληροφορίες"
-        >
-
-            <i class="fa-solid fa-utensils"></i>
-
-        </button>
-
-
-        <h4>
-            Κρέπα
-        </h4>
-
-    </div>
-
-
-
-    <div
-        class="item"
-        data-aos="zoom-in"
-        data-aos-delay="120"
-    >
-
-        <picture>
-
-            <source
-                srcset="images/beef.webp"
-                type="image/webp"
-            >
-
-
-            <img
-                class="recipe-img"
-                src="images/beef.webp"
-                alt="Μπιφτέκια"
-                data-title="Μπιφτέκια"
-                data-description="Αφράτα, καλοψημένα μπιφτέκια από φρέσκο κιμά."
-            >
-
-        </picture>
-
-
-        <button
-            class="info-btn"
-            aria-label="Πληροφορίες"
-        >
-
-            <i class="fa-solid fa-utensils"></i>
-
-        </button>
-
-
-        <h4>
-            Μπιφτέκια
-        </h4>
-
-    </div>
-
-
-
-    <div
-        class="item"
-        data-aos="zoom-in"
-        data-aos-delay="140"
-    >
-
-        <picture>
-
-            <source
-                srcset="images/soutzoukakia.webp"
-                type="image/webp"
-            >
-
-
-            <img
-                class="recipe-img"
-                src="images/soutzoukakia.webp"
-                alt="Σουτζουκάκια"
-                data-title="Σουτζουκάκια Σμυρνέικα"
-                data-description="Κεφτεδάκια με κύμινο και σκόρδο, μαγειρεμένα σε σάλτσα ντομάτας με συνοδεία ρυζιού."
-            >
-
-        </picture>
-
-
-        <button
-            class="info-btn"
-            aria-label="Πληροφορίες"
-        >
-
-            <i class="fa-solid fa-utensils"></i>
-
-        </button>
-
-
-        <h4>
-            Σουτζουκάκια
-        </h4>
-
-    </div>
-
-
-
-    <div
-        class="item"
-        data-aos="zoom-in"
-        data-aos-delay="160"
-    >
-
-        <picture>
-
-            <source
-                srcset="images/spaghetti-mpolonez.webp"
-                type="image/webp"
-            >
-
-
-            <img
-                class="recipe-img"
-                src="images/spaghetti-mpolonez.webp"
-                alt="Σπαγγέτι"
-                data-title="Σπαγγέτι Μπολονέζ"
-                data-description="Παραδοσιακή σπαγγέτι με πλούσια σάλτσα κιμά."
-            >
-
-        </picture>
-
-
-        <button
-            class="info-btn"
-            aria-label="Πληροφορίες"
-        >
-
-            <i class="fa-solid fa-utensils"></i>
-
-        </button>
-
-
-        <h4>
-            Σπαγγέττι Μπολονέζ
-        </h4>
-
-    </div>
-
-
-
-    <div
-        class="item"
-        data-aos="zoom-in"
-        data-aos-delay="180"
-    >
-
-        <picture>
-
-            <source
-                srcset="images/solomon.webp"
-                type="image/webp"
-            >
-
-
-            <img
-                class="recipe-img"
-                src="images/solomon.webp"
-                alt="Σολομός"
-                data-title="Σολομός"
-                data-description="Φρέσκο, ζουμερό φιλέτο σολομού σχάρας με άνηθο περιχυμένο με λαδολέμονο."
-            >
-
-        </picture>
-
-
-        <button
-            class="info-btn"
-            aria-label="Πληροφορίες"
-        >
-
-            <i class="fa-solid fa-utensils"></i>
-
-        </button>
-
-
-        <h4>
-            Σολομός
-        </h4>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     RECIPE MODAL
-========================================================= -->
-
-<div
-    id="recipeModal"
-    class="modal"
->
-
-    <div class="modal-content">
-
-
-        <span
-            class="close"
-            id="recipeClose"
-        >
-            &times;
-        </span>
-
-
-        <div class="fab-wrapper">
-
-            <button
-                class="modal-fab"
-                id="toggleOrderBtn"
-            >
-                <i class="fa-solid fa-cart-shopping"></i>
-            </button>
-
-
-            <div
-                class="order-panel"
-                id="orderPanel"
-            >
-
-                <div class="order-content">
-
-
-                    <span class="panel-title">
-                        Ποσότητα
-                    </span>
-
-
-                    <div class="qty-container">
-
-
-                        <button
-                            class="qty-btn"
-                            id="qtyMinus"
-                        >
-                            <i class="fa-solid fa-minus"></i>
-                        </button>
-
-
-                        <span id="qtyValue">
-                            1
-                        </span>
-
-
-                        <button
-                            class="qty-btn"
-                            id="qtyPlus"
-                        >
-                            <i class="fa-solid fa-plus"></i>
-                        </button>
-
-                    </div>
-
-
-                    <button class="add-to-cart-confirm">
-
-                        ΠΡΟΣΘΗΚΗ
-
-                        <span class="price-hint">
-                            | 12.50€
-                        </span>
-
-                    </button>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <h2 id="modalTitle"></h2>
-
-
-        <img
-            id="modalImage"
-            src=""
-            alt=""
-        >
-
-
-        <p id="modalDescription"></p>
-
-    </div>
-
-</div>
-
-
-
-<!-- =========================================================
-     TESTIMONIALS
-========================================================= -->
-
-<section
-    class="testimonials-section container"
->
-
-
-    <h2
-        data-aos="fade-right"
-        data-aos-duration="400"
-    >
-        Κριτικές πελατών
-    </h2>
-
-
-    <div class="testimonials-grid">
-
-
-        <div
-            class="testimonial-card"
-            data-aos="fade-right"
-            data-aos-delay="0"
-        >
-
-            <div class="client-info">
-
-                <picture>
-
-                    <source
-                        srcset="images/testimo1.webp"
-                        type="image/webp"
-                    >
-
-
-                    <img
-                        src="images/testimo1.webp"
-                        alt="Πελάτης 1"
-                        class="client-img"
-                    >
-
-                </picture>
-
-
-                <div class="client-details">
-
-                    <h4>
-                        Μαρία Κ.
-                    </h4>
-
-                </div>
-
-            </div>
-
-
-            <p>
-                Ο Μουσακάς ήταν σαν σπιτικός!
-                Είδα ότι έχετε και άλλα πιάτα ημέρας,
-                οπότε θα ξαναπαραγγείλουμε σίγουρα με την παρέα.
-            </p>
-
-
-            <div class="rating">
-
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-
-            </div>
-
-        </div>
-
-
-
-        <div
-            class="testimonial-card"
-            data-aos="fade-right"
-            data-aos-delay="50"
-        >
-
-            <div class="client-info">
-
-                <picture>
-
-                    <source
-                        srcset="images/testimo2.webp"
-                        type="image/webp"
-                    >
-
-
-                    <img
-                        src="images/testimo2.webp"
-                        alt="Πελάτης 2"
-                        class="client-img"
-                    >
-
-                </picture>
-
-
-                <div class="client-details">
-
-                    <h4>
-                        Γιάννης Δ.
-                    </h4>
-
-                </div>
-
-            </div>
-
-
-            <p>
-                Πρέπει να δοκιμάσετε τα Σουτζουκάκια!
-                Είναι πολύ νόστιμα.
-                Μου άρεσε που το μενού έχει τόσες πολλές επιλογές
-                από παραδοσιακά μέχρι πιο μοντέρνα.
-                Πολύ καλή εμπειρία.
-            </p>
-
-
-            <div class="rating">
-
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-
-            </div>
-
-        </div>
-
-
-
-        <div
-            class="testimonial-card"
-            data-aos="fade-right"
-            data-aos-delay="60"
-        >
-
-            <div class="client-info">
-
-                <picture>
-
-                    <source
-                        srcset="images/testimo3.webp"
-                        type="image/webp"
-                    >
-
-
-                    <img
-                        src="images/testimo3.webp"
-                        alt="Πελάτης 3"
-                        class="client-img"
-                    >
-
-                </picture>
-
-
-                <div class="client-details">
-
-                    <h4>
-                        Μάριος Λ.
-                    </h4>
-
-                </div>
-
-            </div>
-
-
-            <p>
-                Παραγγέλνω από εδώ συχνά.
-                Το Παστίτσιο είναι απλά τέλειο.
-            </p>
-
-
-            <div class="rating">
-
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-
-            </div>
-
-        </div>
-
-
-
-        <div
-            class="testimonial-card"
-            data-aos="fade-right"
-            data-aos-delay="70"
-        >
-
-            <div class="client-info">
-
-                <picture>
-
-                    <source
-                        srcset="images/testimo4.webp"
-                        type="image/webp"
-                    >
-
-
-                    <img
-                        src="images/testimo4.webp"
-                        alt="Εικόνα Πελάτη 4"
-                        class="client-img"
-                    >
-
-                </picture>
-
-
-                <div class="client-details">
-
-                    <h4>
-                        Ελένη Π.
-                    </h4>
-
-                </div>
-
-            </div>
-
-
-            <p>
-                Σωτήριο για μέρες που δεν προλαβαίνω να μαγειρέψω.
-                Τα παιδιά λατρεύουν τις Κρέπες και εμείς
-                βρίσκουμε πάντα ένα καλό μαγειρευτό!
-            </p>
-
-
-            <div class="rating">
-
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     GALLERY
-========================================================= -->
-
-<section class="gallery">
-
-
-    <h2
-        data-aos="zoom-in"
-        data-aos-duration="400"
-    >
-        Φωτογραφίες / Γκαλερί
-    </h2>
-
-
-    <div class="gallery-container">
-
-
-        <a
-            href="images/carbonara.webp"
-            class="box glightbox"
-            data-aos="zoom-in"
-        >
-
-            <picture>
-
-                <source
-                    srcset="images/carbonara.webp"
-                    type="image/webp"
-                >
-
-
-                <img
-                    src="images/carbonara.webp"
-                    alt="Καρμπονάρα"
-                >
-
-            </picture>
-
-
-            <div class="icon">
-
-                <i class="fas fa-plus"></i>
-
-            </div>
-
-        </a>
-
-
-
-        <a
-            href="images/calzone.png"
-            class="box glightbox"
-            data-aos="zoom-in"
-            data-aos-delay="0"
-        >
-
-            <picture>
-
-                <source
-                    srcset="images/calzone.webp"
-                    type="image/webp"
-                >
-
-
-                <img
-                    src="images/calzone.webp"
-                    alt="Καλτσόνε"
-                >
-
-            </picture>
-
-
-            <div class="icon">
-
-                <i class="fas fa-plus"></i>
-
-            </div>
-
-        </a>
-
-
-
-        <a
-            href="images/pizza-2.png"
-            class="box glightbox"
-            data-aos="zoom-in"
-            data-aos-delay="50"
-        >
-
-            <picture>
-
-                <source
-                    srcset="images/pizza-2.webp"
-                    type="image/webp"
-                >
-
-
-                <img
-                    src="images/pizza-2.webp"
-                    alt="Πίτσα"
-                >
-
-            </picture>
-
-
-            <div class="icon">
-
-                <i class="fas fa-plus"></i>
-
-            </div>
-
-        </a>
-
-
-
-        <a
-            href="images/caesar-salad.webp"
-            class="box glightbox"
-            data-aos="zoom-in"
-            data-aos-delay="60"
-        >
-
-            <picture>
-
-                <source
-                    srcset="images/caesar-salad.webp"
-                    type="image/webp"
-                >
-
-
-                <img
-                    src="images/caesar-salad.webp"
-                    alt="Σαλάτα του Καίσαρα"
-                >
-
-            </picture>
-
-
-            <div class="icon">
-
-                <i class="fas fa-plus"></i>
-
-            </div>
-
-        </a>
-
-
-
-        <a
-            href="images/peinirli.png"
-            class="box glightbox"
-            data-aos="zoom-in"
-            data-aos-delay="70"
-        >
-
-            <picture>
-
-                <source
-                    srcset="images/peinirli.webp"
-                    type="image/webp"
-                >
-
-
-                <img
-                    src="images/peinirli.webp"
-                    alt="Πεϊνιρλί"
-                >
-
-            </picture>
-
-
-            <div class="icon">
-
-                <i class="fas fa-plus"></i>
-
-            </div>
-
-        </a>
-
-
-
-        <a
-            href="images/burger.png"
-            class="box glightbox"
-            data-aos="zoom-in"
-            data-aos-delay="80"
-        >
-
-            <picture>
-
-                <source
-                    srcset="images/burger.webp"
-                    type="image/webp"
-                >
-
-
-                <img
-                    src="images/burger.webp"
-                    alt="Burger"
-                >
-
-            </picture>
-
-
-            <div class="icon">
-
-                <i class="fas fa-plus"></i>
-
-            </div>
-
-        </a>
-
-
-
-        <a
-            href="images/sokolatopita.webp"
-            class="box glightbox"
-            data-aos="zoom-in"
-            data-aos-delay="90"
-        >
-
-            <picture>
-
-                <source
-                    srcset="images/sokolatopita.webp"
-                    type="image/webp"
-                >
-
-
-                <img
-                    src="images/sokolatopita.webp"
-                    alt="Σοκολατόπιτα"
-                >
-
-            </picture>
-
-
-            <div class="icon">
-
-                <i class="fas fa-plus"></i>
-
-            </div>
-
-        </a>
-
-
-
-        <a
-            href="images/profiterol.png"
-            class="box glightbox"
-            data-aos="zoom-in"
-            data-aos-delay="100"
-        >
-
-            <picture>
-
-                <source
-                    srcset="images/profiterol.webp"
-                    type="image/webp"
-                >
-
-
-                <img
-                    src="images/profiterol.webp"
-                    alt="Προφιτερόλ"
-                >
-
-            </picture>
-
-
-            <div class="icon">
-
-                <i class="fas fa-plus"></i>
-
-            </div>
-
-        </a>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     FOOTER
-========================================================= -->
-
-<footer class="footer">
-
-
-    <div class="footer-container">
-
-
-        <div
-            class="footer-col"
-            data-aos="fade-up"
-            data-aos-delay="0"
-        >
-
-            <h3>
-                Ακολουθήστε μας
-            </h3>
-
-
-            <div class="social-icons">
-
-                <a href="#">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-
-                <a href="#">
-                    <i class="fab fa-twitter"></i>
-                </a>
-
-                <a href="#">
-                    <i class="fab fa-instagram"></i>
-                </a>
-
-            </div>
-
-        </div>
-
-
-
-        <div
-            class="footer-col"
-            data-aos="fade-up"
-            data-aos-delay="50"
-        >
-
-            <h3>
-                Σύνδεσμοι
-            </h3>
-
-
-            <ul>
-
-                <li>
-                    <a href="#home">
-                        Αρχική
-                    </a>
-                </li>
-
-
-                <li>
-                    <a href="index1.html">
-                        Σχετικά
-                    </a>
-                </li>
-
-
-                <li>
-                    <a href="index3.html">
-                        Επικοινωνία
-                    </a>
-                </li>
-
-            </ul>
-
-        </div>
-
-
-
-        <div
-            class="footer-col"
-            data-aos="fade-up"
-            data-aos-delay="60"
-        >
-
-            <h3>
-                Πληροφορίες
-            </h3>
-
-
-            <ul>
-
-                <li>
-                    <a href="#">
-                        Συνταγές
-                    </a>
-                </li>
-
-
-                <li>
-                    <a href="#">
-                        Blog
-                    </a>
-                </li>
-
-
-                <li>
-                    <a href="#">
-                        Γκάλερι
-                    </a>
-                </li>
-
-            </ul>
-
-        </div>
-
-
-
-        <div
-            class="footer-col"
-            data-aos="fade-up"
-            data-aos-delay="70"
-        >
-
-            <h3>
-                Επικοινωνία
-            </h3>
-
-
-            <ul>
-
-                <li>
-                    <a href="mailto:info@kitchengrid.gr">
-                        info@kitchengrid.gr
-                    </a>
-                </li>
-
-
-                <li>
-                    <a href="tel:+302101234567">
-                        +30 210 1234567
-                    </a>
-                </li>
-
-            </ul>
-
-        </div>
-
-    </div>
-
-
-    <div
-        class="footer-bottom"
-        data-aos="fade-up"
-        data-aos-delay="80"
-    >
-
-        © 2025 The kitchen grid.
-        Όλα τα δικαιώματα διατηρούνται.
-
-    </div>
-
-</footer>
-
-
-
-<!-- =========================================================
-     LIBRARIES
-========================================================= -->
-
-<script
-    src="https://unpkg.com/aos@2.3.1/dist/aos.js"
-></script>
-
-
-<script
-    src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"
-></script>
-
-
-<!-- =========================================================
-     MAIN JS
-========================================================= -->
-<script
-    type="module"
-    src="./js/main.js"
-></script>
-
-
-
-<!-- =========================================================
-     AOS
-========================================================= -->
-
-<script>
-
-window.addEventListener("load", () => {
-
-    AOS.init({
-
-        once: true,
-
-        duration: 400,
-
-        easing: "ease-out",
-
-        offset: 50,
-
-        delay: 0,
-
-        mirror: false,
-
-        disable: false
-
-    });
-
-    AOS.refreshHard();
-
-});
-
-</script>
-
-
-</body>
-</html>
-```
+import Carousel from './Carousel.js';
+
+// --- APP CLASS ---
+export default class RestaurantApp {
+
+    constructor() {
+        this.recipeModal = document.getElementById('recipeModal');
+        this.init();
+    }
+
+    static setCookie(name, value, days) {
+        const date = new Date();
+
+        date.setTime(
+            date.getTime() + days * 24 * 60 * 60 * 1000
+        );
+
+        document.cookie =
+            `${name}=${value};expires=${date.toUTCString()};path=/;SameSite=Lax`;
+    }
+
+    static getCookie(name) {
+        const nameEQ = `${name}=`;
+        const ca = document.cookie.split(';');
+
+        for (const c of ca) {
+            const entry = c.trim();
+
+            if (entry.startsWith(nameEQ)) {
+                return entry.substring(nameEQ.length);
+            }
+        }
+
+        return null;
+    }
+
+    init() {
+        this.initCarousels();
+        this.initLoginLogic();
+        this.initGlobalEvents();
+        this.initModalsAndOrder();
+        this.initSearch();
+        this.initLightbox();
+        this.initScrollAnimations();
+
+        console.log(
+            " RestaurantApp: Fully Restored with TypeScript Types"
+        );
+    }
+
+    initScrollAnimations() {
+        const handleScroll = () => {
+            const box =
+                document.getElementById('eventBox');
+
+            const section =
+                document.getElementById('events-trigger');
+
+            const screenHeight =
+                window.innerHeight / 1.3;
+
+            if (box && section) {
+                const position =
+                    section.getBoundingClientRect().top;
+
+                if (position < screenHeight) {
+                    box.classList.add('active');
+                }
+            }
+
+            const spaceItems =
+                document.querySelectorAll('.space-item');
+
+            spaceItems.forEach((item) => {
+                const position =
+                    item.getBoundingClientRect().top;
+
+                if (position < screenHeight) {
+                    item.classList.add('active');
+                }
+            });
+        };
+
+        window.addEventListener(
+            'scroll',
+            handleScroll
+        );
+
+        handleScroll();
+    }
+
+    initCarousels() {
+        const carouselSpecs = [
+            '.todays-specials',
+            '.gallery-section'
+        ];
+
+        carouselSpecs.forEach((selector) => {
+            const el =
+                document.querySelector(selector);
+
+            if (el) {
+                new Carousel(selector);
+            }
+        });
+    }
+
+    initGlobalEvents() {
+        window.addEventListener('click', (e) => {
+            const target = e.target;
+
+            const icon = target.closest(
+                'i, svg, .info-icon, .tooltip-btn, [class*="icon"], [class*="fa-"], [class*="bi-"], .info'
+            );
+
+            if (icon) {
+                const card = icon.closest(
+                    '.carousel-card, [data-dish]'
+                );
+
+                if (card) {
+                    this.handleTooltip(card, e);
+                    return;
+                }
+            }
+
+            if (!target.closest('[id^="modal-"]')) {
+                this.closeAllTooltips();
+            }
+
+            if (
+                target === this.recipeModal ||
+                target.classList.contains('modal')
+            ) {
+                this.closeRecipeModal();
+            }
+        });
+    }
+
+    handleTooltip(card, e) {
+        e.stopPropagation();
+
+        const dishId =
+            card.getAttribute('data-dish');
+
+        if (!dishId) {
+            return;
+        }
+
+        const tooltip =
+            document.getElementById(
+                'tooltip-' + dishId
+            );
+
+        if (tooltip) {
+            const isOpen =
+                tooltip.classList.contains('active');
+
+            this.closeAllTooltips();
+
+            if (!isOpen) {
+                tooltip.classList.add('active');
+
+                tooltip.setAttribute(
+                    'data-open',
+                    'true'
+                );
+            }
+        }
+    }
+
+    closeAllTooltips() {
+        const tooltips =
+            document.querySelectorAll(
+                '.carousel-tooltip'
+            );
+
+        tooltips.forEach((t) => {
+            t.classList.remove('active');
+
+            t.setAttribute(
+                'data-open',
+                'false'
+            );
+        });
+    }
+
+    closeAllModals() {
+        document
+            .querySelectorAll('[id^="modal-"]')
+            .forEach((t) => {
+                const el = t;
+
+                el.style.display = 'none';
+
+                el.setAttribute(
+                    'data-open',
+                    'false'
+                );
+            });
+    }
+
+    initLoginLogic() {
+        const overlay =
+            document.getElementById('loginOverlay');
+
+        const popup =
+            document.getElementById('loginPopup');
+
+        const form =
+            document.getElementById('loginForm');
+
+        const hasToken =
+            localStorage.getItem('userToken') ||
+            RestaurantApp.getCookie('userToken');
+
+        const hideLogin =
+            RestaurantApp.getCookie('hideLogin');
+
+        const savedUser =
+            localStorage.getItem('savedUser') ||
+            RestaurantApp.getCookie('savedUser');
+
+        if (form && savedUser) {
+            const input =
+                form.querySelector('input');
+
+            if (input) {
+                input.value = savedUser;
+            }
+        }
+
+        if (!hideLogin && !hasToken) {
+            setTimeout(() => {
+                if (overlay && popup) {
+                    overlay.style.display = 'block';
+                    popup.style.display = 'block';
+
+                    popup.setAttribute(
+                        'aria-hidden',
+                        'false'
+                    );
+
+                    popup
+                        .querySelector('input')
+                        ?.focus();
+                }
+            }, 4000);
+        }
+
+        overlay?.addEventListener(
+            'click',
+            (e) => {
+                if (e.target === overlay && popup) {
+                    overlay.style.display = 'none';
+                    popup.style.display = 'none';
+                }
+            }
+        );
+
+        document
+            .getElementById('loginClose')
+            ?.addEventListener(
+                'click',
+                () => {
+                    if (overlay && popup) {
+                        overlay.style.display = 'none';
+                        popup.style.display = 'none';
+                    }
+                }
+            );
+
+        form?.addEventListener(
+            'submit',
+            (e) => {
+                e.preventDefault();
+
+                const input =
+                    form.querySelector('input');
+
+                const val = input.value;
+
+                const token =
+                    `auth_${Math.random().toString(36).substr(2)}`;
+
+                localStorage.setItem(
+                    'userToken',
+                    token
+                );
+
+                localStorage.setItem(
+                    'savedUser',
+                    val
+                );
+
+                RestaurantApp.setCookie(
+                    'userToken',
+                    token,
+                    30
+                );
+
+                RestaurantApp.setCookie(
+                    'savedUser',
+                    val,
+                    30
+                );
+
+                RestaurantApp.setCookie(
+                    'hideLogin',
+                    'true',
+                    30
+                );
+
+                if (overlay && popup) {
+                    overlay.style.display = 'none';
+                    popup.style.display = 'none';
+                }
+            }
+        );
+    }
+
+    initModalsAndOrder() {
+        let currentQty = 1;
+
+        const qtyValue =
+            document.getElementById('qtyValue');
+
+        const orderPanel =
+            document.getElementById('orderPanel');
+
+        document.addEventListener(
+            'click',
+            (e) => {
+                const target = e.target;
+
+                const btn =
+                    target.closest('.info-btn');
+
+                if (btn) {
+                    const img =
+                        btn
+                            .closest('.item')
+                            ?.querySelector('.recipe-img');
+
+                    if (img) {
+                        const titleEl =
+                            document.getElementById(
+                                'modalTitle'
+                            );
+
+                        const imgEl =
+                            document.getElementById(
+                                'modalImage'
+                            );
+
+                        const descEl =
+                            document.getElementById(
+                                'modalDescription'
+                            );
+
+                        if (titleEl) {
+                            titleEl.innerText =
+                                img.dataset.title || '';
+                        }
+
+                        if (imgEl) {
+                            imgEl.src = img.src;
+                        }
+
+                        if (descEl) {
+                            descEl.innerText =
+                                img.dataset.description || '';
+                        }
+
+                        if (this.recipeModal) {
+                            this.recipeModal.style.display =
+                                'flex';
+
+                            setTimeout(() => {
+                                this.recipeModal
+                                    ?.classList
+                                    .add('active');
+                            }, 10);
+                        }
+
+                        currentQty = 1;
+
+                        if (qtyValue) {
+                            qtyValue.innerText =
+                                currentQty.toString();
+                        }
+
+                        orderPanel
+                            ?.classList
+                            .remove('active');
+                    }
+                }
+            }
+        );
+
+        document
+            .getElementById('recipeClose')
+            ?.addEventListener(
+                'click',
+                () => this.closeRecipeModal()
+            );
+
+        document
+            .getElementById('toggleOrderBtn')
+            ?.addEventListener(
+                'click',
+                () =>
+                    orderPanel?.classList.toggle('active')
+            );
+
+        document
+            .getElementById('qtyPlus')
+            ?.addEventListener(
+                'click',
+                () => {
+                    currentQty++;
+
+                    if (qtyValue) {
+                        qtyValue.innerText =
+                            currentQty.toString();
+                    }
+                }
+            );
+
+        document
+            .getElementById('qtyMinus')
+            ?.addEventListener(
+                'click',
+                () => {
+                    if (currentQty > 1) {
+                        currentQty--;
+
+                        if (qtyValue) {
+                            qtyValue.innerText =
+                                currentQty.toString();
+                        }
+                    }
+                }
+            );
+    }
+
+    closeRecipeModal() {
+        this.recipeModal
+            ?.classList
+            .remove('active');
+
+        setTimeout(() => {
+            if (this.recipeModal) {
+                this.recipeModal.style.display =
+                    'none';
+            }
+        }, 300);
+    }
+
+    initSearch() {
+        const searchIcon =
+            document.getElementById('openSearch') ||
+            document.querySelector('.nav-search');
+
+        const searchOverlay =
+            document.getElementById('searchOverlay');
+
+        const searchClose =
+            document.getElementById('closeSearch') ||
+            document.getElementById('searchClose');
+
+        const searchInput =
+            document.getElementById('searchInput');
+
+        if (!searchIcon || !searchOverlay) {
+            return;
+        }
+
+        searchIcon.addEventListener(
+            'click',
+            (e) => {
+                e.preventDefault();
+
+                searchOverlay.style.display = 'flex';
+
+                setTimeout(() => {
+                    searchOverlay.classList.add('active');
+
+                    searchInput?.focus();
+                }, 10);
+
+                document.body.style.overflow =
+                    'hidden';
+            }
+        );
+
+        const closeSearch = () => {
+            searchOverlay.classList.remove('active');
+
+            setTimeout(() => {
+                searchOverlay.style.display = 'none';
+
+                document.body.style.overflow =
+                    'auto';
+            }, 300);
+        };
+
+        searchClose?.addEventListener(
+            'click',
+            closeSearch
+        );
+
+        searchOverlay.addEventListener(
+            'click',
+            (e) => {
+                if (e.target === searchOverlay) {
+                    closeSearch();
+                }
+            }
+        );
+
+        document.addEventListener(
+            'keydown',
+            (e) => {
+                if (
+                    e.key === "Escape" &&
+                    searchOverlay.classList.contains('active')
+                ) {
+                    closeSearch();
+                }
+            }
+        );
+
+        searchInput?.addEventListener(
+            'keypress',
+            (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+
+                    searchInput.value = '';
+
+                    closeSearch();
+                }
+            }
+        );
+    }
+
+    initLightbox() {
+        if (typeof GLightbox !== 'undefined') {
+            GLightbox({
+                selector: '.glightbox',
+                touchNavigation: true,
+                loop: true,
+                autoplayVideos: true
+            });
+        }
+    }
+}
