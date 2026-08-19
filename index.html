@@ -15,7 +15,7 @@
 
 
     <!-- =========================================================
-         AOS CSS
+         AOS
     ========================================================== -->
 
     <link
@@ -25,7 +25,7 @@
 
 
     <!-- =========================================================
-         PRELOAD HERO IMAGE
+         PRELOAD
     ========================================================== -->
 
     <link
@@ -67,10 +67,12 @@
     >
 
     <noscript>
+
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
         >
+
     </noscript>
 
 
@@ -86,10 +88,12 @@
     >
 
     <noscript>
+
         <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
         >
+
     </noscript>
 
 </head>
@@ -125,7 +129,9 @@
     </span>
 
 
-    <h2>Σύνδεση</h2>
+    <h2>
+        Σύνδεση
+    </h2>
 
 
     <form
@@ -261,7 +267,9 @@
             data-aos-delay="0"
             data-aos-anchor=".navbar"
         >
+
             <i class="fa-solid fa-magnifying-glass"></i>
+
         </div>
 
 
@@ -315,6 +323,7 @@
                     <i class="fa-brands fa-facebook"></i>
                 </a>
 
+
                 <a href="#">
                     <i class="fa-brands fa-instagram"></i>
                 </a>
@@ -333,8 +342,11 @@
             <div class="contact-box">
 
                 <p>
+
                     <i class="fa-solid fa-location-dot"></i>
+
                     Πανεπιστημίου 42, Αθήνα
+
                 </p>
 
 
@@ -364,6 +376,7 @@
     class="search-overlay"
     id="searchOverlay"
 >
+
 
     <span
         class="search-close"
@@ -533,8 +546,8 @@
 
         <h1
             data-aos="fade-up"
+            data-aos-anchor-placement="bottom-bottom"
             data-aos-duration="400"
-            data-aos-delay="0"
         >
             Η Γεύση που Ψάχνετε, με Φρέσκα Υλικά.
         </h1>
@@ -542,8 +555,8 @@
 
         <p
             data-aos="fade-up"
+            data-aos-anchor-placement="bottom-bottom"
             data-aos-duration="400"
-            data-aos-delay="50"
         >
             Ετοιμάζουμε καθημερινά νόστιμα πιάτα με τα καλύτερα υλικά.
         </p>
@@ -553,8 +566,8 @@
             href="#items"
             class="btn"
             data-aos="fade-up"
+            data-aos-anchor-placement="bottom-bottom"
             data-aos-duration="400"
-            data-aos-delay="100"
         >
             Εξερευνήστε το Μενού
         </a>
@@ -567,14 +580,18 @@
 
 <!-- =========================================================
      TODAY'S SPECIALS / CAROUSEL
+
+     ΣΗΜΑΝΤΙΚΟ:
+     Το carousel-card παραμένει με το αρχικό data-aos.
+     Δεν πειράζουμε track/container με transforms.
 ========================================================== -->
 
 <section class="todays-specials">
 
+
     <h2
         data-aos="fade-up"
         data-aos-duration="400"
-        data-aos-delay="0"
     >
         Σημερινά Πιάτα
     </h2>
@@ -582,20 +599,21 @@
 
     <div class="carousel-container">
 
+
         <div class="carousel-track">
 
 
-            <!-- =================================================
-                 CARD 1
-            ================================================== -->
-
             <div
                 class="carousel-card"
+                data-aos="fade-up"
+                data-aos-delay="0"
                 data-dish="pastitsio"
             >
 
-                <div class="tooltip-icon carousel-animate">
+                <div class="tooltip-icon">
+
                     <i class="fa-solid fa-utensils"></i>
+
                 </div>
 
 
@@ -604,7 +622,9 @@
                     class="carousel-tooltip"
                 >
 
-                    <b>Υλικά</b>
+                    <b>
+                        Υλικά
+                    </b>
 
                     <p>
                         μακαρόνια, μοσχαρίσιος κιμάς, μπεσαμέλ
@@ -613,7 +633,7 @@
                 </div>
 
 
-                <picture class="carousel-animate">
+                <picture>
 
                     <source
                         srcset="images/pastitsio.webp"
@@ -628,7 +648,7 @@
                 </picture>
 
 
-                <p class="carousel-animate">
+                <p>
                     Παστίτσιο
                 </p>
 
@@ -636,17 +656,17 @@
 
 
 
-            <!-- =================================================
-                 CARD 2
-            ================================================== -->
-
             <div
                 class="carousel-card"
+                data-aos="fade-up"
+                data-aos-delay="50"
                 data-dish="kalamarakia"
             >
 
-                <div class="tooltip-icon carousel-animate">
+                <div class="tooltip-icon">
+
                     <i class="fa-solid fa-utensils"></i>
+
                 </div>
 
 
@@ -655,7 +675,9 @@
                     class="carousel-tooltip"
                 >
 
-                    <b>Υλικά</b>
+                    <b>
+                        Υλικά
+                    </b>
 
                     <p>
                         ρύζι, κουκουνάρι και μυρωδικά
@@ -664,7 +686,7 @@
                 </div>
 
 
-                <picture class="carousel-animate">
+                <picture>
 
                     <source
                         srcset="images/gemista-kalamarakia.webp"
@@ -679,7 +701,7 @@
                 </picture>
 
 
-                <p class="carousel-animate">
+                <p>
                     Γεμιστά Καλαμαράκια
                 </p>
 
@@ -687,17 +709,17 @@
 
 
 
-            <!-- =================================================
-                 CARD 3
-            ================================================== -->
-
             <div
                 class="carousel-card"
+                data-aos="fade-up"
+                data-aos-delay="100"
                 data-dish="krepes"
             >
 
-                <div class="tooltip-icon carousel-animate">
+                <div class="tooltip-icon">
+
                     <i class="fa-solid fa-utensils"></i>
+
                 </div>
 
 
@@ -706,7 +728,9 @@
                     class="carousel-tooltip"
                 >
 
-                    <b>Υλικά</b>
+                    <b>
+                        Υλικά
+                    </b>
 
                     <p>
                         ζαμπόν και κρέμα γάλακτος,
@@ -716,7 +740,7 @@
                 </div>
 
 
-                <picture class="carousel-animate">
+                <picture>
 
                     <source
                         srcset="images/gemistes-krepes.webp"
@@ -731,7 +755,7 @@
                 </picture>
 
 
-                <p class="carousel-animate">
+                <p>
                     Γεμιστές Κρέπες
                 </p>
 
@@ -739,17 +763,17 @@
 
 
 
-            <!-- =================================================
-                 CARD 4
-            ================================================== -->
-
             <div
                 class="carousel-card"
+                data-aos="fade-up"
+                data-aos-delay="150"
                 data-dish="garidomakaronada"
             >
 
-                <div class="tooltip-icon carousel-animate">
+                <div class="tooltip-icon">
+
                     <i class="fa-solid fa-utensils"></i>
+
                 </div>
 
 
@@ -758,7 +782,9 @@
                     class="carousel-tooltip"
                 >
 
-                    <b>Υλικά</b>
+                    <b>
+                        Υλικά
+                    </b>
 
                     <p>
                         γαρίδες, λιγκουίνι, σάλτσα ντομάτας.
@@ -767,7 +793,7 @@
                 </div>
 
 
-                <picture class="carousel-animate">
+                <picture>
 
                     <source
                         srcset="images/garidomakaronada.webp"
@@ -782,7 +808,7 @@
                 </picture>
 
 
-                <p class="carousel-animate">
+                <p>
                     Γαριδομακαρονάδα
                 </p>
 
@@ -790,17 +816,17 @@
 
 
 
-            <!-- =================================================
-                 CARD 5
-            ================================================== -->
-
             <div
                 class="carousel-card"
+                data-aos="fade-up"
+                data-aos-delay="200"
                 data-dish="gioubetsi"
             >
 
-                <div class="tooltip-icon carousel-animate">
+                <div class="tooltip-icon">
+
                     <i class="fa-solid fa-utensils"></i>
+
                 </div>
 
 
@@ -809,7 +835,9 @@
                     class="carousel-tooltip"
                 >
 
-                    <b>Υλικά</b>
+                    <b>
+                        Υλικά
+                    </b>
 
                     <p>
                         κριθαράκι, σάλτσα ντομάτας
@@ -818,7 +846,7 @@
                 </div>
 
 
-                <picture class="carousel-animate">
+                <picture>
 
                     <source
                         srcset="images/giouvetsi-kritharaki.webp"
@@ -833,7 +861,7 @@
                 </picture>
 
 
-                <p class="carousel-animate">
+                <p>
                     Γιουβέτσι με Κριθαράκι
                 </p>
 
@@ -849,6 +877,7 @@
 </section>
 
 
+
 <!-- =========================================================
      ITEMS
 ========================================================== -->
@@ -862,17 +891,14 @@
     <h2
         data-aos="zoom-in"
         data-aos-duration="400"
-        data-aos-delay="0"
     >
         Προτάσεις Γεύσεων
     </h2>
 
 
-
     <div
         class="item"
         data-aos="zoom-in"
-        data-aos-duration="400"
         data-aos-delay="0"
     >
 
@@ -914,8 +940,7 @@
     <div
         class="item"
         data-aos="zoom-in"
-        data-aos-duration="400"
-        data-aos-delay="50"
+        data-aos-delay="70"
     >
 
         <picture>
@@ -956,7 +981,6 @@
     <div
         class="item"
         data-aos="zoom-in"
-        data-aos-duration="400"
         data-aos-delay="90"
     >
 
@@ -998,8 +1022,7 @@
     <div
         class="item"
         data-aos="zoom-in"
-        data-aos-duration="400"
-        data-aos-delay="130"
+        data-aos-delay="110"
     >
 
         <picture>
@@ -1040,8 +1063,7 @@
     <div
         class="item"
         data-aos="zoom-in"
-        data-aos-duration="400"
-        data-aos-delay="170"
+        data-aos-delay="120"
     >
 
         <picture>
@@ -1082,8 +1104,7 @@
     <div
         class="item"
         data-aos="zoom-in"
-        data-aos-duration="400"
-        data-aos-delay="210"
+        data-aos-delay="140"
     >
 
         <picture>
@@ -1124,8 +1145,7 @@
     <div
         class="item"
         data-aos="zoom-in"
-        data-aos-duration="400"
-        data-aos-delay="250"
+        data-aos-delay="160"
     >
 
         <picture>
@@ -1166,8 +1186,7 @@
     <div
         class="item"
         data-aos="zoom-in"
-        data-aos-duration="400"
-        data-aos-delay="290"
+        data-aos-delay="180"
     >
 
         <picture>
@@ -1323,7 +1342,6 @@
     <h2
         data-aos="fade-right"
         data-aos-duration="400"
-        data-aos-delay="0"
     >
         Κριτικές πελατών
     </h2>
@@ -1335,12 +1353,10 @@
         <div
             class="testimonial-card"
             data-aos="fade-right"
-            data-aos-duration="400"
             data-aos-delay="0"
         >
 
             <div class="client-info">
-
 
                 <picture>
 
@@ -1394,12 +1410,10 @@
         <div
             class="testimonial-card"
             data-aos="fade-right"
-            data-aos-duration="400"
             data-aos-delay="50"
         >
 
             <div class="client-info">
-
 
                 <picture>
 
@@ -1455,12 +1469,10 @@
         <div
             class="testimonial-card"
             data-aos="fade-right"
-            data-aos-duration="400"
-            data-aos-delay="100"
+            data-aos-delay="60"
         >
 
             <div class="client-info">
-
 
                 <picture>
 
@@ -1513,12 +1525,10 @@
         <div
             class="testimonial-card"
             data-aos="fade-right"
-            data-aos-duration="400"
-            data-aos-delay="150"
+            data-aos-delay="70"
         >
 
             <div class="client-info">
-
 
                 <picture>
 
@@ -1583,7 +1593,6 @@
     <h2
         data-aos="zoom-in"
         data-aos-duration="400"
-        data-aos-delay="0"
     >
         Φωτογραφίες / Γκαλερί
     </h2>
@@ -1596,7 +1605,6 @@
             href="images/carbonara.webp"
             class="box glightbox"
             data-aos="zoom-in"
-            data-aos-duration="400"
             data-aos-delay="0"
         >
 
@@ -1617,7 +1625,9 @@
 
 
             <div class="icon">
+
                 <i class="fas fa-plus"></i>
+
             </div>
 
         </a>
@@ -1628,8 +1638,7 @@
             href="images/calzone.png"
             class="box glightbox"
             data-aos="zoom-in"
-            data-aos-duration="400"
-            data-aos-delay="40"
+            data-aos-delay="0"
         >
 
             <picture>
@@ -1649,7 +1658,9 @@
 
 
             <div class="icon">
+
                 <i class="fas fa-plus"></i>
+
             </div>
 
         </a>
@@ -1660,8 +1671,7 @@
             href="images/pizza-2.png"
             class="box glightbox"
             data-aos="zoom-in"
-            data-aos-duration="400"
-            data-aos-delay="80"
+            data-aos-delay="50"
         >
 
             <picture>
@@ -1681,7 +1691,9 @@
 
 
             <div class="icon">
+
                 <i class="fas fa-plus"></i>
+
             </div>
 
         </a>
@@ -1692,8 +1704,7 @@
             href="images/caesar-salad.webp"
             class="box glightbox"
             data-aos="zoom-in"
-            data-aos-duration="400"
-            data-aos-delay="120"
+            data-aos-delay="60"
         >
 
             <picture>
@@ -1713,7 +1724,9 @@
 
 
             <div class="icon">
+
                 <i class="fas fa-plus"></i>
+
             </div>
 
         </a>
@@ -1724,8 +1737,7 @@
             href="images/peinirli.png"
             class="box glightbox"
             data-aos="zoom-in"
-            data-aos-duration="400"
-            data-aos-delay="160"
+            data-aos-duration="70"
         >
 
             <picture>
@@ -1745,7 +1757,9 @@
 
 
             <div class="icon">
+
                 <i class="fas fa-plus"></i>
+
             </div>
 
         </a>
@@ -1756,8 +1770,7 @@
             href="images/burger.png"
             class="box glightbox"
             data-aos="zoom-in"
-            data-aos-duration="400"
-            data-aos-delay="200"
+            data-aos-delay="80"
         >
 
             <picture>
@@ -1777,7 +1790,9 @@
 
 
             <div class="icon">
+
                 <i class="fas fa-plus"></i>
+
             </div>
 
         </a>
@@ -1788,8 +1803,7 @@
             href="images/sokolatopita.webp"
             class="box glightbox"
             data-aos="zoom-in"
-            data-aos-duration="400"
-            data-aos-delay="240"
+            data-aos-delay="90"
         >
 
             <picture>
@@ -1809,7 +1823,9 @@
 
 
             <div class="icon">
+
                 <i class="fas fa-plus"></i>
+
             </div>
 
         </a>
@@ -1820,8 +1836,7 @@
             href="images/profiterol.png"
             class="box glightbox"
             data-aos="zoom-in"
-            data-aos-duration="400"
-            data-aos-delay="280"
+            data-aos-delay="100"
         >
 
             <picture>
@@ -1834,14 +1849,15 @@
                 <img
                     src="images/profiterol.webp"
                     alt="Προφιτερόλ"
-                    loading="lazy"
                 >
 
             </picture>
 
 
             <div class="icon">
+
                 <i class="fas fa-plus"></i>
+
             </div>
 
         </a>
@@ -1865,7 +1881,6 @@
         <div
             class="footer-col"
             data-aos="fade-up"
-            data-aos-duration="400"
             data-aos-delay="0"
         >
 
@@ -1880,9 +1895,11 @@
                     <i class="fab fa-facebook-f"></i>
                 </a>
 
+
                 <a href="#">
                     <i class="fab fa-twitter"></i>
                 </a>
+
 
                 <a href="#">
                     <i class="fab fa-instagram"></i>
@@ -1897,8 +1914,7 @@
         <div
             class="footer-col"
             data-aos="fade-up"
-            data-aos-duration="400"
-            data-aos-delay="40"
+            data-aos-delay="50"
         >
 
             <h3>
@@ -1937,8 +1953,7 @@
         <div
             class="footer-col"
             data-aos="fade-up"
-            data-aos-duration="400"
-            data-aos-delay="80"
+            data-aos-delay="60"
         >
 
             <h3>
@@ -1977,8 +1992,7 @@
         <div
             class="footer-col"
             data-aos="fade-up"
-            data-aos-duration="400"
-            data-aos-delay="120"
+            data-aos-delay="70"
         >
 
             <h3>
@@ -2008,17 +2022,13 @@
     </div>
 
 
-
     <div
         class="footer-bottom"
         data-aos="fade-up"
-        data-aos-duration="400"
-        data-aos-delay="160"
+        data-aos-delay="80"
     >
-
         © 2025 The kitchen grid.
         Όλα τα δικαιώματα διατηρούνται.
-
     </div>
 
 </footer>
@@ -2032,13 +2042,11 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 
-
 <!-- =========================================================
      GLIGHTBOX JS
 ========================================================== -->
 
 <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
-
 
 
 <!-- =========================================================
@@ -2049,7 +2057,6 @@
     type="module"
     src="./js/main.js"
 ></script>
-
 
 
 <!-- =========================================================
