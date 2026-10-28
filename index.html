@@ -2194,13 +2194,14 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
- AOS.init({
+AOS.init({
     once: true,
-    duration: 250,
-    offset: 100,
+    duration: 300,
+    easing: "ease-out-cubic",
+    offset: 60,
+    throttleDelay: 50,
+    mirror: false
 });
-
-
 
     requestAnimationFrame(() => {
 
