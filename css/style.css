@@ -3509,7 +3509,6 @@ p {
   }
 
   
-@media (max-width: 480px) {
     .offers-header {
         padding: 40px 15px;
     }
@@ -3526,7 +3525,7 @@ p {
     .offer-image {
         height: 180px;
     }
-}
+
 
 
 @media (max-width: 850px) {
@@ -3607,6 +3606,22 @@ p {
         height: 210px;
     }
 
-}
   
+    .offers-header {
+        padding: 40px 15px;
+    }
+    
+    .offers-header-content h1 {
+        font-size: 2rem;
+    }
+    
+    .offers-container {
+        grid-template-columns: 1fr;
+        padding: 20px 15px;
+    }
+    
+    .offer-image {
+        height: 180px;
+    }
+}
 
